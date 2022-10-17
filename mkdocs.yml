@@ -231,7 +231,7 @@ nav:
     #   - vtuber: 2/Sukina/vtuber.md
     #   - 音声: 2/Sukina/voice.md
   - 三次元:
-    - 3/index.md
+    # - 3/index.md
     # - 随笔记:
     #   - 3/Jottings/2207-2208.md
     #   - 3/Jottings/2205-2206.md
