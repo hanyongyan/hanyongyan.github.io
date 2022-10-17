@@ -53,6 +53,22 @@ nav:
     - StudyNodes/index.md
     - Linux:
       - Linux入门: StudyNodes/Linux/Linux.md
+      - Vim: StudyNodes/Linux/Vim.md
+    - MySql:
+      - Mysql: StudyNodes/MySql/MySql笔记.md
+    - js: 
+      - Ajax: StudyNodes/JS/Ajax.md
+      - jQuery: StudyNodes/JS/jQuery.md
+      - javaScript: StudyNodes/JS/JS.md
+      - nodejs: StudyNodes/JS/Node.js.md
+    - java: 
+      - JavaWeb: StudyNodes/Java/JavaWeb.md
+      - Maven: StudyNodes/Java/Maven.md
+      - MyBatis: StudyNodes/Java/MaBatis笔记.md
+      - MyBatisPlus: StudyNodes/Java/MyBatisPlus.md
+      - SSM: StudyNodes/Java/SSM.md
+      - 瑞吉外卖笔记: StudyNodes/Java/瑞吉外卖笔记.md
+      - Nacos: StudyNodes/Java/Nacos.md
 
 
 # [Extensions]
