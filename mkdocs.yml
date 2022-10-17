@@ -69,7 +69,11 @@ nav:
       - SSM: StudyNodes/Java/SSM.md
       - 瑞吉外卖笔记: StudyNodes/Java/瑞吉外卖笔记.md
       - Nacos: StudyNodes/Java/Nacos安装指南.md
-
+    - Git:
+      - git: StudyNodes/Git/Git.md
+      - 1.1Git简易指南: StudyNodes/Git/2.1-Git简易指南(上).md
+      - 1.2创建代码仓库: StudyNodes/Git/2.2-创建代码仓库.md
+      - 1.3保存更改: StudyNodes/Git/2.3-保存你的更改.md
 
 # [Extensions]
 plugins:
