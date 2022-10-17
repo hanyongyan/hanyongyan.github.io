@@ -47,6 +47,13 @@ extra:
       link: https://github.com/hanyongyan
       name: GitHub | hanyongyan
 
+# [Navigtion]
+nav:
+  - 学习笔记: 
+    - StudyNodes/index.md
+    - Linux:
+      - Linux入门: StudyNodes/Linux/Linus.md
+
 
 # [Extensions]
 plugins:
