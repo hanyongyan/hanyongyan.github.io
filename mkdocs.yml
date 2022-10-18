@@ -74,6 +74,20 @@ nav:
       - 1.1Git简易指南: StudyNodes/Git/2.1-Git简易指南(上).md
       - 1.2创建代码仓库: StudyNodes/Git/2.2-创建代码仓库.md
       - 1.3保存更改: StudyNodes/Git/2.3-保存你的更改.md
+      - 1.4查看仓库状态: StudyNodes/Git/2.4-查看仓库状态.md
+      - 1.5检查以前的提交: StudyNodes/Git/2.5-检查以前的提交.md
+      - 1.6回滚错误的修改: StudyNodes/Git/2.6-回滚错误的修改.md
+      - 1.7重写项目历史: StudyNodes/Git/2.7-重写项目历史.md
+      - 2.1保持代码同步: StudyNodes/Git/3.2-保持代码同步.md
+      - 2.2创建PullRequest: StudyNodes/Git/3.3-创建PullRequest.md
+      - 2.3使用分支: StudyNodes/Git/3.4-使用分支.md
+      - 2.4常见工作流比较: StudyNodes/Git/常见工作流比较.md
+      - 3Git图解: StudyNodes/Git/4-Git图解.md
+      - 4.1代码合并Merge还是Rebase: StudyNodes/Git/5.1-代码合并Merge还是Rebase.md
+      - 4.2回滚命令: StudyNodes/Git/5.2-回滚命令Reset、Checkout、Revert辨析.md
+      - 4.3Git_log高级用法: StudyNodes/Git/5.3-Git_log高级用法.md
+      - 4.4Git钩子: StudyNodes/Git/5.4-Git钩子.md
+      - 4.5Git提交引用: StudyNodes/Git/5.5-Git提交引用.md
 
 # [Extensions]
 plugins:
