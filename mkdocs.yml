@@ -60,7 +60,7 @@ nav:
       - Ajax: StudyNodes/JS/Ajax.md
       - jQuery: StudyNodes/JS/jQuery.md
       - javaScript: StudyNodes/JS/JS.md
-      - TypeScript: StudyNodes/js/TypeScript基础笔记.md
+      - TypeScript: StudyNodes/JS/TypeScript基础笔记.md
       - nodejs: StudyNodes/JS/Node.js.md
     - java: 
       - JavaWeb: StudyNodes/Java/JavaWeb.md
