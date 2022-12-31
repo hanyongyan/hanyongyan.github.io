@@ -1,0 +1,1904 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="韩永琰的个人网站">
+      
+      
+        <meta name="author" content="韩永琰">
+      
+      
+        <link rel="canonical" href="https://hanyongyan.github.io/StudyNodes/JS/Ajax/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Ajax - 韩永琰的个人网站</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/no-footer.css">
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/unordered-list-symbols.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ajax" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="韩永琰的个人网站" class="md-header__button md-logo" aria-label="韩永琰的个人网站" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            韩永琰的个人网站
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Ajax
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+            </label>
+          
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hanyongyan/hanyongyan.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hanyongyan.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link md-tabs__link--active">
+        学习笔记
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="韩永琰的个人网站" class="md-nav__button md-logo" aria-label="韩永琰的个人网站" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    韩永琰的个人网站
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hanyongyan/hanyongyan.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hanyongyan.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../">学习笔记</a>
+          
+            <label for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="学习笔记" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          学习笔记
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1_2" type="checkbox" id="__nav_1_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_2">
+          Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Linux" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linux/Linux/" class="md-nav__link">
+        Linux入门
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linux/Vim/" class="md-nav__link">
+        Vim
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1_3" type="checkbox" id="__nav_1_3" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_3">
+          MySql
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="MySql" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          MySql
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MySql/MySQL%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        Mysql
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_4" type="checkbox" id="__nav_1_4" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_4">
+          js
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="js" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          js
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Ajax
+      </a>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jQuery/" class="md-nav__link">
+        jQuery
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../JS/" class="md-nav__link">
+        javaScript
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TypeScript%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        TypeScript
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Node.js/" class="md-nav__link">
+        nodejs
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1_5" type="checkbox" id="__nav_1_5" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_5">
+          java
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="java" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_5">
+          <span class="md-nav__icon md-icon"></span>
+          java
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java/JavaWeb/" class="md-nav__link">
+        JavaWeb
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java/Maven/" class="md-nav__link">
+        Maven
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java/MyBatis%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        MyBatis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java/MyBatisPlus/" class="md-nav__link">
+        MyBatisPlus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java/SSM/" class="md-nav__link">
+        SSM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java/%E7%91%9E%E5%90%89%E5%A4%96%E5%8D%96%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        瑞吉外卖笔记
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java/Nacos%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        Nacos
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1_6" type="checkbox" id="__nav_1_6" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_6">
+          Git
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Git" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_6">
+          <span class="md-nav__icon md-icon"></span>
+          Git
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/Git/" class="md-nav__link">
+        git
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/2.1-Git%E7%AE%80%E6%98%93%E6%8C%87%E5%8D%97%28%E4%B8%8A%29/" class="md-nav__link">
+        1.1Git简易指南
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/2.2-%E5%88%9B%E5%BB%BA%E4%BB%A3%E7%A0%81%E4%BB%93%E5%BA%93/" class="md-nav__link">
+        1.2创建代码仓库
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/2.3-%E4%BF%9D%E5%AD%98%E4%BD%A0%E7%9A%84%E6%9B%B4%E6%94%B9/" class="md-nav__link">
+        1.3保存更改
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/2.4-%E6%9F%A5%E7%9C%8B%E4%BB%93%E5%BA%93%E7%8A%B6%E6%80%81/" class="md-nav__link">
+        1.4查看仓库状态
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/2.5-检查以前的提交.md" class="md-nav__link">
+        1.5检查以前的提交
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/2.6-%E5%9B%9E%E6%BB%9A%E9%94%99%E8%AF%AF%E7%9A%84%E4%BF%AE%E6%94%B9/" class="md-nav__link">
+        1.6回滚错误的修改
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/2.7-%E9%87%8D%E5%86%99%E9%A1%B9%E7%9B%AE%E5%8E%86%E5%8F%B2/" class="md-nav__link">
+        1.7重写项目历史
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/3.2-%E4%BF%9D%E6%8C%81%E4%BB%A3%E7%A0%81%E5%90%8C%E6%AD%A5/" class="md-nav__link">
+        2.1保持代码同步
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/3.3-%E5%88%9B%E5%BB%BAPullRequest/" class="md-nav__link">
+        2.2创建PullRequest
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/3.4-%E4%BD%BF%E7%94%A8%E5%88%86%E6%94%AF/" class="md-nav__link">
+        2.3使用分支
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/常见工作流比较.md" class="md-nav__link">
+        2.4常见工作流比较
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/4-Git%E5%9B%BE%E8%A7%A3/" class="md-nav__link">
+        3Git图解
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/5.1-%E4%BB%A3%E7%A0%81%E5%90%88%E5%B9%B6Merge%E8%BF%98%E6%98%AFRebase/" class="md-nav__link">
+        4.1代码合并Merge还是Rebase
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/5.2-%E5%9B%9E%E6%BB%9A%E5%91%BD%E4%BB%A4Reset%E3%80%81Checkout%E3%80%81Revert%E8%BE%A8%E6%9E%90/" class="md-nav__link">
+        4.2回滚命令
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/5.3-Git_log%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/" class="md-nav__link">
+        4.3Git_log高级用法
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/5.4-Git%E9%92%A9%E5%AD%90/" class="md-nav__link">
+        4.4Git钩子
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/5.5-Git%E6%8F%90%E4%BA%A4%E5%BC%95%E7%94%A8/" class="md-nav__link">
+        4.5Git提交引用
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+  <a href="https://github.com/hanyongyan/hanyongyan.github.io/edit/main/docs/StudyNodes/JS/Ajax.md" title="编辑此页" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="ajax">什么是Ajax<a class="headerlink" href="#ajax" title="Permanent link">&para;</a></h1>
+<p>ajax能让我们轻松实现网页与服务器之间的数据交互 </p>
+<p>jQuery中发起ajax的三个常用请求</p>
+<ol>
+<li>$.get()获得数据</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="nx">$</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">url</span><span class="p">,[</span><span class="nx">data</span><span class="p">],[</span><span class="nx">callback</span><span class="p">])</span><span class="w"></span>
+</code></pre></div>
+<p>url：要请求的资源地址</p>
+<p>data：请求资源要携带的参数</p>
+<p>callback：请求成功时的回调函数</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// 无参请求</span><span class="w"></span>
+<span class="nx">$</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">res</span><span class="p">){</span><span class="w"></span>
+<span class="w"> </span><span class="c1">//res 代表请求的返回值</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
+<span class="c1">// 有参请求,此时传入的参数为 id 值为 1</span><span class="w"></span>
+<span class="c1">// 多个参数使用逗号分割</span><span class="w"></span>
+<span class="nx">$</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">url</span><span class="p">,{</span><span class="nx">id</span><span class="o">:</span><span class="mf">1</span><span class="p">},</span><span class="kd">function</span><span class="p">(</span><span class="nx">res</span><span class="p">){</span><span class="w"></span>
+
+<span class="p">})</span><span class="w"></span>
+</code></pre></div>
+<ol>
+<li>$.post() 上传数据</li>
+</ol>
+<p>功能单一，专门用来发起post请求，从而向服务器提交数据</p>
+<p><code>$.post(url,[data],[callback])</code></p>
+<p>url：提交数据的地址</p>
+<p>data：要提交的数据</p>
+<p>callback：数据提交成功时的回调函数</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// 无参请求</span><span class="w"></span>
+<span class="nx">$</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">res</span><span class="p">){</span><span class="w"></span>
+<span class="w"> </span><span class="c1">//res 代表请求的返回值</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
+<span class="c1">// 有参请求,此时传入的参数为 id 值为 1</span><span class="w"></span>
+<span class="c1">// 多个参数使用逗号分割</span><span class="w"></span>
+<span class="nx">$</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="nx">url</span><span class="p">,{</span><span class="nx">id</span><span class="o">:</span><span class="mf">1</span><span class="p">},</span><span class="kd">function</span><span class="p">(</span><span class="nx">res</span><span class="p">){</span><span class="w"></span>
+
+<span class="p">})</span><span class="w"></span>
+</code></pre></div>
+<ol>
+<li>$.ajax() 上传获得均可</li>
+</ol>
+<p>是一个功能比较综合的函数，它允许我们对Ajax请求进行更详细的配置</p>
+<div class="highlight"><pre><span></span><code><span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span><span class="w"></span>
+<span class="w">    </span><span class="nx">method</span><span class="o">:</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w">   </span><span class="c1">// 请求的方式，例如 GET 和 POST</span><span class="w"></span>
+<span class="w">    </span><span class="nx">url</span><span class="o">:</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w">      </span><span class="c1">// 请求的 URL 地址</span><span class="w"></span>
+<span class="w">    </span><span class="nx">data</span><span class="o">:</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// 这次请求要携带的数据 如果不需要数据可以省略</span><span class="w"></span>
+<span class="w">    </span><span class="nx">success</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">res</span><span class="p">){}</span><span class="w">  </span><span class="c1">// 请求成功之后的回调函数</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
+</code></pre></div>
+<h1 id="_1">接口<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>使用 ajax 请求数据时，被请求的 URL 地址，就叫做数据接口（简称接口），同时，每个接口必须有请求方式</p>
+<h2 id="_2">接口文档<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>顾名思义就是接口的说明文档，他是我们调用接口的依据。好的接口文档包含了对接口URL，参数以及输出内容的说明，卫门参照文档接口就能方便的知道接口的作用，以及接口如何进行调用</p>
+<p>合格的的接口文档应该包含以下六项内容</p>
+<ol>
+<li>接口名称：用来表示各个接口的简单说明</li>
+<li>接口URL：接口的调用地址</li>
+<li>调用方式</li>
+<li>参数格式：接口需要传递的参数，每个参数必须包含参数名称、参数类型、是否必选、参说说明</li>
+<li>相应格式：返回值的详细描述，一般包含数据名称、数据类型、说明三项内容</li>
+<li>返回示例（可选）：通过对象的形式，例句服务器返回数据的结构</li>
+</ol>
+<h1 id="form">form表单<a class="headerlink" href="#form" title="Permanent link">&para;</a></h1>
+<h2 id="form_1">form表单的基本使用<a class="headerlink" href="#form_1" title="Permanent link">&para;</a></h2>
+<p>表单在网页中主要负责数据采集功能，HTML中的 <code>&lt;from&gt;</code> 标签，就是用于采集用户输入的信息，并通过 <code>&lt;from&gt;</code> 标签的提交操作把采集到的信息提交到服务器端进行处理</p>
+<p>表单有三个基本部分组成</p>
+<ul>
+<li>表单标签：<code>&lt;from&gt;</code></li>
+<li>表单域：包含了文本框，密码框、隐藏框等</li>
+<li>表单按钮：<code>&lt;button&gt;</code></li>
+</ul>
+<h3 id="form_2">form标签的属性<a class="headerlink" href="#form_2" title="Permanent link">&para;</a></h3>
+<p>form标签用来采集数据，form标签的属性则是用来规定如何把采集到的数据发送到服务器</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>action</td>
+<td>URL地址</td>
+<td>规定提交表单时，向何处发送表单数据</td>
+</tr>
+<tr>
+<td>method</td>
+<td>get或post</td>
+<td>规定以何种方式把表单数据提交到action url</td>
+</tr>
+<tr>
+<td>enctype</td>
+<td>application/x-www-from-urlencode<br />dmultipart/form-data<br />text/plain</td>
+<td>规定在发送表单数据之前如何对器进行编码</td>
+</tr>
+<tr>
+<td>target</td>
+<td>_blank、_self、_parent、_top、_framename</td>
+<td>规定在何处打开action url</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>form表单在未指定action属性值的情况下，action的默认值为当前页面的 url 地址，当提交表单后，页面会立即跳转到指定的 url 地址</p>
+</li>
+<li>
+<p>target的默认值是 _self 表示在相同的框架中打开 action url</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_blank</td>
+<td>在新窗口中打开</td>
+</tr>
+<tr>
+<td>_self</td>
+<td>默认，在相同的框架中打开</td>
+</tr>
+<tr>
+<td>_parent</td>
+<td>在父框架集中打开（很少用</td>
+</tr>
+<tr>
+<td>_top</td>
+<td>在整个窗口中打开（很少用</td>
+</tr>
+<tr>
+<td>_framename</td>
+<td>在指定的框架中打开（很少用</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>method的默认值为get，表示通过 URL 地址的形式，把表单数据提交到 action URL</li>
+</ul>
+<p>get方式是和提交少量的、简单的数据，post方式是和用来提交大量的、复杂的、或包含文件上传的数据
+  实际开发中使用 post 提交方式用的最多，很少用get</p>
+<ul>
+<li>enctype：默认值是 application/x-www-from-urlencode，不需要文件上传时不填写此属性即可</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>application/x-www-from-urlencode</td>
+<td>在发送前编码所有字符（默认</td>
+</tr>
+<tr>
+<td>dmultipart/form-data</td>
+<td>不对字符编码<br />在使用<code>包含文件上传</code>控件的表单时，必须使用该值</td>
+</tr>
+<tr>
+<td>text/plain</td>
+<td>空格转换为 + 号，但不对特殊字符编码（很少用</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_3">表单的同步提交<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>通过点击submit按钮，触发表单提交的操作，从而使页面跳转到 action url的行为，叫做表单的同步提交。</p>
+<p>缺点：表单同步提交后，整个页面会发生跳转，跳转到 action url 所指向的地址，用户体验很差
+            同步提交后，页面之前的状态和数据会丢失</p>
+<p>解决方案：表单只负责采集数据，ajax负责将数据提交到服务器</p>
+<h2 id="ajax_1">通过ajax提交表单数据<a class="headerlink" href="#ajax_1" title="Permanent link">&para;</a></h2>
+<h3 id="_4">监听表单提交时间<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>jQuery中，可以使用如下两种方式，监听到表单的提交时间</p>
+<div class="highlight"><pre><span></span><code><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#form1&quot;</span><span class="p">).</span><span class="nx">submit</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// ...</span><span class="w"></span>
+<span class="w">    </span><span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">()</span><span class="w"> </span><span class="c1">// 阻止默认的提交事件，即防止跳转</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
+
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#form1&quot;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;submit&quot;</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// ...</span><span class="w"></span>
+<span class="w">    </span><span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">()</span><span class="w"> </span><span class="c1">// 阻止默认的提交事件，即防止跳转</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
+</code></pre></div>
+<p>为了简化表单中数据的获取操作，jQuery提供了 <code>serialize()</code> 函数，其语法格式如下 <code>$(selector).serialize()</code>，可以一次性获取到表单中的所有数据，使用此函数时必须为每个表单元素添加name属性！</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span> <span class="na">id </span><span class="o">=</span> <span class="s">&quot;form1&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name </span><span class="o">=</span> <span class="s">&quot;user_name&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">name </span><span class="o">=</span> <span class="s">&quot;password&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span><span class="p">&gt;</span>提交<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#form1&quot;</span><span class="p">).</span><span class="nx">submit</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="w"></span>
+<span class="w">    </span><span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">serialize</span><span class="p">();</span><span class="c1">// 获取到了数据</span><span class="w"></span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+<h2 id="_5">模板引擎的基本概念<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>模板引擎可以解决字符串拼接的形式渲染UI结构</p>
+<p>模板引擎，顾名思义，它可以根据程序员指定的模板结构和数据，自动生成一个完整的HTML页面
+<img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220924121758471.png" alt="image-20220924121758471" style="zoom:50%;" /></p>
+<p>模板引擎的好处：</p>
+<ol>
+<li>减少了字符串的拼接操作</li>
+<li>使代码结构更清晰</li>
+<li>使代码更易于阅读与维护</li>
+</ol>
+<h2 id="art-template">art-template模板引擎<a class="headerlink" href="#art-template" title="Permanent link">&para;</a></h2>
+<p>中文官网：http://aui.github.io/art-template/zh-cn/index.html</p>
+<p>语法可在官网官方文档里面查看，下面有简单的基本语法</p>
+<p>先将art-template下载到本地，然后通过<script>标签加载到网页上使用</p>
+<p>art-template使用步骤</p>
+<ol>
+<li>导入 art-template</li>
+<li>定义数据</li>
+<li>定义模板</li>
+<li>调用template函数（需要两个参数，数据和模板</li>
+<li>渲染HTML结构</li>
+</ol>
+<div class="highlight"><pre><span></span><code>  <span class="cm">&lt;!-- 1. 导入模板引擎 --&gt;</span>
+  <span class="cm">&lt;!-- 在 window 全局，多一个函数，叫做 template(&#39;模板的Id&#39;, 需要渲染的数据对象) --&gt;</span>
+  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;./lib/template-web.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+  <span class="cm">&lt;!--导入jQuery--&gt;</span>
+  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;./lib/jquery.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+  <span class="cm">&lt;!-- 3. 定义模板 --&gt;</span>
+  <span class="cm">&lt;!-- 3.1 模板的 HTML 结构，必须定义到 script 中 --&gt;</span>
+  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/html&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;tpl-user&quot;</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="c">&lt;!--</span><span class="p">{{}}</span><span class="w"> </span><span class="nx">代表占位符</span><span class="o">--&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="p">{{</span><span class="nx">name</span><span class="p">}}</span><span class="w">    </span><span class="o">------</span><span class="w">    </span><span class="p">{{</span><span class="nx">age</span><span class="p">}}</span><span class="o">&lt;</span><span class="err">/h1&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="p">{{</span><span class="err">@</span><span class="w"> </span><span class="nx">test</span><span class="p">}}</span><span class="w"></span>
+
+<span class="w">    </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="w"></span>
+<span class="w">      </span><span class="p">{{</span><span class="k">if</span><span class="w"> </span><span class="nx">flag</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">}}</span><span class="w"></span>
+<span class="w">      </span><span class="nx">flag的值是0</span><span class="w"></span>
+<span class="w">      </span><span class="p">{{</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">flag</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">1</span><span class="p">}}</span><span class="w"></span>
+<span class="w">      </span><span class="nx">flag的值是1</span><span class="w"></span>
+<span class="w">      </span><span class="p">{{</span><span class="err">/if}}</span><span class="w"></span>
+<span class="w">    </span><span class="o">&lt;</span><span class="err">/div&gt;</span><span class="w"></span>
+
+<span class="w">    </span><span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span><span class="w"></span>
+<span class="w">      </span><span class="p">{{</span><span class="nx">each</span><span class="w"> </span><span class="nx">hobby</span><span class="p">}}</span><span class="w"></span>
+<span class="w">      </span><span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;</span><span class="nx">索引是</span><span class="o">:</span><span class="p">{{</span><span class="nx">$index</span><span class="p">}}</span><span class="err">，</span><span class="nx">循环项是</span><span class="o">:</span><span class="p">{{</span><span class="nx">$value</span><span class="p">}}</span><span class="o">&lt;</span><span class="err">/li&gt;</span><span class="w"></span>
+<span class="w">      </span><span class="p">{{</span><span class="err">/each}}</span><span class="w"></span>
+<span class="w">    </span><span class="o">&lt;</span><span class="err">/ul&gt;</span><span class="w"></span>
+
+<span class="w">    </span><span class="o">&lt;</span><span class="nx">h3</span><span class="o">&gt;</span><span class="p">{{</span><span class="nx">regTime</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">dateFormat</span><span class="p">}}</span><span class="o">&lt;</span><span class="err">/h3&gt;</span><span class="w"></span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// 定义处理时间的过滤器</span><span class="w"></span>
+<span class="w">    </span><span class="nx">template</span><span class="p">.</span><span class="nx">defaults</span><span class="p">.</span><span class="nx">imports</span><span class="p">.</span><span class="nx">dateFormat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">date</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">date</span><span class="p">.</span><span class="nx">getFullYear</span><span class="p">()</span><span class="w"></span>
+<span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">date</span><span class="p">.</span><span class="nx">getMonth</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="w"></span>
+<span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">date</span><span class="p">.</span><span class="nx">getDate</span><span class="p">()</span><span class="w"></span>
+
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;-&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">m</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;-&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">d</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+
+<span class="w">    </span><span class="c1">// 2. 定义需要渲染的数据</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;zs&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">age</span><span class="o">:</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="nx">test</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;h3&gt;测试原文输出&lt;/h3&gt;&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">flag</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">hobby</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;吃饭&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;睡觉&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;写代码&#39;</span><span class="p">],</span><span class="w"> </span><span class="nx">regTime</span><span class="o">:</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">()</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 4. 调用 template 函数</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// 返回值是一个渲染好的 HTML 文档</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">htmlStr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">template</span><span class="p">(</span><span class="s1">&#39;tpl-user&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">htmlStr</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// 5. 渲染HTML结构</span><span class="w"></span>
+<span class="w">    </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#container&#39;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">htmlStr</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>标准语法</p>
+<ol>
+<li>
+<p>输出 ：<code>{{}}</code> 在{{}}语法中，可以进行变量的输出，对象属性的输出、三元表达式输出、逻辑或输出、加减乘除等表达式输出</p>
+</li>
+<li>
+<p>原文输出：<code>{{@ value}}</code> 如果要输出的value值中，包含了HTML标签结构，则需要使用原文输出语法，才能保证HTML标签能够被正常解析</p>
+</li>
+<li>
+<p>条件输出：在{{}}中使用 if... else if... /if的方式，进行按需输出</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code>{{if value}} 按需输出的内容 {{/if}}
+{{if v1}} 按需输出的内容 {{else if v2}} 按需输出的内容 {{/if}}
+//上面的代码中含有此例子
+</code></pre></div>
+<ol>
+<li>
+<p>循环输出：在{{}}内，通过each语法遍历循环数组，当前循环的索引使用 $index 进行访问，当前的循环项使用 $value 进行访问，具体代码上面28行</p>
+</li>
+<li>
+<p>过滤器：过滤器的本质就是一个 function 处理函数
+   <img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220924131556725.png" alt="image-20220924131556725" style="zoom: 67%;" /></p>
+</li>
+</ol>
+<p>代码在上面代码 33 和 38 行</p>
+<p>定义过滤器的基本语法如下：filterName自定义</p>
+<p><code>template.defaults.imports.filterName = function(value){ /* return 处理的结果*/}</code></p>
+<p>使用过滤器 <code>{{value | filterName}}</code></p>
+<h1 id="ajax_2">Ajax加强<a class="headerlink" href="#ajax_2" title="Permanent link">&para;</a></h1>
+<h2 id="xmlhttprequest">XMLHttpRequest的基本使用<a class="headerlink" href="#xmlhttprequest" title="Permanent link">&para;</a></h2>
+<p>XMLHttpRequest（简称 xhr）是浏览器提供的 JavaScript 对象，通过它，可以请求<font color="#dd0000">服务器上的数据资源</font>。之前所学的jQuery中的Ajax函数，就是基于 xhr 对象封装出来的
+<img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220924210559947.png" alt="image-20220924210559947" style="zoom: 67%;" /></p>
+<p>使用步骤</p>
+<h3 id="get">发起GET请求<a class="headerlink" href="#get" title="Permanent link">&para;</a></h3>
+<ol>
+<li>创建 xhr 对象</li>
+<li>调用 xhr.open() 函数</li>
+<li>调用 xhr.send() 函数</li>
+<li>监听 xhr.onreadystatechange 事件</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="c1">// 1.创建 XHR 对象</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">xhr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">XMlHttpRequest</span><span class="p">();</span><span class="w"></span>
+<span class="c1">// 2.调用 open 函数，使用参数时在URL中添加，被称为查询字符串</span><span class="w"></span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">请求方式</span><span class="p">,</span><span class="nx">URL</span><span class="p">);</span><span class="w"></span>
+<span class="c1">// 3.调用 send 函数</span><span class="w"></span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">();</span><span class="w"></span>
+<span class="c1">// 4.监听 onreadystatechange  事件</span><span class="w"></span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">onreadystatechange</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(){</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// 固定写法，请求成功的情况</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">readyState</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">4</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">200</span><span class="p">){</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// 获取服务器响应的数据</span><span class="w"></span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">responseText</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>XMLHttpRequest对象的readyState属性，用来表示当前 Ajax 请求所处的状态。每个 Ajax 请求必然处于以下状态中的一个：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>状态</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>UNSENT</td>
+<td>XMLHttpRequest 对象已被创建，但尚未调用 open 方法</td>
+</tr>
+<tr>
+<td>1</td>
+<td>OPENED</td>
+<td>open 方法已被调用</td>
+</tr>
+<tr>
+<td>2</td>
+<td>HEADERS_RECEIVED</td>
+<td>send 方法已经被调用，响应头也已经被接受</td>
+</tr>
+<tr>
+<td>3</td>
+<td>LOADING</td>
+<td>数据接收中，此时 response 属性中已经包含部分数据</td>
+</tr>
+<tr>
+<td>4</td>
+<td>DONE</td>
+<td>Ajax 请求完成，这意味着数据传输已经彻底完成或失败</td>
+</tr>
+</tbody>
+</table>
+<p>查询字符串（上面代码第三行）：查询字符串（URL参数）是指在URL末尾加上用于香服务器发送信息的字符串（变量）</p>
+<p>格式：讲英文的?放在URL的末尾，然后再加上<font color="#dd0000">参数=值</font>，想要加上多个参数的花，使用 &amp; 符号进行分割。以这个形式，可以将想要发送给服务器的数据添加到URL中</p>
+<h3 id="post">发起POST请求<a class="headerlink" href="#post" title="Permanent link">&para;</a></h3>
+<p>步骤</p>
+<ol>
+<li>创建 xhr 对象</li>
+<li>调用 xhr.open() 函数</li>
+<li>设置 Content-Type 属性 （固定写法）</li>
+<li>调用 xhr.send() 函数</li>
+<li>监听 xhr.onreadystatechange 事件
+   <img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220924220215247.png" alt="image-20220924220215247" style="zoom:50%;" /></li>
+</ol>
+<h3 id="url">URL编码<a class="headerlink" href="#url" title="Permanent link">&para;</a></h3>
+<p>URL地址中，只允许出现英文相关的字母、标点符号、数字，因此，在URL地址中不允许出现中文字符
+如果URL中需要包含中文这样的字符，则必须对中文字符进行编码（转义）</p>
+<p><font color="#dd0000">URL编码的原则：</font>使用安全的字符（没有特殊用途或者特殊意义的可打印字符）去表示那些不安全的字符
+编码原则的通俗理解：使用英文字符去表示非英文字符</p>
+<p>浏览器提供了URL编码与解码的API，分别时：</p>
+<ul>
+<li><code>encodeURI()</code>编码的函数</li>
+<li><code>decodeURI()</code>解码的函数</li>
+</ul>
+<h2 id="_6">数据交换格式<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p>数据交换格式，就是服务器端与客户端之间进行数据传输与交换的格式</p>
+<p>前端领域，经常提及的两种数据交换格式分别是 XML 和 JSON 。其中 XML 用的非常少，重点学习数据交换格式 JSON
+<img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220924220913725.png" alt="image-20220924220913725" style="zoom:50%;" /></p>
+<p>JSON中包含对象和数组两种结构，通过这两种结构的相互嵌套，可以表示各种复杂的数据结构
+<img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220924221032077.png" alt="image-20220924221032077" style="zoom:50%;" />
+<img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220924221219735.png" alt="image-20220924221219735" style="zoom:50%;" /></p>
+<p>JSON语法注意事项</p>
+<ul>
+<li>属性名必须使用双引号包裹</li>
+<li>字符串类型的值必须使用双引号包裹</li>
+<li>JSON 中不允许使用单引号表示字符串</li>
+<li>JSON 中不能写注释</li>
+<li>JSON 的最外层必须时对象或数组格式</li>
+<li>不能使用 undefined 或函数作为 JSON 的值</li>
+</ul>
+<p>JSON的作用：在计算机与网络之间存储和传输数据
+JSON的本质：用字符串来表示 Javascript 对象数据或数组数据</p>
+<p>JSON和JS对象的关系：JSON 是 JS 对象的字符串表示法，它使用文本表示一个 JS 对象的信息，本质是一个字符串</p>
+<h3 id="jsonjs">JSON和JS对象互转<a class="headerlink" href="#jsonjs" title="Permanent link">&para;</a></h3>
+<p>实现从 JSON 字符串转换为 JS 对象 使用 <code>JSON.parse()</code>方法</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="s1">&#39;{&quot;a&quot;:&quot;Hello!&quot;,&quot;b&quot;:&quot;World!&quot;}&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="c1">// 将里面的 JSON 风格的字符串转换为 js对象</span><span class="w"></span>
+</code></pre></div>
+<p>JS 对象转换为 JSON 字符串，使用 <code>JSON.stringfy()</code> 方法</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">a</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Hello!&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;World!&#39;</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">str1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">obj</span><span class="p">);</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">str1</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<blockquote>
+<p>序列化和反序列化</p>
+</blockquote>
+<p>把数据对象转换为字符串的过程，叫做序列化。例如调用JSON.stringify()函数的操作</p>
+<p>把字符串转换为数据对象的过程，叫做反序列化</p>
+<h2 id="ajax_3">封装自己的Ajax函数<a class="headerlink" href="#ajax_3" title="Permanent link">&para;</a></h2>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220924223733454.png" alt="image-20220924223733454" style="zoom:50%;" />
+<img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220924223813791.png" alt="image-20220924223813791" style="zoom:67%;" />
+<img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220924223949802.png" alt="image-20220924223949802" style="zoom:50%;" /><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220924231505226.png" alt="image-20220924231505226" style="zoom:50%;" /></p>
+<p>判断请求的类型</p>
+<p>不同的请求类型，对应 xhr 对象的不同操作，因此需要对请求类型进行 if... eles ... 的判断
+<img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220924232037104.png" alt="image-20220924232037104" style="zoom:50%;" /></p>
+<h2 id="xmlhttprequest-level2">XMLHttpRequest Level2的新特性<a class="headerlink" href="#xmlhttprequest-level2" title="Permanent link">&para;</a></h2>
+<p>旧版XMLHttpRequest 的缺点</p>
+<ol>
+<li>只支持文本数据的传输，无法用来读取和上传文件</li>
+<li>传送和接收数据时，没有进度信息，只能提示有没有完成</li>
+</ol>
+<p>XMLHttpRequest Level2的新特性</p>
+<ol>
+<li>可以设置 HTTP 请求的时限</li>
+<li>可以使用 FormData 对象管理表单数据</li>
+<li>可以上传文件</li>
+<li>可以获得数据传输的进度信息</li>
+</ol>
+<p>有时候，ajax操作很耗时，而且无法预知要花多少时间，如果网速很慢，用户可能要等很久，新版本的 XMLHttpRequest 对象，增加了 timeout 属性，可以设置 HTTP 请求的时限</p>
+<p><code>xhr.timeout = 3000</code>单位是 ms，过了这个时限，就自动停止 HTTP 请求，与之配套的还有一个 timeout 事件，用来指定回调函数</p>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220925105805112.png" alt="image-20220925105805112" style="zoom:50%;" /></p>
+<h3 id="formdata">FormData对象管理表单数据<a class="headerlink" href="#formdata" title="Permanent link">&para;</a></h3>
+<p>Ajax操作往往用来提交表单数据，为了方便表单处理，HTML5 新增了一个 FOrmData 对象，可以模拟表单操作</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// 1.创建 FormData 对象</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">fd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">FormData</span><span class="p">();</span><span class="w"></span>
+<span class="c1">// 2.为 FormData 添加表单项</span><span class="w"></span>
+<span class="nx">fd</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">&quot;uanem&quot;</span><span class="p">,</span><span class="s2">&quot;zs&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="nx">fd</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">&quot;upwd&quot;</span><span class="p">,</span><span class="s2">&quot;123456&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="c1">// 3.创建 XHR 对象</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">xhr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">XMLHttpRequest</span><span class="p">();</span><span class="w"></span>
+<span class="c1">// 4.指定请求类型与URL地址</span><span class="w"></span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;POST&quot;</span><span class="p">,</span><span class="nx">URL</span><span class="p">);</span><span class="w"></span>
+<span class="c1">// 5.直接提交 FormData 对象，这与提交网页表单的效果，完全一样</span><span class="w"></span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">fd</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>FormData对象也可以用来获取网页表单的值，示例代码如下：
+<img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220925111101443.png" alt="image-20220925111101443" style="zoom:50%;" /></p>
+<h3 id="_7">上传文件<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>新版本XMLHttpResquest对象，不仅可以发送文本信息，还可以上传文件</p>
+<p>实现步骤：</p>
+<ol>
+<li>定义 UI 结构 （即页面结构）</li>
+<li>验证是否选择了文件</li>
+<li>向 FormData 中追加文件</li>
+<li>使用 xhr 发起上传文件的请求</li>
+<li>监听 onreadystatechange 事件</li>
+</ol>
+<p>示例：</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="cm">&lt;!-- 1. 文件选择框 --&gt;</span>
+  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;file&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;file1&quot;</span> <span class="p">/&gt;</span>
+  <span class="cm">&lt;!-- 2. 上传文件的按钮 --&gt;</span>
+  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;btnUpload&quot;</span><span class="p">&gt;</span>上传文件<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+  <span class="cm">&lt;!-- 3. img 标签，来显示上传成功以后的图片 --&gt;</span>
+  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;img&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;800&quot;</span> <span class="p">/&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// 1. 获取到文件上传按钮</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">btnUpload</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#btnUpload&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// 2. 为按钮绑定单击事件处理函数</span><span class="w"></span>
+<span class="w">    </span><span class="nx">btnUpload</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="c1">// 3. 获取到用户选择的文件列表</span><span class="w"></span>
+<span class="w">      </span><span class="c1">// 获取到的是一个数组</span><span class="w"></span>
+<span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">files</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#file1&#39;</span><span class="p">).</span><span class="nx">files</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">files</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;请选择要上传的文件！&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">fd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">FormData</span><span class="p">()</span><span class="w"></span>
+<span class="w">      </span><span class="c1">// 将用户选择的文件，添加到 FormData 中</span><span class="w"></span>
+<span class="w">      </span><span class="nx">fd</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;avatar&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">files</span><span class="p">[</span><span class="mf">0</span><span class="p">])</span><span class="w"></span>
+
+<span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">xhr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">XMLHttpRequest</span><span class="p">()</span><span class="w"></span>
+<span class="w">      </span><span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;POST&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;http://www.liulongbin.top:3006/api/upload/avatar&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">fd</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">      </span><span class="nx">xhr</span><span class="p">.</span><span class="nx">onreadystatechange</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">readyState</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">4</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">200</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="kd">var</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">responseText</span><span class="p">)</span><span class="w"></span>
+<span class="w">          </span><span class="c1">// 查看 返回了什么数据</span><span class="w"></span>
+<span class="w">          </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span><span class="w"></span>
+<span class="w">          </span><span class="c1">// 此处是查看从服务器返回来的信息</span><span class="w"></span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">status</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">200</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// 上传成功，url地址是由服务器返回来的</span><span class="w"></span>
+<span class="w">            </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#img&#39;</span><span class="p">).</span><span class="nx">src</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;http://www.liulongbin.top:3006&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">data</span><span class="p">.</span><span class="nx">url</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// 上传失败</span><span class="w"></span>
+<span class="w">            </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;图片上传失败！&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">data</span><span class="p">.</span><span class="nx">message</span><span class="p">)</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">})</span><span class="w"></span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="_8">显示上传进度<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>可以通过监听他 xhr.upload.onprogress 事件，来获取到文件的上传进度。
+语法格式如下：
+<img alt="image-20220925113746590" src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220925113746590.png" /></p>
+<h2 id="jquery">jQuery高级用法<a class="headerlink" href="#jquery" title="Permanent link">&para;</a></h2>
+<h3 id="jquery_1">jQuery上传文件<a class="headerlink" href="#jquery_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code> <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;file&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;file1&quot;</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;btnUpload&quot;</span><span class="p">&gt;</span>上传文件<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#btnUpload&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">files</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#file1&#39;</span><span class="p">)[</span><span class="mf">0</span><span class="p">].</span><span class="nx">files</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">files</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="k">return</span><span class="w"> </span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;请选择文件后再上传！&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">fd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">FormData</span><span class="p">()</span><span class="w"></span>
+<span class="w">        </span><span class="nx">fd</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;avatar&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">files</span><span class="p">[</span><span class="mf">0</span><span class="p">])</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// 发起 jQuery 的 Ajax 请求，上传文件</span><span class="w"></span>
+<span class="w">        </span><span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span><span class="w"></span>
+<span class="w">          </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;POST&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;http://www.liulongbin.top:3006/api/upload/avatar&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="nx">fd</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nx">processData</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nx">contentType</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nx">success</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">})</span><span class="w"></span>
+<span class="w">      </span><span class="p">})</span><span class="w"></span>
+
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="jqueryloading">jQuery实现loading效果<a class="headerlink" href="#jqueryloading" title="Permanent link">&para;</a></h3>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220925125807947.png" alt="image-20220925125807947" style="zoom:50%;" /></p>
+<p>附加到文档即只能添加到document身上，注意 <code>$(document).ajaxStart()</code>函数会监听文档内的所有 AJax 请求</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;file&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;file1&quot;</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;btnUpload&quot;</span><span class="p">&gt;</span>上传文件<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;./images/loading.gif&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;display: none;&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;loading&quot;</span> <span class="p">/&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="c1">// 监听到Ajax请求被发起了</span><span class="w"></span>
+<span class="w">      </span><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ajaxStart</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#loading&#39;</span><span class="p">).</span><span class="nx">show</span><span class="p">()</span><span class="w"></span>
+<span class="w">      </span><span class="p">})</span><span class="w"></span>
+
+<span class="w">      </span><span class="c1">// 监听到 Ajax 完成的事件</span><span class="w"></span>
+<span class="w">      </span><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ajaxStop</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#loading&#39;</span><span class="p">).</span><span class="nx">hide</span><span class="p">()</span><span class="w"></span>
+<span class="w">      </span><span class="p">})</span><span class="w"></span>
+
+<span class="w">      </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#btnUpload&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">files</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#file1&#39;</span><span class="p">)[</span><span class="mf">0</span><span class="p">].</span><span class="nx">files</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">files</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="k">return</span><span class="w"> </span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;请选择文件后再上传！&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">fd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">FormData</span><span class="p">()</span><span class="w"></span>
+<span class="w">        </span><span class="nx">fd</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;avatar&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">files</span><span class="p">[</span><span class="mf">0</span><span class="p">])</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// 发起 jQuery 的 Ajax 请求，上传文件</span><span class="w"></span>
+<span class="w">        </span><span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span><span class="w"></span>
+<span class="w">          </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;POST&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;http://www.liulongbin.top:3006/api/upload/avatar&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="nx">fd</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nx">processData</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nx">contentType</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nx">success</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">})</span><span class="w"></span>
+<span class="w">      </span><span class="p">})</span><span class="w"></span>
+<span class="w">    </span><span class="p">})</span><span class="w"></span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</code></pre></div>
+<h1 id="axios">axios<a class="headerlink" href="#axios" title="Permanent link">&para;</a></h1>
+<p>中文文档：<a href="https://www.axios-http.cn/docs/intro">起步 | Axios 中文文档 | Axios 中文网 (axios-http.cn)</a></p>
+<p>Axios 是专注于网络数据请求的库。</p>
+<p>相比于原生的 XMLHttpRequest对象，Axios简单易用，相比于 jQuery，Axios更加轻量化，只专注与网络数据请求</p>
+<p><strong>axios发起GET请求</strong></p>
+<p>语法：<code>axios.get("url",{params:{ /* 参数 */}}).then(cacllback)</code></p>
+<p>具体的请求示例如下：</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// 请求的 URL 地址</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;http://www.liulongbin.top:3006/api/get&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="c1">// 请求的参数对象</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">paramsObj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;zs&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">age</span><span class="o">:</span><span class="w"> </span><span class="mf">20</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="c1">// 调用 axios.get() 发起 GET 请求</span><span class="w"></span>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">params</span><span class="o">:</span><span class="w"> </span><span class="nx">paramsObj</span><span class="w"> </span><span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// res.data 是服务器返回的数据</span><span class="w"></span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">)</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
+</code></pre></div>
+<p><strong>axios发起POST请求</strong></p>
+<p>语法：<code>axios.post("url",{ /* 参数 */ }).then(callback)</code></p>
+<p>具体请求示例如下：</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;http://www.liulongbin.top:3006/api/post&#39;</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">dataObj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">address</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;北京&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">location</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;顺义区&#39;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="nx">axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span><span class="w"> </span><span class="nx">dataObj</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">)</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
+</code></pre></div>
+<p><strong>直接使用axios发起请求</strong></p>
+<p>语法：</p>
+<div class="highlight"><pre><span></span><code><span class="nx">axios</span><span class="p">({</span><span class="w"></span>
+<span class="w">    </span><span class="nx">method</span><span class="o">:</span><span class="s2">&quot;请求类型&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nx">url</span><span class="o">:</span><span class="s2">&quot;URL地址&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nx">data</span><span class="o">:</span><span class="p">{</span><span class="w"> </span><span class="cm">/* POST数据 */</span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nx">params</span><span class="o">:</span><span class="p">{</span><span class="w"> </span><span class="cm">/* GET参数 */</span><span class="p">}</span><span class="w"></span>
+<span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>两个示例</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// POST请求</span><span class="w"></span>
+<span class="nx">axios</span><span class="p">({</span><span class="w"></span>
+<span class="w">  </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;POST&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;http://www.liulongbin.top:3006/api/post&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;娃哈哈&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nx">age</span><span class="o">:</span><span class="w"> </span><span class="mf">18</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nx">gender</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;女&#39;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">)</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
+
+<span class="c1">// GET请求</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;http://www.liulongbin.top:3006/api/get&#39;</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">paramsData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;钢铁侠&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">age</span><span class="o">:</span><span class="w"> </span><span class="mf">35</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="nx">axios</span><span class="p">({</span><span class="w"></span>
+<span class="w">  </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;GET&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="nx">url</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nx">params</span><span class="o">:</span><span class="w"> </span><span class="nx">paramsData</span><span class="w"></span>
+<span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">)</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
+</code></pre></div>
+<h1 id="jsonp">跨域与JSONP<a class="headerlink" href="#jsonp" title="Permanent link">&para;</a></h1>
+<h2 id="_9">同源策略<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<p>如果两个页面的协议，域名和端口<font color="#dd0000">都</font>相同，则两个页面具有相同的源
+<img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220925134656136.png" alt="image-20220925134656136" style="zoom:67%;" /></p>
+<p>同源策略：是浏览器提供的一个安全功能。
+同源策略限制了从一个元加载的文档或脚本如何与来自另一个源的资源进行交互。这是一个用于隔离潜在而已文件的重要安全机制。<font color="#dd0000">即</font>浏览器规定，A网站的JavaScript，不允许和非同源的网站C之间，进行资源的交互</p>
+<ol>
+<li>无法读取非同源网页的 Cookie、LocalStorage 和 IndexedDB</li>
+<li>无法接触非同源网页的 DOM</li>
+<li>无法向非同源地址发送 ajax 请求</li>
+</ol>
+<h2 id="_10">跨域<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<h3 id="_11">什么是跨域<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p>同源指的是两个 URL 的协议、域名、端口一致，反之，则是跨域。</p>
+<p>出现跨域的根本原因：浏览器的同源策略不允许非同源的 URL 之间进行资源的交互。</p>
+<h3 id="_12">浏览器对跨域请求的拦截<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220925153829813.png" alt="image-20220925153829813" style="zoom: 50%;" /></p>
+<p>注意：浏览器允许发起跨域请求，但是，跨域请求回来的数据，会被浏览器拦截，无法被页面获取到！</p>
+<h3 id="_13">如何实现跨域数据请求<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p>现如今，实现跨域数据请求，最主要的两种解决方案，分别是 JSONP 和 CORS</p>
+<p>JSONP：出现的早，兼容性好，是前端程序员为了解决跨域问题，被迫想出来的一种临时解决方案。确实是只支持 GET 请求，不支持 POST 请求</p>
+<p>CORS：出现的较晚，它是 W3C 标准，属于跨域 Ajax 请求的根本解决方案。支持 GET 和 POST 请求，缺点是不兼容某些低版本的浏览器。</p>
+<h2 id="jsonp_1">JSONP<a class="headerlink" href="#jsonp_1" title="Permanent link">&para;</a></h2>
+<p>JSONP是 JSON 的一种使用模式，可用于解决主流浏览器的跨域数据访问的问题</p>
+<p>JSONP的实现原理：
+        由于浏览器同源策略的限制，网页中无法通过 Ajax 请求非同源的接口数据，但是 \<script> 标签不受浏览器同源策略的影响，可以通过 src 属性， 请求非同源的 js 脚本。
+        因此，JSONP的实现原理，就是通过 \<script> 标签的 src 属性，请求跨域的数据接口，并通过函数调用的形式，接受跨域接口响应回来的数据</p>
+<h1 id="_14">节流<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h1>
+<p>节流策略：顾名思义，可以减少一段时间内事件的触发频率</p>
+<p>节流的应用场景：</p>
+<ol>
+<li>鼠标连续不断的触发某事件（如点击），只在单位时间内触发一次</li>
+<li>懒加载是要监听计算滚动条的位置，但不必每次华东都出发，可以降低计算的频率，而不必去浪费CPU</li>
+</ol>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      
+        
+        <a href="../../MySql/MySQL%E7%AC%94%E8%AE%B0/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Mysql" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              Mysql
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../jQuery/" class="md-footer__link md-footer__link--next" aria-label="下一页: jQuery" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              jQuery
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 韩永琰
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    <a href="https://space.bilibili.com/358218864" target="_blank" rel="noopener" title="Bilibili | 愿你决定" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92.02c-26.45-.8-48.21-9.8-65.28-27.2C9.682 419.4.767 396.5 0 368.2V169.8c.767-26 9.682-47.6 26.74-65.7C43.81 87.75 65.57 78.77 92.02 78h29.38L96.05 52.19c-5.75-5.73-8.63-13-8.63-21.79 0-8.8 2.88-16.06 8.63-21.797C101.8 2.868 109.1 0 117.9 0s16.1 2.868 21.9 8.603L213.1 78h88l74.5-69.397C381.7 2.868 389.2 0 398 0c8.8 0 16.1 2.868 21.9 8.603 5.7 5.737 8.6 12.997 8.6 21.797 0 8.79-2.9 16.06-8.6 21.79L394.6 78h29.3c26.4.77 48 9.75 64.7 26.1zm-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96.05c-9.59.4-17.45 3.7-23.58 9.8-6.14 6.1-9.4 13.9-9.78 23.5v194.4c0 9.2 3.26 17 9.78 23.5s14.38 9.8 23.58 9.8H416.4c9.2 0 17-3.3 23.3-9.8 6.3-6.5 9.7-14.3 10.1-23.5V173.8zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5-9.6 0-17.5-3.2-23.6-9.5-6.1-6.3-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2 6.3-6.3 13.2-9.6 23.3-10 9.2.4 17 3.7 23.3 10zm191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.1 6.3-14 9.5-23.6 9.5-9.6 0-17.4-3.2-23.6-9.5-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2 6.3-6.3 14.1-9.6 23.3-10 9.2.4 17 3.7 23.3 10z"/></svg>
+    </a>
+  
+    
+    
+    <a href="https://github.com/hanyongyan" target="_blank" rel="noopener" title="GitHub | hanyongyan" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+        <script src="../../../mkdocs/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+    
+  </body>
+</html>

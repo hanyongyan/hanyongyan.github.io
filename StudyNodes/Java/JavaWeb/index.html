@@ -1,0 +1,3838 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="韩永琰的个人网站">
+      
+      
+        <meta name="author" content="韩永琰">
+      
+      
+        <link rel="canonical" href="https://hanyongyan.github.io/StudyNodes/Java/JavaWeb/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>JavaWeb - 韩永琰的个人网站</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/no-footer.css">
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/unordered-list-symbols.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#java-web" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="韩永琰的个人网站" class="md-header__button md-logo" aria-label="韩永琰的个人网站" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            韩永琰的个人网站
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              JavaWeb
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+            </label>
+          
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hanyongyan/hanyongyan.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hanyongyan.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link md-tabs__link--active">
+        学习笔记
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="韩永琰的个人网站" class="md-nav__button md-logo" aria-label="韩永琰的个人网站" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    韩永琰的个人网站
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hanyongyan/hanyongyan.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hanyongyan.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../">学习笔记</a>
+          
+            <label for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="学习笔记" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          学习笔记
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1_2" type="checkbox" id="__nav_1_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_2">
+          Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Linux" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linux/Linux/" class="md-nav__link">
+        Linux入门
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linux/Vim/" class="md-nav__link">
+        Vim
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1_3" type="checkbox" id="__nav_1_3" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_3">
+          MySql
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="MySql" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          MySql
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MySql/MySQL%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        Mysql
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1_4" type="checkbox" id="__nav_1_4" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_4">
+          js
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="js" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          js
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JS/Ajax/" class="md-nav__link">
+        Ajax
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JS/jQuery/" class="md-nav__link">
+        jQuery
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JS/JS/" class="md-nav__link">
+        javaScript
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JS/TypeScript%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        TypeScript
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JS/Node.js/" class="md-nav__link">
+        nodejs
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5" type="checkbox" id="__nav_1_5" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_5">
+          java
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="java" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_5">
+          <span class="md-nav__icon md-icon"></span>
+          java
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          JavaWeb
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        JavaWeb
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#jdbc" class="md-nav__link">
+    JDBC
+  </a>
+  
+    <nav class="md-nav" aria-label="JDBC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    API 详解
+  </a>
+  
+    <nav class="md-nav" aria-label="API 详解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#drivermanager" class="md-nav__link">
+    DriverManager
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connection" class="md-nav__link">
+    Connection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statement" class="md-nav__link">
+    Statement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preparestatement" class="md-nav__link">
+    PrepareStatement
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maven" class="md-nav__link">
+    Maven基础知识
+  </a>
+  
+    <nav class="md-nav" aria-label="Maven基础知识">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maven_1" class="md-nav__link">
+    Maven坐标详解
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jar" class="md-nav__link">
+    依赖管理(导入jar包)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mybatis" class="md-nav__link">
+    MyBatis
+  </a>
+  
+    <nav class="md-nav" aria-label="MyBatis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xxxmapper" class="md-nav__link">
+    配置文件完成增删改查（XxxMapper）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    动态查询
+  </a>
+  
+    <nav class="md-nav" aria-label="动态查询">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    单条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    添加
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    无返回值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    主键返回
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    修改
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    删除
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    注解完成增删改查
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http" class="md-nav__link">
+    HTTP
+  </a>
+  
+    <nav class="md-nav" aria-label="HTTP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    请求数据格式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    响应数据格式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-tomcat" class="md-nav__link">
+    WEB服务器 - Tomcat
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servlet" class="md-nav__link">
+    Servlet
+  </a>
+  
+    <nav class="md-nav" aria-label="Servlet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#servleturlpattern" class="md-nav__link">
+    Servlet要想被访问，必须配置其访问路径（urlPattern）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#request" class="md-nav__link">
+    Request(请求)
+  </a>
+  
+    <nav class="md-nav" aria-label="Request(请求)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request_1" class="md-nav__link">
+    Request 继承体系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request_2" class="md-nav__link">
+    Request 获取请求数据
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    通用方式获取请求参数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tomcat8-maven-7" class="md-nav__link">
+    请求参数中文乱码问题（Tomcat8已解决  maven插件支持到 7 ）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request_3" class="md-nav__link">
+    Request  请求转发
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    Response(响应)
+  </a>
+  
+    <nav class="md-nav" aria-label="Response(响应)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#response_1" class="md-nav__link">
+    Response继承体系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response_2" class="md-nav__link">
+    Response 设置响应数据功能介绍
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response_3" class="md-nav__link">
+    Response 完成重定向
+  </a>
+  
+    <nav class="md-nav" aria-label="Response 完成重定向">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    路径问题
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response_4" class="md-nav__link">
+    Response 响应字符数据
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response_5" class="md-nav__link">
+    Response 响应字节数据
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jsp-html-ajax" class="md-nav__link">
+    JSP（已逐渐退出历史舞台  由 HTMl + AJAX替代 ）
+  </a>
+  
+    <nav class="md-nav" aria-label="JSP（已逐渐退出历史舞台  由 HTMl + AJAX替代 ）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#el" class="md-nav__link">
+    EL表达式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jstl" class="md-nav__link">
+    JSTL标签
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mvc" class="md-nav__link">
+    MVC模式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    会话跟踪技术
+  </a>
+  
+    <nav class="md-nav" aria-label="会话跟踪技术">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cookie" class="md-nav__link">
+    Cookie
+  </a>
+  
+    <nav class="md-nav" aria-label="Cookie">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    基本使用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    原理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    使用细节
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session" class="md-nav__link">
+    Session
+  </a>
+  
+    <nav class="md-nav" aria-label="Session">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    基本使用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    原理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    使用细节
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cookie-session" class="md-nav__link">
+    Cookie 和 Session 的区别
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filter" class="md-nav__link">
+    Filter
+  </a>
+  
+    <nav class="md-nav" aria-label="Filter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    快速入门
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    执行流程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    使用细节
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listener" class="md-nav__link">
+    Listener（现在很少使用）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ajax" class="md-nav__link">
+    AJAX （主流方式，完成了前后端分离）
+  </a>
+  
+    <nav class="md-nav" aria-label="AJAX （主流方式，完成了前后端分离）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    快速入门
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#axios" class="md-nav__link">
+    Axios 异步框架
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json" class="md-nav__link">
+    Json
+  </a>
+  
+    <nav class="md-nav" aria-label="Json">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    基础语法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-java" class="md-nav__link">
+    JSON 数据和 Java 对象转换
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vue" class="md-nav__link">
+    Vue (前端最为主流的框架)
+  </a>
+  
+    <nav class="md-nav" aria-label="Vue (前端最为主流的框架)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    快速入门
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    常用指令
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    生命周期
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#element" class="md-nav__link">
+    Element （用于美化页面）
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Maven/" class="md-nav__link">
+        Maven
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MyBatis%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        MyBatis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MyBatisPlus/" class="md-nav__link">
+        MyBatisPlus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SSM/" class="md-nav__link">
+        SSM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%91%9E%E5%90%89%E5%A4%96%E5%8D%96%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        瑞吉外卖笔记
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Nacos%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        Nacos
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1_6" type="checkbox" id="__nav_1_6" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_6">
+          Git
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Git" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_6">
+          <span class="md-nav__icon md-icon"></span>
+          Git
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/Git/" class="md-nav__link">
+        git
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/2.1-Git%E7%AE%80%E6%98%93%E6%8C%87%E5%8D%97%28%E4%B8%8A%29/" class="md-nav__link">
+        1.1Git简易指南
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/2.2-%E5%88%9B%E5%BB%BA%E4%BB%A3%E7%A0%81%E4%BB%93%E5%BA%93/" class="md-nav__link">
+        1.2创建代码仓库
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/2.3-%E4%BF%9D%E5%AD%98%E4%BD%A0%E7%9A%84%E6%9B%B4%E6%94%B9/" class="md-nav__link">
+        1.3保存更改
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/2.4-%E6%9F%A5%E7%9C%8B%E4%BB%93%E5%BA%93%E7%8A%B6%E6%80%81/" class="md-nav__link">
+        1.4查看仓库状态
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/2.5-检查以前的提交.md" class="md-nav__link">
+        1.5检查以前的提交
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/2.6-%E5%9B%9E%E6%BB%9A%E9%94%99%E8%AF%AF%E7%9A%84%E4%BF%AE%E6%94%B9/" class="md-nav__link">
+        1.6回滚错误的修改
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/2.7-%E9%87%8D%E5%86%99%E9%A1%B9%E7%9B%AE%E5%8E%86%E5%8F%B2/" class="md-nav__link">
+        1.7重写项目历史
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/3.2-%E4%BF%9D%E6%8C%81%E4%BB%A3%E7%A0%81%E5%90%8C%E6%AD%A5/" class="md-nav__link">
+        2.1保持代码同步
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/3.3-%E5%88%9B%E5%BB%BAPullRequest/" class="md-nav__link">
+        2.2创建PullRequest
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/3.4-%E4%BD%BF%E7%94%A8%E5%88%86%E6%94%AF/" class="md-nav__link">
+        2.3使用分支
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/常见工作流比较.md" class="md-nav__link">
+        2.4常见工作流比较
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/4-Git%E5%9B%BE%E8%A7%A3/" class="md-nav__link">
+        3Git图解
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/5.1-%E4%BB%A3%E7%A0%81%E5%90%88%E5%B9%B6Merge%E8%BF%98%E6%98%AFRebase/" class="md-nav__link">
+        4.1代码合并Merge还是Rebase
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/5.2-%E5%9B%9E%E6%BB%9A%E5%91%BD%E4%BB%A4Reset%E3%80%81Checkout%E3%80%81Revert%E8%BE%A8%E6%9E%90/" class="md-nav__link">
+        4.2回滚命令
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/5.3-Git_log%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/" class="md-nav__link">
+        4.3Git_log高级用法
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/5.4-Git%E9%92%A9%E5%AD%90/" class="md-nav__link">
+        4.4Git钩子
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/5.5-Git%E6%8F%90%E4%BA%A4%E5%BC%95%E7%94%A8/" class="md-nav__link">
+        4.5Git提交引用
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#jdbc" class="md-nav__link">
+    JDBC
+  </a>
+  
+    <nav class="md-nav" aria-label="JDBC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    API 详解
+  </a>
+  
+    <nav class="md-nav" aria-label="API 详解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#drivermanager" class="md-nav__link">
+    DriverManager
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connection" class="md-nav__link">
+    Connection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statement" class="md-nav__link">
+    Statement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preparestatement" class="md-nav__link">
+    PrepareStatement
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maven" class="md-nav__link">
+    Maven基础知识
+  </a>
+  
+    <nav class="md-nav" aria-label="Maven基础知识">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maven_1" class="md-nav__link">
+    Maven坐标详解
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jar" class="md-nav__link">
+    依赖管理(导入jar包)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mybatis" class="md-nav__link">
+    MyBatis
+  </a>
+  
+    <nav class="md-nav" aria-label="MyBatis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xxxmapper" class="md-nav__link">
+    配置文件完成增删改查（XxxMapper）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    动态查询
+  </a>
+  
+    <nav class="md-nav" aria-label="动态查询">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    单条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    添加
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    无返回值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    主键返回
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    修改
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    删除
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    注解完成增删改查
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http" class="md-nav__link">
+    HTTP
+  </a>
+  
+    <nav class="md-nav" aria-label="HTTP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    请求数据格式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    响应数据格式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-tomcat" class="md-nav__link">
+    WEB服务器 - Tomcat
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servlet" class="md-nav__link">
+    Servlet
+  </a>
+  
+    <nav class="md-nav" aria-label="Servlet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#servleturlpattern" class="md-nav__link">
+    Servlet要想被访问，必须配置其访问路径（urlPattern）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#request" class="md-nav__link">
+    Request(请求)
+  </a>
+  
+    <nav class="md-nav" aria-label="Request(请求)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request_1" class="md-nav__link">
+    Request 继承体系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request_2" class="md-nav__link">
+    Request 获取请求数据
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    通用方式获取请求参数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tomcat8-maven-7" class="md-nav__link">
+    请求参数中文乱码问题（Tomcat8已解决  maven插件支持到 7 ）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request_3" class="md-nav__link">
+    Request  请求转发
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    Response(响应)
+  </a>
+  
+    <nav class="md-nav" aria-label="Response(响应)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#response_1" class="md-nav__link">
+    Response继承体系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response_2" class="md-nav__link">
+    Response 设置响应数据功能介绍
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response_3" class="md-nav__link">
+    Response 完成重定向
+  </a>
+  
+    <nav class="md-nav" aria-label="Response 完成重定向">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    路径问题
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response_4" class="md-nav__link">
+    Response 响应字符数据
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response_5" class="md-nav__link">
+    Response 响应字节数据
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jsp-html-ajax" class="md-nav__link">
+    JSP（已逐渐退出历史舞台  由 HTMl + AJAX替代 ）
+  </a>
+  
+    <nav class="md-nav" aria-label="JSP（已逐渐退出历史舞台  由 HTMl + AJAX替代 ）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#el" class="md-nav__link">
+    EL表达式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jstl" class="md-nav__link">
+    JSTL标签
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mvc" class="md-nav__link">
+    MVC模式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    会话跟踪技术
+  </a>
+  
+    <nav class="md-nav" aria-label="会话跟踪技术">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cookie" class="md-nav__link">
+    Cookie
+  </a>
+  
+    <nav class="md-nav" aria-label="Cookie">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    基本使用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    原理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    使用细节
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session" class="md-nav__link">
+    Session
+  </a>
+  
+    <nav class="md-nav" aria-label="Session">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    基本使用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    原理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    使用细节
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cookie-session" class="md-nav__link">
+    Cookie 和 Session 的区别
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filter" class="md-nav__link">
+    Filter
+  </a>
+  
+    <nav class="md-nav" aria-label="Filter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    快速入门
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    执行流程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    使用细节
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listener" class="md-nav__link">
+    Listener（现在很少使用）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ajax" class="md-nav__link">
+    AJAX （主流方式，完成了前后端分离）
+  </a>
+  
+    <nav class="md-nav" aria-label="AJAX （主流方式，完成了前后端分离）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    快速入门
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#axios" class="md-nav__link">
+    Axios 异步框架
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json" class="md-nav__link">
+    Json
+  </a>
+  
+    <nav class="md-nav" aria-label="Json">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    基础语法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-java" class="md-nav__link">
+    JSON 数据和 Java 对象转换
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vue" class="md-nav__link">
+    Vue (前端最为主流的框架)
+  </a>
+  
+    <nav class="md-nav" aria-label="Vue (前端最为主流的框架)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    快速入门
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    常用指令
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    生命周期
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#element" class="md-nav__link">
+    Element （用于美化页面）
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+  <a href="https://github.com/hanyongyan/hanyongyan.github.io/edit/main/docs/StudyNodes/Java/JavaWeb.md" title="编辑此页" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="java-web">Java Web<a class="headerlink" href="#java-web" title="Permanent link">&para;</a></h1>
+<h2 id="jdbc">JDBC<a class="headerlink" href="#jdbc" title="Permanent link">&para;</a></h2>
+<p>Java程序中对应的类中的数据类型应该为包装类，防止存在默认值会造成影响</p>
+<p>七个步骤</p>
+<ol>
+<li>获取Connection</li>
+<li>定义SQL：select * from tb_brand</li>
+<li>获取 PreparedStatement 对象</li>
+<li>设置参数</li>
+<li>执行SQL</li>
+<li>处理结果</li>
+<li>释放资源</li>
+</ol>
+<p>简单的一个小运行</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.Connection</span><span class="p">;</span><span class="w"></span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.DriverManager</span><span class="p">;</span><span class="w"></span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.sql.Statement</span><span class="p">;</span><span class="w"></span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">jdbcTest</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// 1.注册驱动</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// MySql 5 以后的此句以后都可以省略不写</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//Class.forName(&quot;com.mysql.jdbc.Driver&quot;);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// 2.获取链接</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// url 中最后的 test 是你的数据库</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// url 是一个固定的写法 jdbc:mysql:表明是一个协议</span><span class="w"></span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;jdbc:mysql://127.0.01:3306/test&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;root&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;040416&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">Connection</span><span class="w"> </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DriverManager</span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="w"> </span><span class="n">username</span><span class="p">,</span><span class="w"> </span><span class="n">password</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// 3.定义 sql 语句</span><span class="w"></span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">sql</span><span class="o">=</span><span class="s">&quot;update score set math = 0 where id=2&quot;</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// 4.获取执行sql语句的对象 statement</span><span class="w"></span>
+<span class="w">        </span><span class="n">Statement</span><span class="w"> </span><span class="n">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conn</span><span class="p">.</span><span class="na">createStatement</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// 5.执行sql语句</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// 执行语句后返回一个所受影响的行数</span><span class="w"></span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">state</span><span class="p">.</span><span class="na">executeUpdate</span><span class="p">(</span><span class="n">sql</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// 6.处理结果</span><span class="w"></span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">count</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// 7.释放资源</span><span class="w"></span>
+<span class="w">        </span><span class="n">state</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="n">conn</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="api">API 详解<a class="headerlink" href="#api" title="Permanent link">&para;</a></h3>
+<h4 id="drivermanager">DriverManager<a class="headerlink" href="#drivermanager" title="Permanent link">&para;</a></h4>
+<p>static Connection  getConnection(String url, String user , String password)；</p>
+<ul>
+<li>
+<p>参数</p>
+</li>
+<li>
+<p>url : 连接路径</p>
+<p>语法：jdbc:mysql:// ip 地址 : 端口号/数据库名称？参数键值对1&amp;参数键值对2...</p>
+<p>实例：jdbc:mysql://127.0.0.1:3306 / test</p>
+<p>细节：</p>
+<ul>
+<li>
+<p>如果连接的是本机 mysql 服务器，并且 mysql 服务默认端口是 3306 ，则 url 可以简写为：jdbc:mysql:// ip 地址 : 端口号/数据库名称?参数键值对...</p>
+</li>
+<li>
+<p>配置 useSSl=false，禁用安全连接方式，解决警告提示  eg：jdbc:mysql://127.0.0.1:3306/test?useSSL=false</p>
+</li>
+</ul>
+</li>
+<li>
+<p>user : 用户名</p>
+</li>
+<li>
+<p>password ：密码</p>
+</li>
+</ul>
+<h4 id="connection">Connection<a class="headerlink" href="#connection" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>获取执行SQL的对象</p>
+</li>
+<li>
+<p>普通执行SQL对象</p>
+<p>Statement creatStatement()     //有了statement对象以后才能够执行sql语句</p>
+</li>
+<li>
+<p>预编译SQL的执行SQL对象：防止SQL注入</p>
+<p>PrepareStatement  prepareStatement（sql）</p>
+</li>
+<li>
+<p>执行存储过程的对象          //此功能不常用</p>
+<p>CallableStatement prepareCall(sql)</p>
+</li>
+<li>
+<p>管理事务</p>
+</li>
+<li>
+<p>MySql 事务管理</p>
+<div class="highlight"><pre><span></span><code><span class="c1">-- 开启事务：begin/start transaction</span><span class="w"></span>
+<span class="c1">-- 提交事务：commit</span><span class="w"></span>
+<span class="c1">-- 回滚事务：rollback</span><span class="w"></span>
+</code></pre></div>
+</li>
+<li>
+<p>JDBC事务管理：Connection接口中定义了三个对应的方法</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// 开启事务：setAutoCommit(boolean autoCommit):true 为自动提交事务，false为手动提交事务，即开启事务</span><span class="w"></span>
+<span class="c1">// 提交事务：commit()</span><span class="w"></span>
+<span class="c1">// 回滚事务：rollback()</span><span class="w"></span>
+</code></pre></div>
+<p>管理事务的 JAVA 代码
+ 是否做出提交或回滚的动作需要使用 try...catch 语句来执行  做出回滚动作时肯定时报出了错误</p>
+<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// 开启事务</span><span class="w"></span>
+<span class="w">    </span><span class="n">conn</span><span class="p">.</span><span class="na">setAutoCommit</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//执行sql</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">count1</span><span class="o">=</span><span class="n">stmt</span><span class="p">.</span><span class="na">executeUpdate</span><span class="p">(</span><span class="n">sql1</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//处理结果</span><span class="w"></span>
+<span class="w">    </span><span class="n">sout</span><span class="p">(</span><span class="n">count1</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//执行sql</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">count2</span><span class="o">=</span><span class="n">stmt</span><span class="p">.</span><span class="na">executeUpdate</span><span class="p">(</span><span class="n">sql2</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//处理结果</span><span class="w"></span>
+<span class="w">    </span><span class="n">sout</span><span class="p">(</span><span class="n">count2</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//提交事务</span><span class="w"></span>
+<span class="w">    </span><span class="n">conn</span><span class="p">.</span><span class="na">commit</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">){</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// 回滚事务</span><span class="w"></span>
+<span class="w">    </span><span class="n">conn</span><span class="p">.</span><span class="na">rollback</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</li>
+</ol>
+<h4 id="statement">Statement<a class="headerlink" href="#statement" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Statement 作用</li>
+</ul>
+<p>执行SQL语句</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">executeUpdate</span><span class="p">(</span><span class="n">sql</span><span class="p">):</span><span class="n">执行DML</span><span class="err">、</span><span class="n">DDL语句</span><span class="w"></span>
+<span class="c1">//返回值：(1)DML语句影响的行数(2)DDL语句执行后也可能返回0</span><span class="w"></span>
+<span class="c1">//DDL：用来定义数据库对象（数据库，表，字段）</span><span class="w"></span>
+<span class="c1">//DML：用来对数据库表中的数据进行增删改</span><span class="w"></span>
+<span class="n">ResultSet</span><span class="w"> </span><span class="nf">executeQuery</span><span class="p">(</span><span class="n">sql</span><span class="p">):</span><span class="n">执行DQL语句</span><span class="w"></span>
+<span class="c1">//DQL：查询数据库</span><span class="w"></span>
+</code></pre></div>
+<h4 id="preparestatement">PrepareStatement<a class="headerlink" href="#preparestatement" title="Permanent link">&para;</a></h4>
+<ul>
+<li>作用</li>
+</ul>
+<p>预编译SQL语句并执行：预防SQL注入问题</p>
+<ol>
+<li>获取preparedStatement对象</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="c1">//SQL语句中的参数值，使用？占位符替代</span><span class="w"></span>
+<span class="n">String</span><span class="w"> </span><span class="n">sql</span><span class="o">=</span><span class="s">&quot;select * from user where username= ? and passwore=? &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="c1">//通过Connection对象获取，并传入对应的SQL语句</span><span class="w"></span>
+<span class="n">PreparedStatement</span><span class="w"> </span><span class="n">pstmt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conn</span><span class="p">.</span><span class="na">prepareStatement</span><span class="p">(</span><span class="n">sql</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>2.设置参数值
+</code></pre></div>
+<p>​ PreparedStatement 对象：setXxx(参数1，参数2)  :给 ? 赋值</p>
+<p>​         Xxx：数据类型；如setString(参数1，参数2)</p>
+<p>​         参数：参数1 表示 ? 的位置编号 从 1 开始</p>
+<p>​                    参数2 表示 ? 的值</p>
+<p>3.执行SQL</p>
+<p>​ executeUpdate()         //不在需要传递SQL</p>
+<ul>
+<li>SQL注入</li>
+</ul>
+<p>SQL注入使通过操作输入来修改事先定义好的SQL对象，用以达到执行代码对服务器进行攻击的方式    </p>
+<h2 id="maven">Maven基础知识<a class="headerlink" href="#maven" title="Permanent link">&para;</a></h2>
+<p>Maven的作用</p>
+<ul>
+<li>标准化的项目结构</li>
+<li>标准化的构建流程</li>
+<li>方便的依赖管理</li>
+</ul>
+<p>Maven 常用命令</p>
+<ul>
+<li>compile：编译</li>
+<li>clean：清理        删除编译生成的文件夹</li>
+<li>test：测试           运行test目录下的java文件</li>
+<li>package：打包   生成一个jar包</li>
+<li>install：安装       将你的项目生成jar包导入到你的仓库中去</li>
+</ul>
+<h3 id="maven_1">Maven坐标详解<a class="headerlink" href="#maven_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>什么是坐标？</li>
+</ul>
+<p>Maven中的坐标是资源的唯一标识</p>
+<p>使用坐标来定义项目或引入项目中需要的依赖</p>
+<ul>
+<li>Maven坐标主要自称</li>
+</ul>
+<p>groupid：定义当前Maven项目隶属组织名称（通常是域名反写）</p>
+<p>artifactid：定义当前Maven项目名称（通常是模块名称）</p>
+<p>version：定义当前项目版本号</p>
+<p>scope：控制jar包的作用范围，编译环境，测试环境，运行环境 </p>
+<p>​     </p>
+<h3 id="jar">依赖管理(导入jar包)<a class="headerlink" href="#jar" title="Permanent link">&para;</a></h3>
+<ol>
+<li>在pom.xml中编写  <dependencies>  标签</li>
+<li>在  <dependencies>  标签中使用  <dependency>  引入坐标</li>
+<li>定义坐标的 groupId ，artifactId，version</li>
+<li>点击刷新按钮，使坐标生效</li>
+</ol>
+<p><code>pom.xml</code>文件通用格式</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;project</span> <span class="na">xmlns=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0&quot;</span>
+         <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+         <span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
+
+    <span class="nt">&lt;groupId&gt;</span>org.example<span class="nt">&lt;/groupId&gt;</span>
+    <span class="cm">&lt;!--下一句相当于项目的名称--&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>brand-demo<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>1.0-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+    <span class="cm">&lt;!--设置为 war 包--&gt;</span>
+    <span class="nt">&lt;packaging&gt;</span>war<span class="nt">&lt;/packaging&gt;</span>
+
+    <span class="cm">&lt;!--表明了 JDK 的版本--&gt;</span>
+    <span class="nt">&lt;properties&gt;</span>
+        <span class="nt">&lt;maven.compiler.source&gt;</span>17<span class="nt">&lt;/maven.compiler.source&gt;</span>
+        <span class="nt">&lt;maven.compiler.target&gt;</span>17<span class="nt">&lt;/maven.compiler.target&gt;</span>
+    <span class="nt">&lt;/properties&gt;</span>
+
+
+    <span class="nt">&lt;dependencies&gt;</span>
+        <span class="cm">&lt;!--导入坐标--&gt;</span>
+        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>org.mybatis<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>mybatis<span class="nt">&lt;/artifactId&gt;</span>
+            <span class="nt">&lt;version&gt;</span>3.5.10<span class="nt">&lt;/version&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+    <span class="nt">&lt;/dependencies&gt;</span>
+
+    <span class="cm">&lt;!-- 不是必须的 忘记做什么用的了</span>
+<span class="cm">        &lt;build&gt;</span>
+<span class="cm">            &lt;plugins&gt;</span>
+<span class="cm">                &lt;plugin&gt;</span>
+<span class="cm">                    &lt;groupId&gt;org.apache.tomcat.maven&lt;/groupId&gt;</span>
+<span class="cm">                    &lt;artifactId&gt;tomcat7-maven-plugin&lt;/artifactId&gt;</span>
+<span class="cm">                    &lt;version&gt;2.2&lt;/version&gt;</span>
+<span class="cm">                    &lt;configuration&gt;</span>
+<span class="cm">                        &lt;port&gt;80&lt;/port&gt;</span>
+<span class="cm">                    &lt;/configuration&gt;</span>
+<span class="cm">                &lt;/plugin&gt;</span>
+<span class="cm">            &lt;/plugins&gt;</span>
+<span class="cm">        &lt;/build&gt;</span>
+<span class="cm">    --&gt;</span>
+<span class="nt">&lt;/project&gt;</span>
+</code></pre></div>
+<h2 id="mybatis">MyBatis<a class="headerlink" href="#mybatis" title="Permanent link">&para;</a></h2>
+<p><a href="https://mybatis.net.cn/">中文官网</a></p>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220714170642092.png" alt="image-20220714170642092" style="zoom:33%;" /></p>
+<ul>
+<li>MyBatis是一款优秀的<strong>持久层框架</strong>，用于简化JDBC开发</li>
+</ul>
+<p>持久层：</p>
+<ol>
+<li>负责将数据保存到数据库的那一层代码</li>
+<li>JavaEE三层架构：表现层、业务层、持久层</li>
+</ol>
+<p>框架：</p>
+<ul>
+<li>框架就是一个半成品软件，是一套可重用的、通用的、软件基础代码模型</li>
+<li>在框架的基础之上构建软件编穹更加高效、规范、通用、可扩展</li>
+</ul>
+<p>MyBatis免除了几乎所有的JDBC代码以及设置参数和获取结果集的工作</p>
+<p>Mapper代理开发</p>
+<p><a href="https://www.bilibili.com/video/BV1Qf4y1T7Hx?p=50&amp;spm_id_from=333.1007.top_right_bar_window_history.content.click&amp;vd_source=e676186ca320a2feb94cdce6f31b5c9a">具体介绍视频</a></p>
+<ul>
+<li>
+<p>目的</p>
+</li>
+<li>
+<p>解决原生方式中的硬编码</p>
+</li>
+<li>
+<p>简化后期执行SQL</p>
+</li>
+<li>
+<p>步骤</p>
+</li>
+<li>
+<p>定义与SQL映射文件同名的Mapper接口，并且将Mapper接口和SQL映射文件放置在同一目录下
+    （同一目录下并不是真正的同一目录 具体看上面介绍视频）</p>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220624230921452.png" alt="image-20220624230921452" style="zoom: 40%;" /></p>
+</li>
+<li>
+<p>设置SQL映射文件的namespace属性为Mapper接口全限定名   </p>
+</li>
+<li>
+<p>在Mapper 接口中定义方法，方法名就是SQL映射文件中sql语句的id，并保持参数类型和返回值类型一致</p>
+</li>
+<li>
+<p>编码</p>
+<ol>
+<li>通过SqlSession的getMapper方法获取Mapper接口的代理对象</li>
+<li>调用对应方法完成sql的执行</li>
+</ol>
+</li>
+</ul>
+<p>实体类的固定用法</p>
+<div class="highlight"><pre><span></span><code><span class="c1">//不用记！！！ 在</span><span class="w"></span>
+<span class="c1">//1.加载mybatis核心配置文件，获取SqlSessionFactory</span><span class="w"></span>
+<span class="n">String</span><span class="w"> </span><span class="n">resource</span><span class="o">=</span><span class="s">&quot;mybatis-config.xml&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="n">InputStream</span><span class="w"> </span><span class="n">inputStream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Resources</span><span class="p">.</span><span class="na">getResourceAsStream</span><span class="p">(</span><span class="n">resource</span><span class="p">);</span><span class="w"></span>
+<span class="n">SqlSessionFactory</span><span class="w"> </span><span class="n">sqlSessionFactory</span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="n">SqlSessionFactoryBuilder</span><span class="p">().</span><span class="na">build</span><span class="p">(</span><span class="n">inputStream</span><span class="p">);</span><span class="w"></span>
+<span class="c1">//2.获取SqlSession对象，用他来执行sql</span><span class="w"></span>
+<span class="n">SqlSession</span><span class="w"> </span><span class="n">sqlSession</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqlSessionFactory</span><span class="p">.</span><span class="na">openSession</span><span class="p">();</span><span class="w"></span>
+<span class="c1">//3.获取userMapper接口的代理对象</span><span class="w"></span>
+<span class="n">userMapper</span><span class="w"> </span><span class="n">us</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqlSession</span><span class="p">.</span><span class="na">getMapper</span><span class="p">(</span><span class="n">userMapper</span><span class="p">.</span><span class="na">class</span><span class="p">);</span><span class="w"></span>
+<span class="c1">//执行方法</span><span class="w"></span>
+<span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">user</span><span class="o">&gt;</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">us</span><span class="p">.</span><span class="na">selectAll</span><span class="p">();</span><span class="w"></span>
+</code></pre></div>
+<p>细节：如果Mapper接口名称和SQL映射文件名称相同，并在同一目录下，则可以使用包扫描的方式简化SQL映射文件的加载
+在文件<code>mybatis-config.xml</code>内设置  同时也是 <code>mybatis-config.xml</code>的完整配置</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
+<span class="cp">&lt;!DOCTYPE configuration</span>
+<span class="cp">        PUBLIC &quot;-//mybatis.org//DTD Config 3.0//EN&quot;</span>
+<span class="cp">        &quot;http://mybatis.org/dtd/mybatis-3-config.dtd&quot;&gt;</span>
+<span class="nt">&lt;configuration&gt;</span>
+    <span class="cm">&lt;!--</span>
+<span class="cm">        environments:配置数据库连接环境信息，可以配置多个environment，通过default书行切换不同的environment</span>
+<span class="cm">    --&gt;</span>
+    <span class="nt">&lt;environments</span> <span class="na">default=</span><span class="s">&quot;development&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;environment</span> <span class="na">id=</span><span class="s">&quot;development&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;transactionManager</span> <span class="na">type=</span><span class="s">&quot;JDBC&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;dataSource</span> <span class="na">type=</span><span class="s">&quot;POOLED&quot;</span><span class="nt">&gt;</span>
+                <span class="cm">&lt;!--数据库连接信息--&gt;</span>
+                <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;driver&quot;</span> <span class="na">value=</span><span class="s">&quot;com.mysql.jdbc.Driver&quot;</span><span class="nt">/&gt;</span>
+                <span class="cm">&lt;!--说明连接的数据库是哪一个--&gt;</span>
+                <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;url&quot;</span> <span class="na">value=</span><span class="s">&quot;jdbc:mysql:///mybatis_demo?useSSL=false&quot;</span><span class="nt">/&gt;</span>
+                <span class="cm">&lt;!--数据库账号密码--&gt;</span>
+                <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;username&quot;</span> <span class="na">value=</span><span class="s">&quot;root&quot;</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;password&quot;</span> <span class="na">value=</span><span class="s">&quot;040416&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;/dataSource&gt;</span>
+        <span class="nt">&lt;/environment&gt;</span>
+    <span class="nt">&lt;/environments&gt;</span>
+    <span class="cm">&lt;!--加载SQL映射文件--&gt;</span>
+    <span class="nt">&lt;mappers&gt;</span>
+        <span class="cm">&lt;!--加载SQL映射文件--&gt;</span>
+        <span class="cm">&lt;!--&lt;Demo.mapper resource=&quot;Demo/Demo.mapper/userMapper.xml&quot;/&gt;--&gt;</span>
+        <span class="cm">&lt;!--Mapper代理方式--&gt;</span>
+        <span class="cm">&lt;!--此种方式可以扫描这个包下的全部xml文件 不用单一添加--&gt;</span>
+        <span class="nt">&lt;package</span> <span class="na">name=</span><span class="s">&quot;Demo.mapper&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/mappers&gt;</span>
+<span class="nt">&lt;/configuration&gt;</span>
+</code></pre></div>
+<h3 id="xxxmapper">配置文件完成增删改查（XxxMapper）<a class="headerlink" href="#xxxmapper" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
+<span class="cp">&lt;!DOCTYPE mapper</span>
+<span class="cp">        PUBLIC &quot;-//mybatis.org//DTD Mapper 3.0//EN&quot;</span>
+<span class="cp">        &quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot;&gt;</span>
+<span class="cm">&lt;!--</span>
+<span class="cm">    namespace：名称空间，填入你对应的路径</span>
+<span class="cm">--&gt;</span>
+
+<span class="nt">&lt;mapper</span> <span class="na">namespace=</span><span class="s">&quot;Demo.mapper.BrandMapper&quot;</span><span class="nt">&gt;</span>
+
+<span class="cm">&lt;!--下面的所有方法均写在这里面--&gt;</span>
+
+<span class="nt">&lt;/mapper&gt;</span>
+</code></pre></div>
+<ul>
+<li>查询所有数据</li>
+</ul>
+<div class="highlight"><pre><span></span><code>// 方法一  
+<span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">&quot;selectAll&quot;</span> <span class="na">resultType=</span><span class="s">&quot;Demo.pojo.Brand&quot;</span><span class="nt">&gt;</span>
+        select
+           id, brand_name as brandName, company_name companyName, ordered, description, status
+        from test.tb_brand;
+        <span class="cm">&lt;!--使用了起别名是因为与实体类中的名称不对应无法完成封装--&gt;</span>
+    <span class="nt">&lt;/select&gt;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// 方法二  使用映射（最好用的方法）
+<span class="cm">&lt;!-- id 是唯一标识 随便取名字 其他地方需要引用</span>
+<span class="cm">   type 是映射的类型，支持别名--&gt;</span>
+<span class="nt">&lt;resultMap</span> <span class="na">id=</span><span class="s">&quot;brandResultMap&quot;</span> <span class="na">type=</span><span class="s">&quot;Demo.pojo.Brand&quot;</span><span class="nt">&gt;</span>
+      <span class="cm">&lt;!--</span>
+<span class="cm">          result 是普通字段去使用 </span>
+<span class="cm">          主键字段使用 id 关键字</span>
+<span class="cm">          column是字段的名称</span>
+<span class="cm">          property是实体类的属性名</span>
+<span class="cm">        --&gt;</span>
+        <span class="nt">&lt;result</span> <span class="na">column=</span><span class="s">&quot;brand_name&quot;</span> <span class="na">property=</span><span class="s">&quot;brandName&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;result</span> <span class="na">column=</span><span class="s">&quot;company_name&quot;</span> <span class="na">property=</span><span class="s">&quot;companyName&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/resultMap&gt;</span>
+    <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">&quot;selectAll&quot;</span> <span class="na">resultMap=</span><span class="s">&quot;brandResultMap&quot;</span><span class="nt">&gt;</span>
+          <span class="cm">&lt;!--此处的resultType改为了resultMap--&gt;</span>
+        select
+            *
+        from test.tb_brand;
+    <span class="nt">&lt;/select&gt;</span>
+</code></pre></div>
+<ul>
+<li>根据某一个字段查询</li>
+</ul>
+<div class="highlight"><pre><span></span><code>    <span class="cm">&lt;!--根据ID查询--&gt;</span>
+    <span class="cm">&lt;!--</span>
+<span class="cm">        参数占位符：</span>
+<span class="cm">            1. #{}：可以防止sql注入问题</span>
+<span class="cm">            2. ${}：存在sql注入问题</span>
+<span class="cm">            3. 使用时机：</span>
+<span class="cm">                * 参数传递的时候：#{} </span>
+<span class="cm">                * 表明或者列名不固定的情况下：${}  会存在SQL注入风险</span>
+<span class="cm">    --&gt;</span>
+    <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">&quot;selectById&quot;</span> <span class="na">resultMap=</span><span class="s">&quot;brandResultMap&quot;</span><span class="nt">&gt;</span>
+        select *
+        from test.tb_brand where id = #{id};
+        <span class="cm">&lt;!--{id}应和接口中传入的参数名字一致--&gt;</span>
+    <span class="nt">&lt;/select&gt;</span>
+</code></pre></div>
+<ul>
+<li>多条件查询（占位符不能够随便写了）</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">// Mapper 接口中的方法 </span><span class="w"></span>
+<span class="cm">/*</span>
+<span class="cm">  @Param(&quot;status&quot;)int XXX </span>
+<span class="cm">  传入的参数XXX去找xml语句#{status}中的status</span>
+<span class="cm">    传入多个参数是为了准确的传参            */</span><span class="w"></span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">Brand</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">selectByCondition</span><span class="p">(</span><span class="nd">@Param</span><span class="p">(</span><span class="s">&quot;status&quot;</span><span class="p">)</span><span class="kt">int</span><span class="w"> </span><span class="n">status</span><span class="p">,</span><span class="w"> </span><span class="nd">@Param</span><span class="p">(</span><span class="s">&quot;companyName&quot;</span><span class="p">)</span><span class="n">String</span><span class="w"> </span><span class="n">companyName</span><span class="p">,</span><span class="nd">@Param</span><span class="p">(</span><span class="s">&quot;brandName&quot;</span><span class="p">)</span><span class="n">String</span><span class="w"> </span><span class="n">brandName</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Brand</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">selectByCondition</span><span class="p">(</span><span class="n">Brand</span><span class="w"> </span><span class="n">brand</span><span class="p">);</span><span class="w"></span>
+<span class="c1">// 如果你传入的参数正好属于一个对象的话</span><span class="w"></span>
+<span class="c1">// xml语句中#{Xxx}会去找实体类中的getXxx方法</span><span class="w"></span>
+<span class="c1">// 意味着参数的占位符名称要和类中的属性名一样，要不会找不到对应的参数</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Brand</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">selectByCondition</span><span class="p">(</span><span class="n">Map</span><span class="w"> </span><span class="n">map</span><span class="p">);</span><span class="w"></span>
+<span class="c1">//传入一个map集合 map集合的键的名称要与XML的占位符名称一致</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>   <span class="cm">&lt;!-- 上面中的@Param中的值为了方便参数的传递 对应的值去找对应的值--&gt;</span>
+<span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">&quot;selectByCondition&quot;</span> <span class="na">resultType=</span><span class="s">&quot;Demo.pojo.Brand&quot;</span><span class="nt">&gt;</span>
+        select *
+        from test.tb_brand
+        where status=#{status} 
+            and brand_name like #{brandName}
+            and company_name like #{companyName}
+    <span class="cm">&lt;!--使用like连接完成模糊查询--&gt;</span>
+    <span class="nt">&lt;/select&gt;</span>
+</code></pre></div>
+<h3 id="_1">动态查询<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p><a href="https://mybatis.net.cn/dynamic-sql.html">动态查询官方网址</a></p>
+<div class="highlight"><pre><span></span><code>   <span class="cm">&lt;!--</span>
+<span class="cm">        * if：条件判断</span>
+<span class="cm">            * test：逻辑表达式</span>
+<span class="cm">    --&gt;</span>
+    <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">&quot;selectByCondition&quot;</span> <span class="na">resultMap=</span><span class="s">&quot;brandResultMap&quot;</span><span class="nt">&gt;</span>
+        select *
+        from test.tb_brand
+        where
+        <span class="nt">&lt;if</span> <span class="na">test=</span><span class="s">&quot;status != null&quot;</span><span class="nt">&gt;</span>
+            status = #{status}
+        <span class="nt">&lt;/if&gt;</span>
+        <span class="nt">&lt;if</span> <span class="na">test=</span><span class="s">&quot;brandName !=null and brandName != &#39;&#39; &quot;</span><span class="nt">&gt;</span>
+            and brand_name like #{brandName}
+        <span class="nt">&lt;/if&gt;</span>
+        <span class="nt">&lt;if</span> <span class="na">test=</span><span class="s">&quot;companyName != null and companyName != &#39;&#39; &quot;</span><span class="nt">&gt;</span>
+            and company_name like #{companyName}
+        <span class="nt">&lt;/if&gt;</span>
+    <span class="cm">&lt;!--</span>
+<span class="cm">        这样会存在一个问题，当为传入status值时 sql语法会出现问题</span>
+<span class="cm">        解决办法在下面</span>
+<span class="cm">    --&gt;</span>
+    <span class="nt">&lt;/select&gt;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!--解决办法一  提取上面的where片段 加一个恒等式--&gt;</span>
+     where 1=1
+        <span class="nt">&lt;if</span> <span class="na">test=</span><span class="s">&quot;status != null&quot;</span><span class="nt">&gt;</span>
+            status = #{status}
+        <span class="nt">&lt;/if&gt;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!--</span>
+<span class="cm">    解决办法二</span>
+<span class="cm">    使用了where标签 更加方便</span>
+<span class="cm">--&gt;</span>
+    <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">&quot;selectByCondition&quot;</span> <span class="na">resultMap=</span><span class="s">&quot;brandResultMap&quot;</span><span class="nt">&gt;</span>
+        select *
+        from test.tb_brand
+        <span class="nt">&lt;where&gt;</span>
+            <span class="nt">&lt;if</span> <span class="na">test=</span><span class="s">&quot;status != null&quot;</span><span class="nt">&gt;</span>
+                 status = #{status}
+            <span class="nt">&lt;/if&gt;</span>
+            <span class="nt">&lt;if</span> <span class="na">test=</span><span class="s">&quot;brandName !=null and brandName != &#39;&#39; &quot;</span><span class="nt">&gt;</span>
+                 brand_name like #{brandName}
+            <span class="nt">&lt;/if&gt;</span>
+            <span class="nt">&lt;if</span> <span class="na">test=</span><span class="s">&quot;companyName != null and companyName != &#39;&#39; &quot;</span><span class="nt">&gt;</span>
+                 company_name like #{companyName}
+            <span class="nt">&lt;/if&gt;</span>
+        <span class="nt">&lt;/where&gt;</span>
+
+    <span class="nt">&lt;/select&gt;</span>
+</code></pre></div>
+<h5 id="_2">单条件<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h5>
+<ul>
+<li>从多个条件中选择一个</li>
+<li>choose（when,otherwise)：选择。类似于java中的switch语句（when相当于case，otherwise相当于default，test相当于判断条件）</li>
+</ul>
+<div class="highlight"><pre><span></span><code>    <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">&quot;selectByConditionSingle&quot;</span> <span class="na">resultMap=</span><span class="s">&quot;brandResultMap&quot;</span><span class="nt">&gt;</span>
+        select *
+        from test.tb_brand
+        where
+        <span class="nt">&lt;choose&gt;</span>
+            <span class="nt">&lt;when</span> <span class="na">test=</span><span class="s">&quot;status!=null&quot;</span><span class="nt">&gt;</span>
+                status=#{status}
+            <span class="nt">&lt;/when&gt;</span>
+            <span class="nt">&lt;when</span> <span class="na">test=</span><span class="s">&quot;companyName!=null and companyName!=&#39;&#39; &quot;</span><span class="nt">&gt;</span>
+                company_name like #{companyName}
+            <span class="nt">&lt;/when&gt;</span>
+            <span class="nt">&lt;when</span> <span class="na">test=</span><span class="s">&quot;brandName!=null and brandName!=&#39;&#39;&quot;</span><span class="nt">&gt;</span>
+                brand_name like #{brandName}
+            <span class="nt">&lt;/when&gt;</span>
+            <span class="nt">&lt;otherwise&gt;</span>
+                1=1
+            <span class="nt">&lt;/otherwise&gt;</span>
+        <span class="nt">&lt;/choose&gt;</span>
+    <span class="nt">&lt;/select&gt;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!--使用where标签更方便  省略了otherwise的用法  动态的查询--&gt;</span>
+    <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">&quot;selectByConditionSingle&quot;</span> <span class="na">resultMap=</span><span class="s">&quot;brandResultMap&quot;</span><span class="nt">&gt;</span>
+        select *
+        from test.tb_brand
+        <span class="nt">&lt;where&gt;</span>
+            <span class="nt">&lt;choose&gt;</span>
+                <span class="nt">&lt;when</span> <span class="na">test=</span><span class="s">&quot;status!=null&quot;</span><span class="nt">&gt;</span>
+                    status=#{status}
+                <span class="nt">&lt;/when&gt;</span>
+                <span class="nt">&lt;when</span> <span class="na">test=</span><span class="s">&quot;companyName!=null and companyName!=&#39;&#39; &quot;</span><span class="nt">&gt;</span>
+                    company_name like #{companyName}
+                <span class="nt">&lt;/when&gt;</span>
+                <span class="nt">&lt;when</span> <span class="na">test=</span><span class="s">&quot;brandName!=null and brandName!=&#39;&#39;&quot;</span><span class="nt">&gt;</span>
+                    brand_name like #{brandName}
+                <span class="nt">&lt;/when&gt;</span>
+
+            <span class="nt">&lt;/choose&gt;</span>
+        <span class="nt">&lt;/where&gt;</span>
+    <span class="nt">&lt;/select&gt;</span>
+</code></pre></div>
+<h5 id="_3">添加<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h5>
+<p><strong>SqlSession对象时不传参（默认开启事务）或者传入false时会打开事务然后需要手动提交事务</strong></p>
+<h5 id="_4">无返回值<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code>    <span class="nt">&lt;insert</span> <span class="na">id=</span><span class="s">&quot;add&quot;</span><span class="nt">&gt;</span>
+        insert into test.tb_brand(brand_name, company_name, ordered, description, status)
+        values (#{brandName},#{companyName},#{ordered},#{description},#{status});
+    <span class="nt">&lt;/insert&gt;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="cm">/*2.获取SqlSession对象</span>
+<span class="cm">    SqlSession sqlSession = sqlSessionFactory.openSession();*/</span><span class="w">  </span>
+<span class="c1">//4.执行方法</span><span class="w"></span>
+<span class="w">    </span><span class="n">brandMapper</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">brands</span><span class="p">);</span><span class="w"></span>
+<span class="c1">//5.提交事务</span><span class="w"></span>
+<span class="w">    </span><span class="n">sqlSession</span><span class="p">.</span><span class="na">commit</span><span class="p">();</span><span class="w"> </span>
+<span class="c1">//如果在步骤2得到SqlSession对象时不传参（默认开启事务）或者传入false时会打开事务然后需要手动提交事务</span><span class="w"></span>
+<span class="c1">//在传入true时不需要手动提交事务</span><span class="w"></span>
+</code></pre></div>
+<h5 id="_5">主键返回<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code> <span class="nt">&lt;insert</span> <span class="na">id=</span><span class="s">&quot;add&quot;</span> <span class="na">useGeneratedKeys=</span><span class="s">&quot;true&quot;</span> <span class="na">keyProperty=</span><span class="s">&quot;id&quot;</span><span class="nt">&gt;</span>
+<span class="cm">&lt;!-- </span>
+<span class="cm">    就可是使用对应的getId() 方法得到id</span>
+<span class="cm">    keyProperty 指向了ID的属性名称</span>
+<span class="cm">--&gt;</span>
+</code></pre></div>
+<h5 id="_6">修改<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h5>
+<ul>
+<li>修改全部字段</li>
+</ul>
+<div class="highlight"><pre><span></span><code>    <span class="nt">&lt;insert</span> <span class="na">id=</span><span class="s">&quot;add&quot;</span> <span class="na">useGeneratedKeys=</span><span class="s">&quot;true&quot;</span> <span class="na">keyProperty=</span><span class="s">&quot;id&quot;</span><span class="nt">&gt;</span>
+        insert into test.tb_brand(brand_name, company_name, ordered, description, status)
+        values (#{brandName}, #{companyName}, #{ordered}, #{description}, #{status});
+    <span class="nt">&lt;/insert&gt;</span>
+<span class="cm">&lt;!--如果对应的接口中返回值是int 那么将返回ying&#39;xiang--&gt;</span>
+</code></pre></div>
+<ul>
+<li>修改动态字段</li>
+</ul>
+<div class="highlight"><pre><span></span><code>    <span class="cm">&lt;!--引入了set标签 防止出现语法错误--&gt;</span>
+    <span class="nt">&lt;update</span> <span class="na">id=</span><span class="s">&quot;update&quot;</span><span class="nt">&gt;</span>
+        update test.tb_brand
+        <span class="nt">&lt;set&gt;</span>
+            <span class="nt">&lt;if</span> <span class="na">test=</span><span class="s">&quot;brandName != null and brandName != &#39;&#39; &quot;</span><span class="nt">&gt;</span>
+                brand_name = #{brandName},
+            <span class="nt">&lt;/if&gt;</span>
+            <span class="nt">&lt;if</span> <span class="na">test=</span><span class="s">&quot;companyName != null and companyName != &#39;&#39; &quot;</span><span class="nt">&gt;</span>
+                company_name= #{companyName},
+            <span class="nt">&lt;/if&gt;</span>
+            <span class="nt">&lt;if</span> <span class="na">test=</span><span class="s">&quot;ordered != null  &quot;</span><span class="nt">&gt;</span>
+                ordered = #{ordered},
+            <span class="nt">&lt;/if&gt;</span>
+            <span class="nt">&lt;if</span> <span class="na">test=</span><span class="s">&quot;description != null and description != &#39;&#39; &quot;</span><span class="nt">&gt;</span>
+                description = #{description},
+            <span class="nt">&lt;/if&gt;</span>
+            <span class="nt">&lt;if</span> <span class="na">test=</span><span class="s">&quot;status != null &quot;</span><span class="nt">&gt;</span>
+                status = #{status}
+            <span class="nt">&lt;/if&gt;</span>
+            where id = #{id};
+        <span class="nt">&lt;/set&gt;</span>
+    <span class="nt">&lt;/update&gt;</span>
+</code></pre></div>
+<h5 id="_7">删除<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h5>
+<ul>
+<li>单一条件删除</li>
+</ul>
+<div class="highlight"><pre><span></span><code>    <span class="nt">&lt;delete</span> <span class="na">id=</span><span class="s">&quot;deleteById&quot;</span><span class="nt">&gt;</span>
+        delete
+        from test.tb_brand
+        where id = #{id};
+    <span class="nt">&lt;/delete&gt;</span>
+</code></pre></div>
+<ul>
+<li>动态删除</li>
+</ul>
+<div class="highlight"><pre><span></span><code>    <span class="cm">&lt;!--根据id批量删除--&gt;</span>
+    <span class="nt">&lt;delete</span> <span class="na">id=</span><span class="s">&quot;deleteByIds&quot;</span><span class="nt">&gt;</span>
+        delete
+        from test.tb_brand
+        where id in
+        <span class="nt">&lt;foreach</span> <span class="na">collection=</span><span class="s">&quot;ids&quot;</span> <span class="na">item=</span><span class="s">&quot;id&quot;</span> <span class="na">separator=</span><span class="s">&quot;,&quot;</span> <span class="na">open=</span><span class="s">&quot;(&quot;</span> <span class="na">close=</span><span class="s">&quot;)&quot;</span><span class="nt">&gt;</span>
+            #{id}
+        <span class="nt">&lt;/foreach&gt;</span>;
+    <span class="nt">&lt;/delete&gt;</span>
+    <span class="cm">&lt;!--open=&quot;(&quot; close=&quot;)&quot; 相当于是括号  去除这两个 在foreach便签外添加（）一样 separator代表分隔符 --&gt;</span>
+</code></pre></div>
+<h3 id="_8">注解完成增删改查<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>使用注解开发回避配置文件开发更加方便</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@Select</span><span class="p">(</span><span class="s">&quot;select * from tb_user where id = #{id}&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="kd">public</span><span class="w"> </span><span class="n">User</span><span class="w"> </span><span class="nf">selectByld</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">);</span><span class="w"></span>
+<span class="c1">//在xml中对数据库中的字段起了别名以后需要使用 @ResultMap(&quot;填入你的 resultMap 标签的属性 id 的名称&quot;)</span><span class="w"></span>
+</code></pre></div>
+<ul>
+<li>查询：@Select</li>
+<li>添加：@Insert</li>
+<li>修改：@Update</li>
+<li>删除：@Delete</li>
+<li>别名：@ResultMap</li>
+</ul>
+<p>提示：</p>
+<ul>
+<li>注解完成简单功能（对于复杂的语句，java的注解力不从心，而且让sql语句更加混乱）</li>
+<li>配置文件完成复杂功能</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">// 使用注解完成一个查询案例</span><span class="w"></span>
+<span class="nd">@Select</span><span class="p">(</span><span class="s">&quot;select * from tb_brand where id = #{id}&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="n">Brand</span><span class="w"> </span><span class="nf">selectById</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">);</span><span class="w"></span>
+<span class="c1">//不需要再在配置xml</span><span class="w"></span>
+</code></pre></div>
+<h2 id="http">HTTP<a class="headerlink" href="#http" title="Permanent link">&para;</a></h2>
+<p>规定了浏览器与服务器之间传输的规则。</p>
+<p><strong>HTTP协议特点</strong></p>
+<ul>
+<li>基于TCP协议：面向连接，安全</li>
+<li>基于请求-响应模型的：一次请求对应一次响应</li>
+<li>HTTP协议是无状态的协议：对于事物处理没有记忆能力。每次请求-响应都是独立的</li>
+<li>缺点：多次请求间不能共享数据（Java中使用会话技术（Cookie，Session）来解决这个问题）</li>
+<li>优点：速度快</li>
+</ul>
+<h3 id="_9">请求数据格式<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<ol>
+<li>请求行：请求数据的第一行。其中GET表示请求方式，/便是请求资源路径，HTTP/1.1表示协议版本</li>
+<li>请求头：第二行开始，格式为key：value形式。（请求头可以有多行）</li>
+<li>请求体：POST请求的最后一部分，存放请求参数</li>
+</ol>
+<p>GET请求和POST请求的方式</p>
+<ul>
+<li>GET请求请求参数在请求行中，没有请求体。POST请求请求参数在请求体中。</li>
+<li>GET请求请求参数大小有限制，POST没有。</li>
+</ul>
+<p>GET请求</p>
+<div class="highlight"><pre><span></span><code><span class="nf">GET</span> <span class="nn">/</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">www.itcast.cn</span>
+<span class="na">Connection</span><span class="o">:</span> <span class="l">keep-alive</span>
+<span class="na">Cache-Control</span><span class="o">:</span> <span class="l">max-age=o Upgrade-lnsecure-Requests: 1</span>
+<span class="na">User-Agent</span><span class="o">:</span> <span class="l">Mozilla/5.0 Chrome/91.0.4472.106</span>
+<span class="err">...</span>
+</code></pre></div>
+<p>POST请求（最后一行为请求体）</p>
+<div class="highlight"><pre><span></span><code><span class="nf">POST</span> <span class="nn">/</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">www.itcast.cn</span>
+<span class="na">Connection</span><span class="o">:</span> <span class="l">keep-alive</span>
+<span class="na">Cache-Control</span><span class="o">:</span> <span class="l">max-age=0 Upgrade-lnsecure-Requests: 1</span>
+<span class="na">User-Agent</span><span class="o">:</span> <span class="l">Mozilla/5.0 Chrome/91.0.4472.106</span>
+
+username=superbaby&amp;password=123456
+</code></pre></div>
+<h3 id="_10">响应数据格式<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p><a href="https://cloud.tencent.com/developer/chapter/13553">状态码大全</a></p>
+<p>响应数据分为三部分：</p>
+<ol>
+<li>响应行：响应数据的第一行。其中HTTP/1.1表示协议版本，200便是响应状态码，OK表示状态码描述</li>
+<li>响应偷：第二行开始，格式为key：value形式</li>
+<li>响应体：最后一部分。存放响应数据</li>
+</ol>
+<p>响应数据的格式：</p>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220622121701265.png" alt="image-20220622121701265" style="zoom:50%;" /></p>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220622121825135.png" width="50%" style="zoom:50%;" /></p>
+<h2 id="web-tomcat">WEB服务器 - Tomcat<a class="headerlink" href="#web-tomcat" title="Permanent link">&para;</a></h2>
+<p>​   web服务器是一个应用程序，对HTTP协议的操作进行封装（简化开发），使得程序员不必直接对协议进行操作，让web开发更加便捷。主要功能是“提供网上信息浏览服务”。
+​   Tomcat是轻量级的web服务器，支持 Servlet/JSP 少量 JavaEE规范。</p>
+<h2 id="servlet">Servlet<a class="headerlink" href="#servlet" title="Permanent link">&para;</a></h2>
+<p>快速入门</p>
+<ol>
+<li>创建web项目，导入Serclet依赖坐标</li>
+</ol>
+<div class="highlight"><pre><span></span><code>        <span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>javax.servlet<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>javax.servlet-api<span class="nt">&lt;/artifactId&gt;</span>
+            <span class="nt">&lt;version&gt;</span>4.0.1<span class="nt">&lt;/version&gt;</span>
+            <span class="cm">&lt;!--下面这一句必须加--&gt;</span>
+            <span class="nt">&lt;scope&gt;</span>provided<span class="nt">&lt;/scope&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div>
+<ol>
+<li>创建：定义一个类，实现Servlet接口，并重写接口中所有方法</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="c1">//urlPatterns表示访问目标</span><span class="w"></span>
+<span class="c1">//loadOnStartup 为负整数时：第一次访问是创建Servlet对象</span><span class="w"></span>
+<span class="c1">//              0或正整数：服务器启动时创建Servlet对象，数字越小优先级越高</span><span class="w"></span>
+<span class="c1">//默认情况使用  @WebServlet(&quot;/demo&quot;)</span><span class="w"></span>
+<span class="nd">@WebServlet</span><span class="p">(</span><span class="n">urlPatterns</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;/demo&quot;</span><span class="p">,</span><span class="n">loadOnStartup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Demo</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Servlet</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//调用时机：默认情况下，Servlet被第一次访问时调用并且只会被调用一次</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">init</span><span class="p">(</span><span class="n">ServletConfig</span><span class="w"> </span><span class="n">servletConfig</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">ServletException</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">     </span><span class="c1">//1.调用时机：每一次Servler被访问时调用</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//2.调用次数：每一次调用</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">service</span><span class="p">(</span><span class="n">ServletRequest</span><span class="w"> </span><span class="n">servletRequest</span><span class="p">,</span><span class="w"> </span><span class="n">ServletResponse</span><span class="w"> </span><span class="n">servletResponse</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">ServletException</span><span class="p">,</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w"> </span><span class="c1">//调用时机：内存释放或者服务器关闭的时候，Servler对象会被销毁时调用</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//调用次数：1次</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">destroy</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">ServletConfig</span><span class="w"> </span><span class="nf">getServletConfig</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w"> </span><span class="c1">//返回一些关于Servlet对象的信息，比如作者、版本和版权  一般不怎么使用</span><span class="w"></span>
+<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getServletInfo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<ol>
+<li>配置：在类上使用@WebServlet 注解，配置该Servlet的访问路径</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="nd">@WebServlet</span><span class="w"> </span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ServletDemo</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Servlet</span><span class="w"></span>
+</code></pre></div>
+<ol>
+<li>访问：启动Tomcat，浏览器输入url访问该Servlet</li>
+</ol>
+<p>Servlet生命周期</p>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220622170518722.png" alt="image-20220622170518722" style="zoom:50%;" /></p>
+<p>Servlet体系结构</p>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220624092913357.png" alt="image-20220624092913357" style="zoom:50%;" /></p>
+<p>我们自定义servlet时，一般继承HttpServlet并且复写他的 <code>doGet()</code> 和<code>doPost()</code> 方法</p>
+<p>doGet()方法中写 get 请求方式的处理逻辑</p>
+<p>doPost()方法中写 post 请求方式的处理逻辑</p>
+<h3 id="servleturlpattern">Servlet要想被访问，必须配置其访问路径（urlPattern）<a class="headerlink" href="#servleturlpattern" title="Permanent link">&para;</a></h3>
+<ol>
+<li>一个 Servlet 可以配置多个 urlPattern</li>
+</ol>
+<p>@WebServlet( urlPattern = { "/demo1" , " /demo2" } )</p>
+<ol>
+<li>urlPattern 配置规则</li>
+</ol>
+<p>优先级：精确匹配 &gt; 目录匹配 &gt; 扩展名匹配 &gt; 任意匹配</p>
+<ul>
+<li>
+<p>精确匹配    </p>
+<ul>
+<li>配置路径：@WebServlet( " /user/demo1 " )</li>
+<li>访问路径：localhost:8080/web-demo/user/demo1</li>
+</ul>
+</li>
+<li>
+<p>目录匹配</p>
+<ul>
+<li>配置路径：@WebServlet( " /user/* " )</li>
+<li>访问路径：localhost:8080/web-demo/user/aaa ，localhost:8080/web-demo/user/bbb</li>
+</ul>
+</li>
+<li>
+<p>扩展名匹配 </p>
+<ul>
+<li>配置路径：@WebServlet( " *.do " )   （注意没有 / ）</li>
+<li>访问路径：localhost:8080/web-demo/aaa.do ，localhost:8080/web-demo/bbb.do</li>
+</ul>
+</li>
+<li>
+<p>任意匹配（尽量不要使用，是危险的）</p>
+<ul>
+<li>
+<p>配置路径：@WebServlet( " / " ) ，@WebServlet( " /* " )   </p>
+</li>
+<li>
+<p>访问路径：localhost:8080/web-demo/***</p>
+</li>
+</ul>
+<p>后面的优先级高于前面的优先级，当我们项目中的Servlet配置了 <code>/</code> ，当其他的url-pattern都匹配不上时会走这个Servlet</p>
+<p>配置 <code>/*</code> ，意味着匹配任意访问路径</p>
+</li>
+</ul>
+<p>### XML配置方式编写Servlet（了解）</p>
+<p>Servlet 从3.0版本后开始支持使用注解配置，3.0版本前只支持XML 配置文件的配置方式</p>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220624101833874.png" alt="image-20220624101833874" style="zoom:50%;" /></p>
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!--说明类的位置--&gt;</span>
+<span class="nt">&lt;serclet-class&gt;</span>com.itheima.web.servlet.ServletDemo5<span class="nt">&lt;/serclet-class&gt;</span>
+<span class="cm">&lt;!--说明访问路径--&gt;</span>
+<span class="nt">&lt;url-pattern&gt;</span>/demo5<span class="nt">&lt;/url-pattern&gt;</span>
+<span class="cm">&lt;!--两个name标签的内容需要一样--&gt;</span>
+</code></pre></div>
+<h2 id="request">Request(请求)<a class="headerlink" href="#request" title="Permanent link">&para;</a></h2>
+<h3 id="request_1">Request 继承体系<a class="headerlink" href="#request_1" title="Permanent link">&para;</a></h3>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220624105037077.png" alt="image-20220624105037077" style="zoom:50%;" /></p>
+<p>因为使用Tomcat所以是Tomcat定义的实现类</p>
+<h3 id="request_2">Request 获取请求数据<a class="headerlink" href="#request_2" title="Permanent link">&para;</a></h3>
+<ol>
+<li>请求行</li>
+</ol>
+<p>常用的一些方法</p>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220624113408330.png" alt="image-20220624113408330" style="zoom: 67%;" /></p>
+<p>getQueryString()：<code>localhost:8080/Tomcat/demo1?username=zhangsan&amp;password=123</code> 返回的是后面的这一串</p>
+<ol>
+<li>请求头</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="nf">getHeader</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nama</span><span class="p">)</span><span class="w"></span>
+<span class="c1">//根据请求头名称，获取值</span><span class="w"></span>
+</code></pre></div>
+<ol>
+<li>请求体</li>
+</ol>
+<p>使用字节输入流或者字符输入流</p>
+<h3 id="_11">通用方式获取请求参数<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p>doGet() 和 doPost() 的逻辑概念是一样的，但是对于参数的获取的方式是不一样的，会出现代码重复的问题</p>
+<ul>
+<li>GET方式</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="nf">getQueryString</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<ul>
+<li>POST方式</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">BufferedReader</span><span class="w"> </span><span class="nf">getReader</span><span class="p">();</span><span class="w"></span>
+</code></pre></div>
+<p>解决方案一:</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@WebServlet</span><span class="p">(</span><span class="s">&quot;/req1&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">RequestDemo1</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">HttpServlet</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doGet</span><span class="p">(</span><span class="n">HttpServletRequest</span><span class="w"> </span><span class="n">req</span><span class="p">,</span><span class="w"> </span><span class="n">HttpServletResponse</span><span class="w"> </span><span class="n">resp</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">ServletException</span><span class="p">,</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//获取请求方式</span><span class="w"></span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">req</span><span class="p">.</span><span class="na">getMethod</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//获取请求参数</span><span class="w"></span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">params</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="s">&quot;GET&quot;</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">method</span><span class="p">)){</span><span class="w"></span>
+<span class="w">            </span><span class="n">params</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">req</span><span class="p">.</span><span class="na">getQueryString</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="s">&quot;POST&quot;</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">method</span><span class="p">)){</span><span class="w"></span>
+<span class="w">            </span><span class="n">BufferedReader</span><span class="w"> </span><span class="n">reader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">req</span><span class="p">.</span><span class="na">getReader</span><span class="p">();</span><span class="w"></span>
+<span class="w">            </span><span class="n">params</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reader</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//将请求参数进行打印控制台</span><span class="w"></span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">params</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doPost</span><span class="p">(</span><span class="n">HttpServletRequest</span><span class="w"> </span><span class="n">req</span><span class="p">,</span><span class="w"> </span><span class="n">HttpServletResponse</span><span class="w"> </span><span class="n">resp</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">ServletException</span><span class="p">,</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">doGet</span><span class="p">(</span><span class="n">req</span><span class="p">,</span><span class="n">resp</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>使用request的getMethod()来获取请求方式，根据请求方式的不同分别获取请求参数值，这样就可以解决上述问题，但是以后每个Servlet都需要这样写代码，实现起来比较麻烦，<strong>这种方案我们不采用</strong></p>
+<p>解决方案二:</p>
+<p>request对象已经将上述获取请求参数的方法进行了封装，并且request提供的方法实现的功能更强大，以后只需要调用request提供的方法即可，在request的方法中都实现了哪些操作?</p>
+<p>(1)根据不同的请求方式获取请求参数，获取的内容如下:</p>
+<p><img alt="image-20220624134258968" src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220624134258968.png" /></p>
+<p>(2)把获取到的内容进行分割，内容如下:</p>
+<p><img alt="image-20220624134310198" src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220624134310198.png" /></p>
+<p>(3)把分割后端数据，存入到一个Map集合中:</p>
+<p><img alt="image-20220624134323599" src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220624134323599.png" /></p>
+<p><strong>注意</strong>:因为参数的值可能是一个，也可能有多个，所以Map的值的类型为String数组。</p>
+<p>基于上述理论，request对象为我们提供了如下方法:</p>
+<ul>
+<li>获取所有参数Map集合</li>
+</ul>
+<div class="highlight"><pre><span></span><code>Map&lt;String,String[]&gt; getParameterMap()
+</code></pre></div>
+<ul>
+<li>根据名称获取参数值（数组）</li>
+</ul>
+<div class="highlight"><pre><span></span><code>String[] getParameterValues(String name)
+</code></pre></div>
+<ul>
+<li>根据名称获取参数值(单个值)</li>
+</ul>
+<div class="highlight"><pre><span></span><code>String getParameter(String name)
+</code></pre></div>
+<p>接下来，我们通过案例来把上述的三个方法进行实例演示:</p>
+<p>1.修改req.html页面，添加爱好选项，爱好可以同时选多个</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Title<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;/request-demo/req2&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;get&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;username&quot;</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;password&quot;</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;hobby&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;1&quot;</span><span class="p">&gt;</span> 游泳
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;hobby&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;2&quot;</span><span class="p">&gt;</span> 爬山 <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><img alt="1628780937599" src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/1628780937599.png" /></p>
+<p>2.在Servlet代码中获取页面传递GET请求的参数值</p>
+<p>2.1获取GET方式的所有请求参数</p>
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * request 通用方式获取请求参数</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="nd">@WebServlet</span><span class="p">(</span><span class="s">&quot;/req2&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">RequestDemo2</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">HttpServlet</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doGet</span><span class="p">(</span><span class="n">HttpServletRequest</span><span class="w"> </span><span class="n">req</span><span class="p">,</span><span class="w"> </span><span class="n">HttpServletResponse</span><span class="w"> </span><span class="n">resp</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">ServletException</span><span class="p">,</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//GET请求逻辑</span><span class="w"></span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;get....&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//1. 获取所有参数的Map集合</span><span class="w"></span>
+<span class="w">        </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">[]&gt;</span><span class="w"> </span><span class="n">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">req</span><span class="p">.</span><span class="na">getParameterMap</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">map</span><span class="p">.</span><span class="na">keySet</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// username:zhangsan lisi</span><span class="w"></span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">key</span><span class="o">+</span><span class="s">&quot;:&quot;</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">            </span><span class="c1">//获取值</span><span class="w"></span>
+<span class="w">            </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">map</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">key</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">values</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doPost</span><span class="p">(</span><span class="n">HttpServletRequest</span><span class="w"> </span><span class="n">req</span><span class="p">,</span><span class="w"> </span><span class="n">HttpServletResponse</span><span class="w"> </span><span class="n">resp</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">ServletException</span><span class="p">,</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>获取的结果为:</p>
+<p><img alt="1628780965283" src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/1628780965283.png" /></p>
+<p>2.2获取GET请求参数中的爱好，结果是数组值</p>
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * request 通用方式获取请求参数</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="nd">@WebServlet</span><span class="p">(</span><span class="s">&quot;/req2&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">RequestDemo2</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">HttpServlet</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doGet</span><span class="p">(</span><span class="n">HttpServletRequest</span><span class="w"> </span><span class="n">req</span><span class="p">,</span><span class="w"> </span><span class="n">HttpServletResponse</span><span class="w"> </span><span class="n">resp</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">ServletException</span><span class="p">,</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//GET请求逻辑</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//...</span><span class="w"></span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;------------&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">hobbies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">req</span><span class="p">.</span><span class="na">getParameterValues</span><span class="p">(</span><span class="s">&quot;hobby&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">hobby</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">hobbies</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">hobby</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doPost</span><span class="p">(</span><span class="n">HttpServletRequest</span><span class="w"> </span><span class="n">req</span><span class="p">,</span><span class="w"> </span><span class="n">HttpServletResponse</span><span class="w"> </span><span class="n">resp</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">ServletException</span><span class="p">,</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>获取的结果为:</p>
+<p><img alt="1628781031437" src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/1628781031437.png" /></p>
+<p>2.3获取GET请求参数中的用户名和密码，结果是单个值</p>
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * request 通用方式获取请求参数</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="nd">@WebServlet</span><span class="p">(</span><span class="s">&quot;/req2&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">RequestDemo2</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">HttpServlet</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doGet</span><span class="p">(</span><span class="n">HttpServletRequest</span><span class="w"> </span><span class="n">req</span><span class="p">,</span><span class="w"> </span><span class="n">HttpServletResponse</span><span class="w"> </span><span class="n">resp</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">ServletException</span><span class="p">,</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//GET请求逻辑</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//...</span><span class="w"></span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">req</span><span class="p">.</span><span class="na">getParameter</span><span class="p">(</span><span class="s">&quot;username&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">req</span><span class="p">.</span><span class="na">getParameter</span><span class="p">(</span><span class="s">&quot;password&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">username</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">password</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doPost</span><span class="p">(</span><span class="n">HttpServletRequest</span><span class="w"> </span><span class="n">req</span><span class="p">,</span><span class="w"> </span><span class="n">HttpServletResponse</span><span class="w"> </span><span class="n">resp</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">ServletException</span><span class="p">,</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>获取的结果为:</p>
+<p><img alt="1628781176434" src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/1628781176434.png" /></p>
+<p>3.在Servlet代码中获取页面传递POST请求的参数值</p>
+<p>3.1将req.html页面form表单的提交方式改成post</p>
+<p>3.2将doGet方法中的内容复制到doPost方法中即可</p>
+<h3 id="tomcat8-maven-7">请求参数中文乱码问题（Tomcat8已解决  maven插件支持到 7 ）<a class="headerlink" href="#tomcat8-maven-7" title="Permanent link">&para;</a></h3>
+<p>由于浏览器传来的值的编码是 UTF-8 但是Tomcat对其解析时使用的编码为 ISO_8859_1 因为编码不兼容导致乱码</p>
+<p>POST提交方式解决乱码</p>
+<div class="highlight"><pre><span></span><code><span class="n">request</span><span class="p">.</span><span class="na">setCharacterEncoding</span><span class="p">(</span><span class="s">&quot;UTF-8&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="c1">//对其编码方式进行改变，根据HTML页面的编码来进行设置</span><span class="w"></span>
+<span class="n">String</span><span class="w"> </span><span class="n">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">request</span><span class="p">.</span><span class="na">getParameter</span><span class="p">(</span><span class="s">&quot;username&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">username</span><span class="p">);</span><span class="w"></span>
+<span class="c1">//不使用第一行代码打印出来就是乱码</span><span class="w"></span>
+</code></pre></div>
+<p>GET提交方式解决乱码（也是通用解决办法）</p>
+<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">request</span><span class="p">.</span><span class="na">getParameter</span><span class="p">(</span><span class="s">&quot;username&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="c1">//将字符串转换为字节数组，按照 ISO_8859_1 编码</span><span class="w"></span>
+<span class="kt">byte</span><span class="o">[]</span><span class="w"> </span><span class="n">bytes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">username</span><span class="p">.</span><span class="na">getBytes</span><span class="p">(</span><span class="n">StandardCharsets</span><span class="p">.</span><span class="na">ISO_8859_1</span><span class="p">);</span><span class="w"></span>
+<span class="c1">//通过字节数组按照 UTF_8 转换为字符串</span><span class="w"></span>
+<span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">bytes</span><span class="p">,</span><span class="w"> </span><span class="n">StandardCharsets</span><span class="p">.</span><span class="na">UTF_8</span><span class="p">);</span><span class="w"></span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">s</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<h3 id="request_3">Request  请求转发<a class="headerlink" href="#request_3" title="Permanent link">&para;</a></h3>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220624153421389.png" alt="image-20220624153421389" style="zoom:50%;" /></p>
+<p>资源A和资源B共享数据</p>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220624153721661.png" alt="image-20220624153721661" style="zoom:60%;" /></p>
+<p>请求转发特点</p>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220624154244195.png" alt="image-20220624154244195" style="zoom:80%;" /></p>
+<p>重定向特点 两者进行对比一下</p>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220624164951993.png" alt="image-20220624164951993" style="zoom:50%;" /></p>
+<h2 id="response">Response(响应)<a class="headerlink" href="#response" title="Permanent link">&para;</a></h2>
+<h3 id="response_1">Response继承体系<a class="headerlink" href="#response_1" title="Permanent link">&para;</a></h3>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220624162255534.png" alt="image-20220624162255534" style="zoom: 67%;" /></p>
+<h3 id="response_2">Response 设置响应数据功能介绍<a class="headerlink" href="#response_2" title="Permanent link">&para;</a></h3>
+<ol>
+<li>响应行</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">setStatus</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">sc</span><span class="p">)</span><span class="w"></span>
+<span class="c1">//设置响应状态码</span><span class="w"></span>
+</code></pre></div>
+<ol>
+<li>响应头</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="c1">//设置响应头键值对</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">setHeader</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="n">String</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<ol>
+<li>响应体</li>
+</ol>
+<p>使用字符字节输出流</p>
+<div class="highlight"><pre><span></span><code><span class="c1">//获取字符输出流</span><span class="w"></span>
+<span class="n">PrintWrite</span><span class="w"> </span><span class="nf">getWrite</span><span class="p">()</span><span class="w"></span>
+<span class="c1">//获取字节输出流</span><span class="w"></span>
+<span class="n">ServletOutputStream</span><span class="w"> </span><span class="nf">getOutputStream</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<h3 id="response_3">Response 完成重定向<a class="headerlink" href="#response_3" title="Permanent link">&para;</a></h3>
+<p>重定向：一种资源跳转方式</p>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220624164913223.png" alt="image-20220624164913223" style="zoom:50%;" /></p>
+<p>加上虚拟目录是会写死这个路径我们应该使用动态获取的办法</p>
+<div class="highlight"><pre><span></span><code><span class="c1">//获取虚拟目录</span><span class="w"></span>
+<span class="n">String</span><span class="w"> </span><span class="n">contextPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">request</span><span class="p">.</span><span class="na">getContextPath</span><span class="p">();</span><span class="w"></span>
+<span class="n">response</span><span class="p">.</span><span class="na">sendRedirect</span><span class="p">(</span><span class="n">contextPath</span><span class="o">+</span><span class="s">&quot;/ServletTest2&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="c1">// response.sendRedirect(&quot;/Tomcat/ServletTest2&quot;);</span><span class="w"></span>
+<span class="c1">//上面这一句就是写死的</span><span class="w"></span>
+</code></pre></div>
+<p>请求转发特点 对比一下</p>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220624154244195.png" alt="image-20220624154244195" style="zoom:80%;" /></p>
+<h4 id="_12">路径问题<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
+<p>请求转发不需要虚拟目录，重定向需要虚拟目录</p>
+<ul>
+<li>浏览器使用：需要加载虚拟目录（项目访问路径）</li>
+<li>服务端使用：不需要加载虚拟目录</li>
+</ul>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220624170637504.png" alt="image-20220624170637504" style="zoom: 60%;" /></p>
+<h3 id="response_4">Response 响应字符数据<a class="headerlink" href="#response_4" title="Permanent link">&para;</a></h3>
+<p>通过Response对象获取字符输出流</p>
+<div class="highlight"><pre><span></span><code><span class="n">PrintWriter</span><span class="w"> </span><span class="n">writer</span><span class="o">=</span><span class="n">response</span><span class="p">.</span><span class="na">getWriter</span><span class="p">();</span><span class="w"></span>
+<span class="c1">//可向网页界面中写入aaa，如果直接输出中文会乱码，编码不支持</span><span class="w"></span>
+<span class="n">writer</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="s">&quot;aaa&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="c1">//response.setContentType(&quot;text/html;charset=utf-8&quot;);</span><span class="w"></span>
+<span class="c1">//可通过此方式设置输出的内容的风格，并设置编码格式 在一个引号内</span><span class="w"></span>
+</code></pre></div>
+<h3 id="response_5">Response 响应字节数据<a class="headerlink" href="#response_5" title="Permanent link">&para;</a></h3>
+<p>通过Response对象获取字节输出流</p>
+<div class="highlight"><pre><span></span><code><span class="n">ServletOutputStream</span><span class="w"> </span><span class="n">outputStream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">response</span><span class="p">.</span><span class="na">getOutputStream</span><span class="p">();</span><span class="w"></span>
+<span class="n">outputStream</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">字节数据</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>IOUtils工具类可以更简单的使用IO流可在maven中配置</p>
+<p><img alt="image-20220624214634718" src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220624214634718.png" /></p>
+<h2 id="jsp-html-ajax">JSP（已逐渐退出历史舞台  由 HTMl + AJAX替代 ）<a class="headerlink" href="#jsp-html-ajax" title="Permanent link">&para;</a></h2>
+<p><img alt="image-20220625161246918" src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220625161246918.png" /></p>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220625100634888.png" alt="image-20220625100634888" style="zoom:50%;" /></p>
+<p><img alt="image-20220626111343300" src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220626111343300.png" /></p>
+<h3 id="el">EL表达式<a class="headerlink" href="#el" title="Permanent link">&para;</a></h3>
+<p>用于简化JSP页面中的java代码</p>
+<p>主要功能：获取数据</p>
+<p>语法：${expression}    （中间的表达式对应 Servlet 语句中的  req.setAttribute("expression", brands);）
+在使用此语句 <code>req.getRequestDispatcher("/EL-demo.jsp").forward(request,response);</code>转移到对应页面中去</p>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220626113033398.png" alt="image-20220626113033398" style="zoom:50%;" /></p>
+<p>比如一个小使用</p>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220627171829709.png" alt="image-20220627171829709" style="zoom:50%;" /></p>
+<h3 id="jstl">JSTL标签<a class="headerlink" href="#jstl" title="Permanent link">&para;</a></h3>
+<p>使用标签取代 JSP 页面上的 Java 代码</p>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220626113305367.png" alt="image-20220626113305367" style="zoom:50%;" /></p>
+<p><code>&lt;c:if test=" EL表达式 "&gt;  &lt;?c:if&gt;</code>  test 是逻辑表达式  同样是由 Servler 转发而来的</p>
+<p>forEach </p>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220626114743111.png" style="zoom:50%;" /></p>
+<p>还有一个属性  varStatus 其值任意填写
+比如上图的获取 id 时获取的是数据库中的 id 但是其不一定连续 可以使用 <code>varStatus = "status"  ${status.index} 或者 ${status.count}  count 代表从 1 开始  index从 0 开始</code>  </p>
+<p>普通 For 循环</p>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220626115339659.png" alt="image-20220626115339659" style="zoom:50%;" /></p>
+<h3 id="mvc">MVC模式<a class="headerlink" href="#mvc" title="Permanent link">&para;</a></h3>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220626121752229.png" alt="image-20220626121752229" style="zoom:50%;" /></p>
+<p>可以提高代码的复用性</p>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220626122235309.png" alt="image-20220626122235309" style="zoom:50%;" /></p>
+<p>SSM就是对这三个层面代码的封装和简化</p>
+<h2 id="_13">会话跟踪技术<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<p>会话：用户打开浏览器，访问web服务器的资源，会话建立，知道有一方断开连接，会话结束。在一次会话中可以包含多次请求和响应</p>
+<p>会话跟踪：一种维护浏览器状态的方法，服务器需要识别多次请求是否来自同一浏览器，以便在同一次会话中的多次请求间共享数据</p>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220627120021257.png" alt="image-20220627120021257" style="zoom:50%;" />六次请求三次会话</p>
+<p>实现方式</p>
+<ul>
+<li>客户端会话跟踪技术（数据存储到客户端）：Cookie  （没有 Session 安全）</li>
+<li>服务端会话跟踪技术（数据存储到服务端）：Session</li>
+</ul>
+<h3 id="cookie">Cookie<a class="headerlink" href="#cookie" title="Permanent link">&para;</a></h3>
+<h4 id="_14">基本使用<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>发送 Cookie</p>
+</li>
+<li>
+<p>创建 Cookie 对象，设置数据</p>
+<p><code>Cookie cookie =new Cookie("key","value");</code></p>
+</li>
+<li>
+<p>发送 Cookie 到客户端：Shi用 response 对象</p>
+<p>response.addCookie(cookie);</p>
+<div class="highlight"><pre><span></span><code><span class="c1">//Cookie 的创建</span><span class="w"></span>
+<span class="n">Cookie</span><span class="w"> </span><span class="n">c_username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Cookie</span><span class="p">(</span><span class="s">&quot;username&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">username</span><span class="p">);</span><span class="w"></span>
+<span class="n">Cookie</span><span class="w"> </span><span class="n">c_password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Cookie</span><span class="p">(</span><span class="s">&quot;password&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">password</span><span class="p">);</span><span class="w"></span>
+<span class="c1">//设置存活时间</span><span class="w"></span>
+<span class="n">c_password</span><span class="p">.</span><span class="na">setMaxAge</span><span class="p">(</span><span class="mi">60</span><span class="o">*</span><span class="mi">60</span><span class="o">*</span><span class="mi">24</span><span class="p">);</span><span class="c1">//存活一天</span><span class="w"></span>
+<span class="n">c_username</span><span class="p">.</span><span class="na">setMaxAge</span><span class="p">(</span><span class="mi">60</span><span class="o">*</span><span class="mi">60</span><span class="o">*</span><span class="mi">24</span><span class="p">);</span><span class="c1">//存活一天</span><span class="w"></span>
+<span class="c1">//Cookie 发送</span><span class="w"></span>
+<span class="n">res</span><span class="p">.</span><span class="na">addCookie</span><span class="p">(</span><span class="n">c_username</span><span class="p">);</span><span class="w"></span>
+<span class="n">res</span><span class="p">.</span><span class="na">addCookie</span><span class="p">(</span><span class="n">c_password</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+</li>
+<li>
+<p>获取 Cookie</p>
+</li>
+<li>
+<p>获取客户端携带的所有 Cookie ，使用 request 对象</p>
+<p><code>Cookie[] cookies = request.getCookie();</code></p>
+</li>
+<li>
+<p>遍历数组，获取每一个 Cookie 对象：for 循环</p>
+</li>
+<li>
+<p>使用 Cookie 对象方法获取数据</p>
+<p><code>cookie.getName();</code></p>
+<p><code>cookie.getValue();</code></p>
+</li>
+</ol>
+<h4 id="_15">原理<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
+<p>COokie 的实现是基于 HTTP 协议的</p>
+<ul>
+<li>响应头：set - cookie;</li>
+<li>请求头：cookie</li>
+</ul>
+<h4 id="_16">使用细节<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
+<p>Cookie 存活时间</p>
+<ul>
+<li>默认情况下，Cookie 存储在浏览器内存中，当浏览器关闭，内存释放，则 Cookie 被销毁</li>
+<li>setMaxAge( int seconds )：设置 Cookie 存活时间</li>
+<li>正数：将 Cookie 写入浏览器所在电脑的莹白，持久化存储，到时间自动删除</li>
+<li>负数：默认值，Cookie 在当前浏览器内存中，当浏览器关闭，则 Cookie 被销毁</li>
+<li>零：删除对应 Cookie</li>
+</ul>
+<p>Cookie 存储中文（默认不支持中文）
+        如需存储中文，则需要进行转码：URL编码
+            转码
+                <code>String value = "张三";  value = URLEnconder.encode(value,"UTF-8");</code>
+            解码
+                <code>String value = cookie.getValue(); value = URLDecoder.decode(value,"UTF-8");</code></p>
+<p>Cookie 设置好以后 如何自动填充用户名和密码呢<br />
+        在页面获取 Cookie 数据后，设置到用户名和密码框中：
+        使用 EL表达式 <code>${cookie.key.value}  // key指存储在 cookie 中的键的名称 设置在标签元素的 value 值</code>     </p>
+<h3 id="session">Session<a class="headerlink" href="#session" title="Permanent link">&para;</a></h3>
+<h4 id="_17">基本使用<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
+<p>服务端会话跟踪技术：将数据保存到服务端</p>
+<p>JavaEE 提供HttpSession 接口，来实现一次会话的多次请求见数据共享功能</p>
+<p>使用：</p>
+<ol>
+<li>获取 Session 对象</li>
+</ol>
+<p><code>HttpSession session=request.getSession();</code></p>
+<ol>
+<li>
+<p>Session 对象功能</p>
+</li>
+<li>
+<p>void setAttribute ( String name , Object O)：存储数据到 Session 域中</p>
+</li>
+<li>Object getAttribute ( String name )：根据 key ，获取值</li>
+<li>void removeAttribute ( String name )：根据 key ，删除该键值对</li>
+</ol>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220629134127070.png" alt="image-20220629134127070" style="zoom:50%;" /></p>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220629134359529.png" alt="image-20220629134359529" style="zoom:50%;" /></p>
+<h4 id="_18">原理<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
+<p>Session 是基于 Cookie 实现的</p>
+<h4 id="_19">使用细节<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
+<p>不能长期的去保存一些数据，Cookie 可以</p>
+<ul>
+<li>
+<p>Session 钝化、活化</p>
+</li>
+<li>
+<p>钝化：在服务器正常关闭后，Tomcat 会自动将 Session 数据写入硬盘的文件中</p>
+</li>
+<li>活化：再次启动服务器后，从文件中加载数据到 Session 中 文件被删除</li>
+</ul>
+<p>eg：服务器正常重启后，Session 中的数据仍然存在</p>
+<ul>
+<li>
+<p>Session 销毁</p>
+</li>
+<li>
+<p>默认情况下，无操作，30 分钟自动销毁</p>
+<p>如想更改默认时间 可在 web.xml 文件中添加</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;session-config&gt;</span>
+    <span class="nt">&lt;session-timeout&gt;</span>xxx<span class="nt">&lt;/session-timeout&gt;</span>    <span class="cm">&lt;!--xxx 代表分钟数--&gt;</span>
+<span class="nt">&lt;/session-config&gt;</span>
+</code></pre></div>
+</li>
+<li>
+<p>调用 Session 对象的 invalidate() 方法来进行销毁</p>
+</li>
+</ul>
+<h3 id="cookie-session">Cookie 和 Session 的区别<a class="headerlink" href="#cookie-session" title="Permanent link">&para;</a></h3>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220629142317671.png" alt="image-20220629142317671" style="zoom:50%;" /></p>
+<h2 id="filter">Filter<a class="headerlink" href="#filter" title="Permanent link">&para;</a></h2>
+<ul>
+<li>概念：Filter 表示过滤器，是 JavaWeb 三大组件 （ Servlet、Filter、Listener ）之一</li>
+<li>顾虑其可以把对资源的请求拦截下来，从而实现一些特殊的请求</li>
+<li>过滤器一般完成一些通用的操作，比如：权限控制、统一编码处理、敏感字符处理...</li>
+</ul>
+<h3 id="_20">快速入门<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220702101156657.png" alt="image-20220702101156657" style="zoom:50%;" /></p>
+<h3 id="_21">执行流程<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220702100711087.png" alt="image-20220702100711087" style="zoom:50%;" /></p>
+<h3 id="_22">使用细节<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
+<ul>
+<li>拦截路径配置</li>
+</ul>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220702102308072.png" alt="image-20220702102308072" style="zoom:50%;" /></p>
+<ul>
+<li>过滤器链</li>
+</ul>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220702103413227.png" alt="image-20220702103413227" style="zoom:50%;" /></p>
+<h2 id="listener">Listener（现在很少使用）<a class="headerlink" href="#listener" title="Permanent link">&para;</a></h2>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220702150234679.png" alt="image-20220702150234679" style="zoom:50%;" /></p>
+<h2 id="ajax">AJAX （主流方式，完成了前后端分离）<a class="headerlink" href="#ajax" title="Permanent link">&para;</a></h2>
+<p>概念：异步的 JavaScript 和 XML</p>
+<p>作用：</p>
+<ol>
+<li>与服务器进行数据交换：通过 AJAX 可以给服务器发送请求，并获取服务器响应的数据
+   使用了 AJAX 和服务器进行通信，就可以使用 HTML + AJAX 来替换 JSP 页面了  </li>
+</ol>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220702152018475.png" alt="image-20220702152018475" style="zoom:50%;" /></p>
+<p>与 JSP 的区别<img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220702152056041.png" alt="image-20220702152056041" style="zoom:33%;" /></p>
+<ol>
+<li>
+<p>异步交互：可以在不重新加载整个页面的情况下，与服务器交换数据并更新部分网页的技术，如：搜索联想</p>
+</li>
+<li>
+<p>同步和异步的区别
+   <img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220702153411248.png" style="zoom:50%;" /></p>
+</li>
+</ol>
+<h3 id="_23">快速入门<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220702155113810.png" alt="image-20220702155113810" style="zoom:50%;" /></p>
+<h3 id="axios">Axios 异步框架<a class="headerlink" href="#axios" title="Permanent link">&para;</a></h3>
+<p>Axios 对原生的 AJAX 进行封装，简化书写</p>
+<p>官网：<a href="https://www.axios-http.cn/">Axios 中文文档 </a></p>
+<p>快速入门
+<img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220702162225303.png" alt="image-20220702162225303" style="zoom:50%;" /></p>
+<p>2中的then(function (resp){</p>
+<p>}) 可以替换为 then(resp =&gt;{</p>
+<p>})   类似 Java 中的 Lambda 表达式</p>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220702182217004.png" alt="image-20220702182217004" style="zoom:50%;" /></p>
+<h2 id="json">Json<a class="headerlink" href="#json" title="Permanent link">&para;</a></h2>
+<p>概念：JavaScript Object Notation 。 Javascript对象表示法</p>
+<p>由于其语法简单，层次结构鲜明，现多用于作为数据载体，在网络中进行数据传输</p>
+<h3 id="_24">基础语法<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220702215230972.png" alt="image-20220702215230972" style="zoom:50%;" /></p>
+<h3 id="json-java">JSON 数据和 Java 对象转换<a class="headerlink" href="#json-java" title="Permanent link">&para;</a></h3>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220702215938111.png" style="zoom: 50%;" /></p>
+<div class="highlight"><pre><span></span><code><span class="c1">//Servlet 获取网页的json数据</span><span class="w"></span>
+
+<span class="c1">//获取请求体数据</span><span class="w"></span>
+<span class="n">BufferedReader</span><span class="w"> </span><span class="n">br</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">request</span><span class="p">.</span><span class="na">getReader</span><span class="p">();</span><span class="w"></span>
+<span class="n">String</span><span class="w"> </span><span class="n">params</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">br</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span><span class="w"></span>
+
+<span class="c1">//将 json 字符串转为 Java 对象、</span><span class="w"></span>
+<span class="n">Brand</span><span class="w"> </span><span class="n">brand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JSON</span><span class="p">.</span><span class="na">parseObject</span><span class="p">(</span><span class="n">params</span><span class="p">,</span><span class="n">Brand</span><span class="p">.</span><span class="na">class</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<h2 id="vue">Vue (前端最为主流的框架)<a class="headerlink" href="#vue" title="Permanent link">&para;</a></h2>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220703121927805.png" alt="image-20220703121927805" style="zoom:50%;" /></p>
+<h3 id="_25">快速入门<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h3>
+<ol>
+<li>新建 HTML 页面，引入 Vue.js 文件</li>
+</ol>
+<p><code>&lt;scrpit src="js/vue.js"&gt;&lt;/scrpit&gt;</code></p>
+<ol>
+<li>在 JS 代码区域，创建Vue核心对象，进行数据绑定</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="ow">new</span><span class="o">:</span><span class="nx">Vue</span><span class="p">({</span><span class="w"></span>
+<span class="w"> </span><span class="nx">el</span><span class="o">:</span><span class="s2">&quot;#app&quot;</span><span class="p">,</span><span class="c1">//对应相应的id 设置Vue的控制范围</span><span class="w"></span>
+<span class="w"> </span><span class="nx">data</span><span class="p">(){</span><span class="w"></span>
+<span class="w">     </span><span class="k">return</span><span class="p">{</span><span class="w"></span>
+<span class="w">         </span><span class="nx">username</span><span class="o">:</span><span class="s2">&quot;&quot;</span><span class="c1">//对应 id 标签的 v-model 的值要和 username 一样，不是引号中的值</span><span class="w"></span>
+<span class="w">     </span><span class="p">}</span><span class="w"></span>
+<span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
+</code></pre></div>
+<ol>
+<li>编写视图</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;app&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;username&quot;</span> <span class="na">v-model</span><span class="o">=</span><span class="s">&quot;username&quot;</span><span class="p">&gt;</span>
+    <span class="cm">&lt;!--插值表达式--&gt;</span>
+    {{username}}
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="_26">常用指令<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v-bind</td>
+<td>为HTML便签绑定属性值，如设置 href <code>&lt;a v-bind:href="url"&gt;&lt;/a&gt; v-bind可以省略</code></td>
+</tr>
+<tr>
+<td>v-model</td>
+<td>在表单元素上创建双向数据绑定</td>
+</tr>
+<tr>
+<td>v-on</td>
+<td>为HTML标签绑定事件 <code>v-on可替换为@</code></td>
+</tr>
+<tr>
+<td>v-if</td>
+<td>条件性的渲染某元素，判定为true时渲染，否则不渲染</td>
+</tr>
+<tr>
+<td>v-else</td>
+<td>同上</td>
+</tr>
+<tr>
+<td>v-else-if</td>
+<td>同上</td>
+</tr>
+<tr>
+<td>v-show</td>
+<td>根据条件展示某元素，区别在于切换的是display属性的值</td>
+</tr>
+<tr>
+<td>v-for</td>
+<td>列表渲染，遍历容器的元素或者对象的属性</td>
+</tr>
+</tbody>
+</table>
+<p>使用 Vue 定义方法</p>
+<div class="highlight"><pre><span></span><code><span class="ow">new</span><span class="w"> </span><span class="nx">Vue</span><span class="p">({</span><span class="w"></span>
+<span class="w">    </span><span class="nx">el</span><span class="o">:</span><span class="s2">&quot;#Xxx&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nx">methods</span><span class="o">:</span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">show</span><span class="p">(){</span><span class="w"></span>
+<span class="w">            </span><span class="c">&lt;!--</span><span class="nx">方法体</span><span class="p">,</span><span class="nx">show是方法的名字</span><span class="o">--&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
+</code></pre></div>
+<h3 id="_27">生命周期<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h3>
+<p>生命周期有八个阶段：每触发一个生命周期，会自动执行一个生命周期方法</p>
+<table>
+<thead>
+<tr>
+<th align="center">状态</th>
+<th align="left">阶段周期</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">beforeCreate</td>
+<td align="left">创建前</td>
+</tr>
+<tr>
+<td align="center">created</td>
+<td align="left">创建后</td>
+</tr>
+<tr>
+<td align="center">beforeMount</td>
+<td align="left">加载前</td>
+</tr>
+<tr>
+<td align="center">mounted</td>
+<td align="left">加载完成</td>
+</tr>
+<tr>
+<td align="center">beforeUpdate</td>
+<td align="left">更新前</td>
+</tr>
+<tr>
+<td align="center">updated</td>
+<td align="left">更新后</td>
+</tr>
+<tr>
+<td align="center">beforeDestory</td>
+<td align="left">销毁前</td>
+</tr>
+<tr>
+<td align="center">destoryed</td>
+<td align="left">销毁后</td>
+</tr>
+</tbody>
+</table>
+<p>mounted：Vue初始化成功，HTML页面渲染成功，发送异步请求，加载数据</p>
+<h2 id="element">Element （用于美化页面）<a class="headerlink" href="#element" title="Permanent link">&para;</a></h2>
+<p>Element：基于Vue的网站组件库，用于快速构建网页</p>
+<p>组件：组成网页的部件，例如 超链接，按钮，图片，表格等...</p>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220704131642128.png" alt="image-20220704131642128" style="zoom:50%;" /></p>
+<p><a href="https://element.eleme.cn/#/zh-CN">Element - 网站快速成型工具</a></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      
+        
+        <a href="../../JS/Node.js/" class="md-footer__link md-footer__link--prev" aria-label="上一页: nodejs" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              nodejs
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../Maven/" class="md-footer__link md-footer__link--next" aria-label="下一页: Maven" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              Maven
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 韩永琰
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    <a href="https://space.bilibili.com/358218864" target="_blank" rel="noopener" title="Bilibili | 愿你决定" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92.02c-26.45-.8-48.21-9.8-65.28-27.2C9.682 419.4.767 396.5 0 368.2V169.8c.767-26 9.682-47.6 26.74-65.7C43.81 87.75 65.57 78.77 92.02 78h29.38L96.05 52.19c-5.75-5.73-8.63-13-8.63-21.79 0-8.8 2.88-16.06 8.63-21.797C101.8 2.868 109.1 0 117.9 0s16.1 2.868 21.9 8.603L213.1 78h88l74.5-69.397C381.7 2.868 389.2 0 398 0c8.8 0 16.1 2.868 21.9 8.603 5.7 5.737 8.6 12.997 8.6 21.797 0 8.79-2.9 16.06-8.6 21.79L394.6 78h29.3c26.4.77 48 9.75 64.7 26.1zm-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96.05c-9.59.4-17.45 3.7-23.58 9.8-6.14 6.1-9.4 13.9-9.78 23.5v194.4c0 9.2 3.26 17 9.78 23.5s14.38 9.8 23.58 9.8H416.4c9.2 0 17-3.3 23.3-9.8 6.3-6.5 9.7-14.3 10.1-23.5V173.8zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5-9.6 0-17.5-3.2-23.6-9.5-6.1-6.3-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2 6.3-6.3 13.2-9.6 23.3-10 9.2.4 17 3.7 23.3 10zm191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.1 6.3-14 9.5-23.6 9.5-9.6 0-17.4-3.2-23.6-9.5-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2 6.3-6.3 14.1-9.6 23.3-10 9.2.4 17 3.7 23.3 10z"/></svg>
+    </a>
+  
+    
+    
+    <a href="https://github.com/hanyongyan" target="_blank" rel="noopener" title="GitHub | hanyongyan" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+        <script src="../../../mkdocs/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+    
+  </body>
+</html>

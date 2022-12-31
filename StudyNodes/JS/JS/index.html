@@ -1,0 +1,2485 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="韩永琰的个人网站">
+      
+      
+        <meta name="author" content="韩永琰">
+      
+      
+        <link rel="canonical" href="https://hanyongyan.github.io/StudyNodes/JS/JS/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>javaScript - 韩永琰的个人网站</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/no-footer.css">
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/unordered-list-symbols.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#js" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="韩永琰的个人网站" class="md-header__button md-logo" aria-label="韩永琰的个人网站" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            韩永琰的个人网站
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              javaScript
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+            </label>
+          
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hanyongyan/hanyongyan.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hanyongyan.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link md-tabs__link--active">
+        学习笔记
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="韩永琰的个人网站" class="md-nav__button md-logo" aria-label="韩永琰的个人网站" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    韩永琰的个人网站
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hanyongyan/hanyongyan.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hanyongyan.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../">学习笔记</a>
+          
+            <label for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="学习笔记" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          学习笔记
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1_2" type="checkbox" id="__nav_1_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_2">
+          Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Linux" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linux/Linux/" class="md-nav__link">
+        Linux入门
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linux/Vim/" class="md-nav__link">
+        Vim
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1_3" type="checkbox" id="__nav_1_3" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_3">
+          MySql
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="MySql" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          MySql
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MySql/MySQL%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        Mysql
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_4" type="checkbox" id="__nav_1_4" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_4">
+          js
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="js" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          js
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ajax/" class="md-nav__link">
+        Ajax
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jQuery/" class="md-nav__link">
+        jQuery
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        javaScript
+      </a>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TypeScript%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        TypeScript
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Node.js/" class="md-nav__link">
+        nodejs
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1_5" type="checkbox" id="__nav_1_5" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_5">
+          java
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="java" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_5">
+          <span class="md-nav__icon md-icon"></span>
+          java
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java/JavaWeb/" class="md-nav__link">
+        JavaWeb
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java/Maven/" class="md-nav__link">
+        Maven
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java/MyBatis%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        MyBatis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java/MyBatisPlus/" class="md-nav__link">
+        MyBatisPlus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java/SSM/" class="md-nav__link">
+        SSM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java/%E7%91%9E%E5%90%89%E5%A4%96%E5%8D%96%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        瑞吉外卖笔记
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java/Nacos%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        Nacos
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1_6" type="checkbox" id="__nav_1_6" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_6">
+          Git
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Git" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_6">
+          <span class="md-nav__icon md-icon"></span>
+          Git
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/Git/" class="md-nav__link">
+        git
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/2.1-Git%E7%AE%80%E6%98%93%E6%8C%87%E5%8D%97%28%E4%B8%8A%29/" class="md-nav__link">
+        1.1Git简易指南
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/2.2-%E5%88%9B%E5%BB%BA%E4%BB%A3%E7%A0%81%E4%BB%93%E5%BA%93/" class="md-nav__link">
+        1.2创建代码仓库
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/2.3-%E4%BF%9D%E5%AD%98%E4%BD%A0%E7%9A%84%E6%9B%B4%E6%94%B9/" class="md-nav__link">
+        1.3保存更改
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/2.4-%E6%9F%A5%E7%9C%8B%E4%BB%93%E5%BA%93%E7%8A%B6%E6%80%81/" class="md-nav__link">
+        1.4查看仓库状态
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/2.5-检查以前的提交.md" class="md-nav__link">
+        1.5检查以前的提交
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/2.6-%E5%9B%9E%E6%BB%9A%E9%94%99%E8%AF%AF%E7%9A%84%E4%BF%AE%E6%94%B9/" class="md-nav__link">
+        1.6回滚错误的修改
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/2.7-%E9%87%8D%E5%86%99%E9%A1%B9%E7%9B%AE%E5%8E%86%E5%8F%B2/" class="md-nav__link">
+        1.7重写项目历史
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/3.2-%E4%BF%9D%E6%8C%81%E4%BB%A3%E7%A0%81%E5%90%8C%E6%AD%A5/" class="md-nav__link">
+        2.1保持代码同步
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/3.3-%E5%88%9B%E5%BB%BAPullRequest/" class="md-nav__link">
+        2.2创建PullRequest
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/3.4-%E4%BD%BF%E7%94%A8%E5%88%86%E6%94%AF/" class="md-nav__link">
+        2.3使用分支
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/常见工作流比较.md" class="md-nav__link">
+        2.4常见工作流比较
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/4-Git%E5%9B%BE%E8%A7%A3/" class="md-nav__link">
+        3Git图解
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/5.1-%E4%BB%A3%E7%A0%81%E5%90%88%E5%B9%B6Merge%E8%BF%98%E6%98%AFRebase/" class="md-nav__link">
+        4.1代码合并Merge还是Rebase
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/5.2-%E5%9B%9E%E6%BB%9A%E5%91%BD%E4%BB%A4Reset%E3%80%81Checkout%E3%80%81Revert%E8%BE%A8%E6%9E%90/" class="md-nav__link">
+        4.2回滚命令
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/5.3-Git_log%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/" class="md-nav__link">
+        4.3Git_log高级用法
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/5.4-Git%E9%92%A9%E5%AD%90/" class="md-nav__link">
+        4.4Git钩子
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/5.5-Git%E6%8F%90%E4%BA%A4%E5%BC%95%E7%94%A8/" class="md-nav__link">
+        4.5Git提交引用
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+  <a href="https://github.com/hanyongyan/hanyongyan.github.io/edit/main/docs/StudyNodes/JS/JS.md" title="编辑此页" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="js">JS预解析<a class="headerlink" href="#js" title="Permanent link">&para;</a></h1>
+<p>JS引擎运行 Js 会分为两步：预解析和代码执行</p>
+<ol>
+<li>预解析：js引擎会把 js 里面所有的 var 还有 function 提升到当前作用域的最前面</li>
+<li>代码执行：按照代码书写的顺序从上往下执行</li>
+</ol>
+<p>预解析分为 变量预解析（变量提升）和函数预解析（函数提升）</p>
+<ol>
+<li>变量提升：就是把所有的变量声明提升到<strong><code>当前的作用域</code></strong>最前面但不进行赋值操作</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="c1">// 比如下面是能够执行成功的</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"></span>
+<span class="c1">//相当于执行了以下代码</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">num</span><span class="p">;</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span><span class="w"></span>
+<span class="nx">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<ol>
+<li>函数提升：就是把所有的函数声明提升到<code>当前的作用域</code>的最前面但不调用函数</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="c1">// 比如这样是可以执行的</span><span class="w"></span>
+<span class="nx">fun</span><span class="p">();</span><span class="w"></span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">fun</span><span class="p">(){}</span><span class="w"></span>
+</code></pre></div>
+<h1 id="h5">H5自定义属性<a class="headerlink" href="#h5" title="Permanent link">&para;</a></h1>
+<p>H5规定自定义属性<code>data-</code>开头作为属性名并赋值，使得自定义属性更加清楚
+H5新增的获取自定义属性的方法 <code>element.dataset.index</code>index代表 自定义属性 - 后面的值
+element.dataset 代表所有的自定义属性
+如果自定义属性中有多个 - 获取自定义属性要使用驼峰命名法
+eg：<code>&lt;div data-list-name = "haha"&gt;</code> 对应的获取就是 <code>element.dataset.listName</code></p>
+<h1 id="_1">节点概述<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>一般的，节点至少拥有nodeType（节点类型）、nodeName（节点名称）和nodeValue（节点值）这三个基本属性</p>
+<ul>
+<li>元素节点：nodeType 为 1</li>
+<li>属性节点：nodeType 为 2</li>
+<li>文本节点：nodeType 为 3（文本节点包含文字、空格、换行等）</li>
+</ul>
+<p>实际开发中，节点操作主要是操作元素节点</p>
+<h2 id="_2">节点层级<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>利用DOM树可以把节点划分为不同的层级关系，常见的是父子兄弟层级关系</p>
+<ul>
+<li>
+<p>父节点：node.parentNode;      得到的是离元素最近的父节点，找不到就为null</p>
+</li>
+<li>
+<p>子节点：parent.childNodes;      不推荐使用</p>
+</li>
+</ul>
+<p>​             parent.children          更推荐使用，获取<code>所有</code>的子元素节点，<code>伪数组形式</code></p>
+<p>​             parent.firstChild           返回第一个子节点，一般是文本节点</p>
+<p>​             parent.lastChild            返回最后一个子节点，一般是文本节点</p>
+<p>​             parent.firstElementChild        返回第一个族元素节点              ie9以上支持</p>
+<p>​             parent.lastElementChild         返回最后一个族元素节点         ie9以上支持</p>
+<ul>
+<li>兄弟节点：node.nextSibling         返回当前元素的下一个兄弟节点，包含所有的节点</li>
+</ul>
+<p>​             node.nextElementSibling     返回下一个元素节点 <code>记这个</code></p>
+<p>​             node.previousSibling        返回当前元素的上一个兄弟节点，包含所有节点</p>
+<p>​             nodepreviousElementSibling      返回上一个兄弟元素节点 <code>记这个</code></p>
+<h2 id="_3">节点<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="_4">添加节点<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p><code>document.createElement('tagName');</code>方法创建由 tagName指定的 HTML 元素。</p>
+<p>添加节点：node.appendChild(child) 将一个节点添加到指定父节点的子节点列表末尾，追加元素</p>
+<p>​               node.insertBefore(child,指定元素)将一个节点添加到父节点的指定子节点的前面</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>123<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// 1. 创建节点元素</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">li</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;li&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// 2. 添加节点</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">ul</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;ul&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nx">ul</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">li</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// 3. 添加节点到指定位置</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">lili</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;li&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nx">ul</span><span class="p">.</span><span class="nx">insertBefore</span><span class="p">(</span><span class="nx">lili</span><span class="p">,</span><span class="w"> </span><span class="nx">ul</span><span class="p">.</span><span class="nx">children</span><span class="p">[</span><span class="mf">0</span><span class="p">]);</span><span class="w"></span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><code>element.insertAdjacentHTML(position, text);</code>插入一个与当前节点的周围</p>
+<p>此方法是可以使用字符串来添加元素的，appendChild 是不支持追加字符串的子元素</p>
+<p>position表示插入内容相对于元素的位置，并且必须是以下字符串之一：</p>
+<ul>
+<li><code>'beforebegin'</code>：元素自身的前面。</li>
+<li><code>'afterbegin'</code>：插入元素内部的第一个子节点之前。</li>
+<li><code>'beforeend'</code>：插入元素内部的最后一个子节点之后。</li>
+<li><code>'afterend'</code>：元素自身的后面。</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">// 原为 &lt;div id=&quot;one&quot;&gt;one&lt;/div&gt;</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">d1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;one&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="nx">d1</span><span class="p">.</span><span class="nx">insertAdjacentHTML</span><span class="p">(</span><span class="s1">&#39;afterend&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;&lt;div id=&quot;two&quot;&gt;two&lt;/div&gt;&#39;</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// 此时，新结构变成：</span><span class="w"></span>
+<span class="c1">// &lt;div id=&quot;one&quot;&gt;one&lt;/div&gt;&lt;div id=&quot;two&quot;&gt;two&lt;/div&gt;</span><span class="w"></span>
+</code></pre></div>
+<h3 id="_5">删除节点<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p><code>node.removeChile(child)</code></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>删除<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>熊大<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>熊二<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>光头强<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w">    </span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">button</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nx">button</span><span class="p">.</span><span class="nx">onclick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(){</span><span class="w"></span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">ul</span><span class="w"> </span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;ul&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="nx">ul</span><span class="p">.</span><span class="nx">removeChild</span><span class="p">(</span><span class="nx">ul</span><span class="p">.</span><span class="nx">children</span><span class="p">[</span><span class="mf">0</span><span class="p">]);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="_6">克隆节点<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>1<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>2<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">ul</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;ul&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">lili</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ul</span><span class="p">.</span><span class="nx">chileren</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">cloneNode</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="nx">ul</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">lili</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//这样的复制是浅拷贝</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//node.cloneNode() 括号为空或者里面是false 浅拷贝只复制标签不复制内容</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//node.cloneNode(true) 深拷贝 复制标签bing&#39;q </span><span class="w"></span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="_7">动态创建元素的区别<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>innerHtml创建多个元素效率更高（不拼接字符串的形式，采取数组形式拼接，如果使用字符串拼接效率会非常低）结构稍微复杂</p>
+<p>createElement创建多个元素效率稍微低一点点，但是结构更清晰</p>
+<p>不同浏览器下，innerHtml采用数组形式拼接生成元素效率要比createElement更高</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// 拼接字符串形式，此种形式效率是最最最低的</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">inner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;.inner&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;=</span><span class="mf">100</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">){</span><span class="w"></span>
+<span class="w">    </span><span class="nx">inner</span><span class="p">.</span><span class="nx">innerHtml</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s1">&#39;&lt;a herf=&quot;#&quot;&gt;百度&lt;/a&gt;&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">// 数组的方式，此种形式效率最高</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">inner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;.inner&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span><span class="w"></span>
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">100</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">){</span><span class="w"></span>
+<span class="w">    </span><span class="nx">arr</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">&#39;&lt;a herf=&quot;#&quot;&gt;百度&lt;/a&gt;&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="nx">inner</span><span class="p">.</span><span class="nx">innerHtml</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">arr</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">);</span><span class="w"> </span>
+<span class="c1">//join 是讲数组转换成字符串的一个内置函数，传入的参数代表分割符</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">// 使用createElement的形式 效率稍低与数组形式</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">create</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;.create&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">100</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">){</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nx">create</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h1 id="dom">DOM重点核心<a class="headerlink" href="#dom" title="Permanent link">&para;</a></h1>
+<h2 id="_8">事件<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<h3 id="_9">注册事件<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">btn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="nx">btn</span><span class="p">.</span><span class="nx">onclick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">funcation</span><span class="p">(){</span><span class="w"></span>
+<span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;hi&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="nx">btn</span><span class="p">.</span><span class="nx">onclick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">funcation</span><span class="p">(){</span><span class="w"></span>
+<span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;hahaha&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="c1">// 执行以后只会弹出 最后一个</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">btn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="nx">btn</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span><span class="kd">function</span><span class="p">(){</span><span class="w"></span>
+<span class="w">                    </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;22&quot;</span><span class="p">);</span><span class="w"> </span>
+<span class="w">                    </span><span class="p">})</span><span class="w"></span>
+<span class="nx">btn</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span><span class="kd">function</span><span class="p">(){</span><span class="w"></span>
+<span class="w">                    </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;22&quot;</span><span class="p">);</span><span class="w"> </span>
+<span class="w">                    </span><span class="p">})</span><span class="w"></span>
+<span class="c1">//使用事件监听注册事件，同一个元素同一个时间可以添加多个监听器  ie9以上才使用</span><span class="w"></span>
+<span class="c1">//第一个参数是事件类型不用加on</span><span class="w"></span>
+</code></pre></div>
+<h3 id="_10">删除事件（解绑事件<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// 传统方式完成解绑事件</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">div</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="nx">div</span><span class="p">.</span><span class="nx">onclick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">funcation</span><span class="p">(){</span><span class="w"></span>
+<span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;22&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nx">div</span><span class="p">.</span><span class="nx">onclick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">// 监听器完成解绑事件</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">div</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="nx">div</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span><span class="nx">fn</span><span class="p">);</span><span class="w">   </span><span class="c1">// 此处的函数调用不需要加括号</span><span class="w"></span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">fn</span><span class="p">(){</span><span class="w"></span>
+<span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="mf">22</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nx">div</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span><span class="nx">fn</span><span class="p">);</span><span class="w">    </span><span class="c1">//完成解绑</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h2 id="dom_1">DOM事件流<a class="headerlink" href="#dom_1" title="Permanent link">&para;</a></h2>
+<p>事件流描述的是从页面中接收事件的顺序。
+事件发生时会在元素节点之间按照特定的顺序传播，这个传播过程即DOM事件流。</p>
+<p><img alt="image-20220916104144257" src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220916104144257.png" /></p>
+<p>DOM事件流三个阶段</p>
+<ol>
+<li>JS代码中只能执行捕获或者冒泡其中的一个阶段</li>
+<li>onclick和attachEvent只能得到冒泡阶段</li>
+<li>addEventLIstener(type, listener[ , useCapture])第三个参数如果是true，表示在时间捕获阶段调用事件处理程序；如果是false（不写默认就是false），表示在事件冒泡阶段调用事件处理程序</li>
+<li>实际开发中我们很少使用事件捕获，我们更关注事件冒泡。</li>
+<li>有些事件是没有冒泡的，比如 onblur、onmouseenter、onmouseleave</li>
+<li>事件冒泡有时候会带来麻烦，有时候优惠帮助很巧妙的做某些事件</li>
+</ol>
+<div class="highlight"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;father&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;son&quot;</span><span class="p">&gt;</span>son盒子<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// dom 事件流 三个阶段</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// 1. JS 代码中只能执行捕获或者冒泡其中的一个阶段。</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// 2. onclick 和 attachEvent（ie） 只能得到冒泡阶段。</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// 3. 捕获阶段 如果addEventListener 第三个参数是 true 那么则处于捕获阶段  document -&gt; html -&gt; body -&gt; father -&gt; son</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// 下面的语句执行时会先弹出 father 再弹出 son</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// var son = document.querySelector(&#39;.son&#39;);</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// son.addEventListener(&#39;click&#39;, function() {</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//     alert(&#39;son&#39;);</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// }, true);</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// var father = document.querySelector(&#39;.father&#39;);</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// father.addEventListener(&#39;click&#39;, function() {</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//     alert(&#39;father&#39;);</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// }, true);</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// 4. 冒泡阶段 如果addEventListener 第三个参数是 false 或者 省略 那么则处于冒泡阶段  son -&gt; father -&gt;body -&gt; html -&gt; document</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// 下面的语句会先 弹出 son在弹出father 最后弹出 document</span><span class="w"></span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">son</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.son&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="nx">son</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;son&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">},</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">father</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.father&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="nx">father</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;father&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">},</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;document&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">})</span><span class="w"></span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+<h2 id="_11">什么是事件对象<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>123<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// 事件对象</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">div</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nx">div</span><span class="p">.</span><span class="nx">onclick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// console.log(e);</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// console.log(window.event);</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// e = e || window.event;</span><span class="w"></span>
+<span class="w">            </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// div.addEventListener(&#39;click&#39;, function(e) {</span><span class="w"></span>
+<span class="w">        </span><span class="c1">//         console.log(e);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">//     })</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// 1. event 就是一个事件对象 写到我们侦听函数的 小括号里面 当形参来看</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// 2. 事件对象只有有了事件才会存在，它是系统给我们自动创建的，不需要我们传递参数</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// 3. 事件对象 是 我们事件的一系列相关数据的集合 跟事件相关的 比如鼠标点击里面就包含了鼠标的相关信息，鼠标坐标啊，如果是键盘事件里面就包含的键盘事件的信息 比如 判断用户按下了那个键</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// 4. 这个事件对象我们可以自己命名 比如 event 、 evt、 e（常用）</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// 5. 事件对象也有兼容性问题 ie678 通过 window.event 兼容性的写法  e = e || window.event;</span><span class="w"></span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>事件对象属性方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>e.target</td>
+<td>返回触发事件的对象                                     标准</td>
+</tr>
+<tr>
+<td>e.srcElement</td>
+<td>返回触发事件的对象                                     非标准 ie678</td>
+</tr>
+<tr>
+<td>e.type</td>
+<td>返回该事件的类型 比如click mouseover 不带on</td>
+</tr>
+<tr>
+<td>e.cancelBubble</td>
+<td>该属性阻止冒泡     非标准  ie678使用</td>
+</tr>
+<tr>
+<td>e.returnValue</td>
+<td>该属性组织默认事件（默认行为）非标准 ie678使用 比如不让链接跳转</td>
+</tr>
+<tr>
+<td>e.preventDefault()</td>
+<td>该属性组织默认事件（默认行为）标准   比如不让链接跳转</td>
+</tr>
+<tr>
+<td>e.stopPropagation()</td>
+<td>阻止冒泡   标准</td>
+</tr>
+</tbody>
+</table>
+<p>阻止默认事件：e.preventDefault()、e.returnValue、直接return</p>
+<p>eg：</p>
+<div class="highlight"><pre><span></span><code><span class="c1">//eg:</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="nx">a</span><span class="p">.</span><span class="nx">onclick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="w"></span>
+<span class="w">    </span><span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//e.returnValue</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//return</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//三种方式均组织了默认行为</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="c1">// a.addElventListener(&quot;click&quot;,function(e){</span><span class="w"></span>
+<span class="c1">// e.preventDefault(); 也是可以的</span><span class="w"></span>
+<span class="c1">//})</span><span class="w"></span>
+</code></pre></div>
+<p>阻止事件冒泡：事件冒泡，开始时有最具体的元素接受，然后逐级向上传播到DOM最顶层节点
+标准写法：e.stopPropagation();</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">son</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.son&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="nx">son</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;son&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//在此处进行了阻止冒泡 但是点击father会继续进行冒泡</span><span class="w"></span>
+<span class="w">    </span><span class="nx">e</span><span class="p">.</span><span class="nx">stopPropagation</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//如果是ie678</span><span class="w"></span>
+<span class="w">    </span><span class="nx">e</span><span class="p">.</span><span class="nx">cancelBubble</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// 下面的完成了兼容性</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// if(e &amp;&amp; e.stopPropagation){</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//  e.stopPropagation();</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// } else {</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//     window.event.cancelBubble = true;</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// }</span><span class="w"></span>
+
+
+<span class="p">},</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">father</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.father&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="nx">father</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;father&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="p">},</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span><span class="w"></span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;document&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
+</code></pre></div>
+<h2 id="_12">事件委托（代理、委派）<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<p>事件冒泡本身的特性，会带来坏处，也会带来好处，需要我们灵活掌握。</p>
+<p>事件委托也成为事件代理，jQuery里面称为事件委派</p>
+<p>事件委托的原理：<code>不是每个子节点单独设置事件监听器，二十事件监听器设置在父节点上，然后利用冒泡原理影响设置每个子节点</code></p>
+<p>事件委托的作用：提高了程序的性能</p>
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!--比如我们来弹出一个框--&gt;</span>
+<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>你好1<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>你好2<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>你好3<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>你好4<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">ul</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;ul&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// 原来的形式需要遍历一下才能进行</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// for(var i =0;i&lt;ul.children.length;i++){</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//     ul.children[i].onclick = function(){</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//         alert( this.innerText);</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//     } </span><span class="w"></span>
+<span class="w">    </span><span class="c1">// }</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//现在的形式不需要遍历即可进行</span><span class="w"></span>
+<span class="w">    </span><span class="nx">ul</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// e.target返回触发事件的对象  </span><span class="w"></span>
+<span class="w">        </span><span class="nx">alert</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">innerText</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">})</span><span class="w"></span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+<h2 id="_13">鼠标事件<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220916144600263.png" alt="image-20220916144600263" style="zoom:50%;" /></p>
+<table>
+<thead>
+<tr>
+<th>鼠标事件对象</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>e.clientX</td>
+<td>返回鼠标相对于浏览器窗口可视区的X坐标</td>
+</tr>
+<tr>
+<td>e.clientY</td>
+<td>返回鼠标相对于浏览器窗口可视区的Y坐标</td>
+</tr>
+<tr>
+<td>e.pageX</td>
+<td>返回鼠标相对于文档页面的X坐标</td>
+</tr>
+<tr>
+<td>e.pageY</td>
+<td>返回鼠标相对于文档页面的Y坐标</td>
+</tr>
+<tr>
+<td>e.screenX</td>
+<td>返回鼠标相对于电脑屏幕的X坐标</td>
+</tr>
+<tr>
+<td>e.screenY</td>
+<td>返回鼠标相对于电脑屏幕的Y坐标</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_14">键盘事件<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>键盘事件</th>
+<th>触发条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>onkeyup</td>
+<td>某个键盘按键被松开时触发</td>
+</tr>
+<tr>
+<td>onkeydown</td>
+<td>某个键盘按键被按下时触发</td>
+</tr>
+<tr>
+<td>onkeypress</td>
+<td>某个键盘按键被按下时触发  但是他不识别功能键 比如 ctrl 箭头等</td>
+</tr>
+</tbody>
+</table>
+<p>三个事件的执行顺序：keydown、keypress、keyup</p>
+<p>keyup和keydown事件不区分大小写，keypress区分大小写字母</p>
+<p>keyup和keypress在文本框里的特点：他们两个事件触发时，文字还没有落入文本框中</p>
+<p>keyup事件触发的时候，文字已经落入文本框里面了</p>
+<h1 id="bom">BOM浏览器模型<a class="headerlink" href="#bom" title="Permanent link">&para;</a></h1>
+<h2 id="bomdom">BOM和DOM的区别<a class="headerlink" href="#bomdom" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>DOM</th>
+<th>BOM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文档对象模型</td>
+<td>浏览器对象模型</td>
+</tr>
+<tr>
+<td>DOM就是把文档当作一个对象看待</td>
+<td>把浏览器当作一个对象来看待</td>
+</tr>
+<tr>
+<td>DOM的顶级对象是document</td>
+<td>BOM的顶级对象是window</td>
+</tr>
+<tr>
+<td>DOM主要学习的是操作页面元素</td>
+<td>BOM学习的是浏览器窗口交互的一些对象</td>
+</tr>
+<tr>
+<td>DOM是W3C标准规范</td>
+<td>BOM是浏览器厂商在各自浏览器上定义的，兼容性较差</td>
+</tr>
+</tbody>
+</table>
+<p>BOM包含DOM</p>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220916172943424.png" alt="image-20220916172943424" style="zoom:50%;" /></p>
+<h2 id="bom_1">BOM概述<a class="headerlink" href="#bom_1" title="Permanent link">&para;</a></h2>
+<p>BOM即浏览器对象模型，他提供了独立于内容而与浏览器窗口进行交互的对象，其核心对象时window。</p>
+<p>BOM由一系列相关的对象构成</p>
+<p>window对象是浏览器的顶级对象，它具有双重角色。</p>
+<ol>
+<li>它是 JS 访问浏览器窗口的一个接口</li>
+<li>它是一个全局对象。定义在全局作用域中的变量、函数都会变成window对象的属性和方法</li>
+</ol>
+<p>在调用的时候可以省略window</p>
+<h3 id="_15">调整窗口大小事件<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<p>window.onresize = function(){}
+window.addEventListener("resize",function(){})
+只要窗口大小发生像素变化，就会触发这个事件
+window.innerWidth 拿到屏幕尺寸</p>
+<h3 id="_16">定时器<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<p>window对象给我们提供了两个定时器</p>
+<p><code>setTimeout(调用函数，[延迟的毫秒数])</code> 又被称为回调函数。该定时器在定时器到期后执行调用函数，延迟时间不选就是0ms，只会执行一次</p>
+<p>停止定时器 clearTimeout(timeoutId)</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>点击停止定时器<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">btn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;button&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">timer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;爆炸了&#39;</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">},</span><span class="w"> </span><span class="mf">5000</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nx">btn</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">clearTimeout</span><span class="p">(</span><span class="nx">timer</span><span class="p">);</span><span class="c1">// 传入的是这个定时器函数的名字</span><span class="w"></span>
+<span class="w">    </span><span class="p">})</span><span class="w"></span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><code>setInterval(调用函数，[延迟的毫秒数])</code>每隔一段时间，就去调用一次回调函数，</p>
+<p><strong>回调函数原理：</strong>函数可以作为一个参数。将这个函数作为参数传到另一个函数里面，当那个函数执行完之后，在执行传进去的这个函数，这个过程就叫做回调。</p>
+<p>停止定时器：clearInterval（intervalId）;使用此方法取消调用 setInterval() 建立的定时器</p>
+<h3 id="this">this指向问题<a class="headerlink" href="#this" title="Permanent link">&para;</a></h3>
+<ol>
+<li>全局作用域或者普通函数中this指向全局对象window，定时器也是指向window</li>
+<li>方法调用中谁调用this指向谁</li>
+<li>构造函数中this指向构造函数实例</li>
+</ol>
+<h2 id="js_1">JS执行机制<a class="headerlink" href="#js_1" title="Permanent link">&para;</a></h2>
+<p>js是单线程</p>
+<h2 id="_17">同步和异步<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h2>
+<h3 id="_18">同步任务<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<p>同步任务都在主线程上执行，形成一个执行栈。</p>
+<h3 id="_19">异步任务<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<p>JS的异步是通过回调函数实现的。</p>
+<p>一般而言，异步任务有以下三种类型：</p>
+<ol>
+<li>普通事件，如click、resize等；   比如 document.onclick = fn() 只有当你点击时才会添加到任务队列中</li>
+<li>资源加载，如load、error等；</li>
+<li>定时器，包括setInterval、setTimeout；</li>
+</ol>
+<p>异步任务相关回调函数添加到任务队列中（任务队列也成为消息队列）</p>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220917210243959.png" alt="image-20220917210243959" style="zoom: 67%;" /></p>
+<h3 id="js_2">JS执行机制<a class="headerlink" href="#js_2" title="Permanent link">&para;</a></h3>
+<ol>
+<li>先执行执行栈中的同步任务</li>
+<li>异步任务（回调函数）放入任务队列中</li>
+<li>一旦执行栈中的所有同步任务执行完毕，系统就会按次序读取任务队列中的异步任务，于是被读取的异步任务结束等待状态，进入执行栈，开始执行。</li>
+</ol>
+<p><img alt="image-20220917211952599" src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220917211952599.png" /></p>
+<h2 id="location">location对象<a class="headerlink" href="#location" title="Permanent link">&para;</a></h2>
+<p>window对象给我们提供了一个location属性用于获取或设置窗体的URL，并且可以用于解析URL。因为这个属性返回的是一个对象，所以我们将这个属性也成为location对象。</p>
+<table>
+<thead>
+<tr>
+<th>location对象属性</th>
+<th>返回值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>location.herf</code></td>
+<td>获取或者设置整个URL</td>
+</tr>
+<tr>
+<td>location.host</td>
+<td>返回主机（域名） eg：www.baidu.com</td>
+</tr>
+<tr>
+<td>location.port</td>
+<td>返回端口号 如果未写返回空字符串</td>
+</tr>
+<tr>
+<td>location.pathname</td>
+<td>返回路径</td>
+</tr>
+<tr>
+<td><code>location.search</code></td>
+<td>返回参数</td>
+</tr>
+<tr>
+<td>location.hash</td>
+<td>返回片段 #后面内容 常见于锚点链接</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>location对象方法</th>
+<th>返回值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>location.assign()</td>
+<td>跟 herf 一样，可以跳转页面（也称为重定向页面</td>
+</tr>
+<tr>
+<td>location.replace()</td>
+<td>替换当前页面，因为不记录历史，所以不能后退页面</td>
+</tr>
+<tr>
+<td>location.reload()</td>
+<td>重新加载页面，相当于刷新或者f5 如果参数为 true 强制刷新 ctrl+f5</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="nx">location</span><span class="p">.</span><span class="nx">assign</span><span class="p">(</span><span class="s2">&quot;http://www.baidu.com&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="nx">location</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s2">&quot;http://www.baidu.com&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="nx">location</span><span class="p">.</span><span class="nx">reload</span><span class="p">();</span><span class="w"></span>
+</code></pre></div>
+<h2 id="navigator">navigator对象<a class="headerlink" href="#navigator" title="Permanent link">&para;</a></h2>
+<p>navigator对象包含有关浏览器的信息，他有很多属性，我们最常用的时userAgent，该属性可以返回由客户主机发送服务器的user-agent头部的值  </p>
+<p>下面前端代码可以判断用户用哪个终端打开页面</p>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220918091116255.png" alt="image-20220918091116255" style="zoom: 67%;" /></p>
+<h2 id="history">History对象<a class="headerlink" href="#history" title="Permanent link">&para;</a></h2>
+<p>window对象给我们提供了一个history对象，与浏览器历史记录进行交互，该对象包含用户（在浏览器窗口中）访问过的URL</p>
+<table>
+<thead>
+<tr>
+<th>history对象方法</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>back()</td>
+<td>可以后退功能</td>
+</tr>
+<tr>
+<td>forward()</td>
+<td>前进功能</td>
+</tr>
+<tr>
+<td>go(参数)</td>
+<td>前进后退功能，参数如果是1前进一一个也i面 如果是-1后退一个页面</td>
+</tr>
+</tbody>
+</table>
+<h1 id="pc">PC端网页特效<a class="headerlink" href="#pc" title="Permanent link">&para;</a></h1>
+<h2 id="offset">元素偏移量offset系列<a class="headerlink" href="#offset" title="Permanent link">&para;</a></h2>
+<p>offset翻译过来就是偏移量，我们使用offset系列相关属性可以<code>动态的</code>得到该元素的位置（偏移）、大小等。</p>
+<ul>
+<li>获取元素距离带有定位父元素的位置</li>
+<li>获取元素自身的大小（高度宽度，不过返回的数值不带单位）</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>offset系列属性</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>element.offsetParent</td>
+<td>返回作为该元素<code>带有定位</code>的父级元素，如果父级都没有定位则返回body</td>
+</tr>
+<tr>
+<td>element.offsetTop</td>
+<td>返回元素相对带有定位父元素上方的偏移量，如果没有父亲或者父亲没有定位则以body为主</td>
+</tr>
+<tr>
+<td>element.offsetLeft</td>
+<td>返回元素相对带有定位父元素左边框的偏移量，如果没有父亲或者父亲没有定位则以body为主</td>
+</tr>
+<tr>
+<td>element.offsetWidth</td>
+<td>返回自身报考padding、边框、内容区的宽度，返回数值不带单位</td>
+</tr>
+<tr>
+<td>element.offsetHeight</td>
+<td>返回自身报考padding、边框、内容区的高度，返回数值不带单位</td>
+</tr>
+</tbody>
+</table>
+<h3 id="offsetstyle">offset和style的区别<a class="headerlink" href="#offsetstyle" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>offset</th>
+<th>style</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>可以得到任意样式表中的样式值</td>
+<td>只能得到行内样式表的样式值<br />行内样式表：写在标签里面的style</td>
+</tr>
+<tr>
+<td>获得的数值是没有单位的</td>
+<td>获得的是带有单位的字符串</td>
+</tr>
+<tr>
+<td>offsetWidth包含padding+border+width</td>
+<td>style.width获得不包含padding和border的值</td>
+</tr>
+<tr>
+<td>offsetWidth等属性是只读属性，只能获取不能赋值</td>
+<td>style.width是可读写属性</td>
+</tr>
+<tr>
+<td>我们要想获取元素大小位置，用offset更合适</td>
+<td>我们要想更改元素值使用style</td>
+</tr>
+</tbody>
+</table>
+<h2 id="client">元素可视区client系列<a class="headerlink" href="#client" title="Permanent link">&para;</a></h2>
+<p>我们使用client系列的相关属性来获取元素可视区的相关信息。通过client系列的相关属性可以动态的得到该元素的边框大小、元素大小等。</p>
+<table>
+<thead>
+<tr>
+<th>client系列属性</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>element.clientTop</td>
+<td>返回元素上边框的大小</td>
+</tr>
+<tr>
+<td>element.clientLeft</td>
+<td>返回元素左边框的大小</td>
+</tr>
+<tr>
+<td>element..cilentWidth</td>
+<td>返回自身包括padding、内容区的宽度、不含边框，返回数值不带单位</td>
+</tr>
+<tr>
+<td>element.clientHeight</td>
+<td>返回自身包括padding、内容区的高度、不含边框，返回数值不带单位</td>
+</tr>
+</tbody>
+</table>
+<p>与offset的区别时不包含边框</p>
+<h2 id="_20">立即执行函数<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h2>
+<p>立即执行函数：不需要调用，里面能够自己执行的函数</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="kd">function</span><span class="p">(){})();</span><span class="w"> </span><span class="c1">//第二个小括号可以看作是调用函数 ，可以传入参数</span><span class="w"></span>
+<span class="nx">或者</span><span class="w"></span>
+<span class="p">(</span><span class="kd">function</span><span class="p">(){}());</span><span class="w"></span>
+<span class="c1">// 多个立即执行函数之间必须有分号隔开</span><span class="w"></span>
+<span class="c1">//上面的虽然是匿名函数，不过也是可以设置方法名的</span><span class="w"></span>
+<span class="c1">//立即执行函数最大的作用就是 du&#39;li&#39;chuang</span><span class="w"></span>
+</code></pre></div>
+<p>pageshow事件，这个时间在页面显示时触发，无论页面是否来自缓存。在重新加载页面是，pageshow会在load事件触发后触发；根据事件对象中的persisted来判断是否是缓存中的页面触发的pageshow事件，注意这个事件给window添加，一般为了<code>适配火狐浏览器</code>使用</p>
+<div class="highlight"><pre><span></span><code><span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;pageshow&quot;</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">persisted</span><span class="p">){</span><span class="w"></span>
+<span class="w">        </span><span class="p">...</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
+</code></pre></div>
+<h2 id="scroll">元素滚动scroll系列<a class="headerlink" href="#scroll" title="Permanent link">&para;</a></h2>
+<p>使用scroll系列的相关属性可以动态的得到该<code>元素</code>的大小、滚动距离等</p>
+<table>
+<thead>
+<tr>
+<th>scroll系列属性</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>element.scrollTop</td>
+<td>返回被卷去的上侧距离，返回数值不带单位</td>
+</tr>
+<tr>
+<td>element.scrollLeft</td>
+<td>返回被卷去的左侧距离</td>
+</tr>
+<tr>
+<td>element.scrollWidth</td>
+<td>返回自身实际的宽度，不含边框，返回数值不带单位</td>
+</tr>
+<tr>
+<td>element.scrollHeight</td>
+<td>返回自身实际的高估，不含边框</td>
+</tr>
+</tbody>
+</table>
+<p>scroll与client相比是真正的内容大小</p>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220919095234104.png" alt="image-20220919095234104" style="zoom:50%;" /></p>
+<p>scrollTop相当于是超出盒子的上方部分</p>
+<p>页面被卷去的头部：可以通过<code>window.pageYOffset</code>获得，如果是被卷去的左侧 <code>window.pageXOffset</code>
+注意元素被卷去的头部是 element.scrollTop，页面被卷去的透视则是 window.pageYOffset</p>
+<h2 id="_21">三者对比<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h2>
+<ol>
+<li>offset系列经常用于获取元素位置</li>
+<li>client经常用于获取元素大小</li>
+<li>scroll经常用于获取滚动距离</li>
+<li>注意页面滚动的距离通过window.pageXOffset获得</li>
+</ol>
+<h2 id="mouseentermouseover">mouseenter和mouseover的区别<a class="headerlink" href="#mouseentermouseover" title="Permanent link">&para;</a></h2>
+<p>mouseover鼠标经过自身盒子会触发，经过子盒子还会出发。mouseenter只会经过自身盒子触发</p>
+<p>之所以这样，就是因为mouseenter不会冒泡    </p>
+<h2 id="_22">动画函数封装<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h2>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20220919104809523.png" alt="image-20220919104809523" style="zoom:50%;" /></p>
+<h1 id="js_3">JS面向对象<a class="headerlink" href="#js_3" title="Permanent link">&para;</a></h1>
+<p>子类在构造函数中使用 super ，必须放到 this 前面（必须先调用父类的构造方法，在使用子类构造方法）</p>
+<p>ES6中类没有变量提升，所以必须先定义类，才能通过类实例化对象</p>
+<p>类里面的共有的属性和方法一定要加 this 使用</p>
+<h2 id="this_1">类里面的this指向问题<a class="headerlink" href="#this_1" title="Permanent link">&para;</a></h2>
+<ol>
+<li>构造函数里面的 this 指向的是 创建的实例对象</li>
+<li>方法里面的 this 指向的是这个方法的调用者</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nx">Star</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">uname</span><span class="p">,</span><span class="w"> </span><span class="nx">age</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// constructor 里面的this 指向的是 创建的实例对象</span><span class="w"></span>
+<span class="w">        </span><span class="nx">that</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">uname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">uname</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">age</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// this.sing();</span><span class="w"></span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">btn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;button&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">btn</span><span class="p">.</span><span class="nx">onclick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">sing</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="nx">sing</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// 这个sing方法里面的this 指向的是 btn 这个按钮,因为这个按钮调用了这个函数</span><span class="w"></span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">that</span><span class="p">.</span><span class="nx">uname</span><span class="p">);</span><span class="w"> </span><span class="c1">// that里面存储的是constructor里面的this</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="nx">dance</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// 这个dance里面的this 指向的是实例对象 ldh 因为ldh 调用了这个函数</span><span class="w"></span>
+<span class="w">        </span><span class="nx">_that</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h2 id="_23">实例成员和静态成员<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span><span class="w"> </span><span class="nx">Person</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">uname</span><span class="p">,</span><span class="w"> </span><span class="nx">age</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">uname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">uname</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">age</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<ul>
+<li>实例成员就是构造函数内部通过 this 添加的成员 ，uname, age 就是实例成员</li>
+</ul>
+<p>实例成员只能通过实例化的对象来进行访问</p>
+<p>比如：<code>var ldh = new Person("刘德华",18);  console.log(ldh.age)</code></p>
+<ul>
+<li>静态成员在构造函数本身上添加的成员</li>
+</ul>
+<p><code>Person.sex = '男'</code>只能通过构造函数来进行访问 <code>console.log(Person.sex)</code></p>
+<h2 id="prototype">构造函数原型 prototype<a class="headerlink" href="#prototype" title="Permanent link">&para;</a></h2>
+<p>构造函数通过原型分配的函数时所有对象所共享的。</p>
+<p>每一个构造函数都有一个 prototype 属性，指向另一个对象。注意这个 prototype 是一个对象，这个对象的所有属性和方法，都会被构造函数所拥有</p>
+<p>我们可以把<font color="#dd0000">那些不变的方法</font>，直接定义在 prototype 对象上，这样所有对象的示例就可以共享这些方法。</p>
+<p>一般情况下我们的公共属性定义到构造函数里面，公共的方法我们就定义到原型对象prototype身上</p>
+<h3 id="__proto__">__proto__<a class="headerlink" href="#__proto__" title="Permanent link">&para;</a></h3>
+<p>对象都会有一个属性 _<em>proto__指向构造函数的 prototype 对象，之所以我们对象可以使用构造函数prototype 原型对象的属性和方法，就是因为对象 _</em>_proto__ 原型的存在
+<img alt="image-20221003172224493" src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20221003172224493.png" /></p>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20221004183101377.png" alt="image-20221004183101377" style="zoom:50%;" />
+<img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20221004183342500.png" alt="image-20221004183342500" style="zoom:50%;" /></p>
+<h3 id="_24">利用原型对象扩展内置对象方法<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
+<p>比如</p>
+<div class="highlight"><pre><span></span><code><span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">sum</span><span class="o">+=</span><span class="k">this</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">sum</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="mf">2</span><span class="p">,</span><span class="mf">3</span><span class="p">];</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">.</span><span class="nx">sum</span><span class="p">());</span><span class="w"></span>
+</code></pre></div>
+<h2 id="_25">继承<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h2>
+<p>ES6之前并没有给我们提供 extends 继承，我们可以通过构造函数+原型对象模拟实现继承，被称为组合继承</p>
+<h3 id="call">call（）<a class="headerlink" href="#call" title="Permanent link">&para;</a></h3>
+<p>调用这个函数，并且修改函数运行时的 this 指向</p>
+<p><code>fun.call(thisArg,arg1,arg2,...)</code></p>
+<ul>
+<li>thisArg：当前调用函数 this 的指向对象</li>
+<li>arg1，arg2：传递的其他参数</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">fn</span><span class="p">(</span><span class="nx">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">args</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">args</span><span class="p">[</span><span class="mf">1</span><span class="p">]);</span><span class="w"></span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">];</span><span class="w"></span>
+<span class="nx">fn</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">arr</span><span class="p">,</span><span class="w"> </span><span class="nx">arr</span><span class="p">);</span><span class="w"></span>
+<span class="c1">// 单独调用fn函数时 this指向的是window</span><span class="w"></span>
+<span class="c1">// 使用fn.call(arr,arr) this指向的是 arr </span><span class="w"></span>
+</code></pre></div>
+<h3 id="_26">借用构造函数继承父类型属性<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// 1.父构造函数</span><span class="w"></span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">Father</span><span class="p">(</span><span class="nx">uname</span><span class="p">,</span><span class="w"> </span><span class="nx">age</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">uname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">uname</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">age</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">money</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;金钱&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="c1">// 2.子构造函数</span><span class="w"></span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">Son</span><span class="p">(</span><span class="nx">uname</span><span class="p">,</span><span class="w"> </span><span class="nx">age</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">Father</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="nx">uname</span><span class="p">,</span><span class="w"> </span><span class="nx">age</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="c1">// Son.prototype = Father.prototype; 这样直接赋值会有问题，如果修改子原型对象，父原型对象也会跟着一起变化</span><span class="w"></span>
+<span class="nx">Son</span><span class="p">.</span><span class="nx">prototype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Father</span><span class="p">();</span><span class="w"></span>
+<span class="c1">// 如果使用了上面的形式修改了原型对象，记得利用 constructor 指回原来的原型对象</span><span class="w"></span>
+<span class="nx">Son</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="kr">constructor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Son</span><span class="p">;</span><span class="w"></span>
+
+
+<span class="c1">// 这个是子构造函数的专属方法</span><span class="w"></span>
+<span class="nx">Son</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">exam</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;考试&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">son</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Son</span><span class="p">(</span><span class="s2">&quot;刘德华&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">19</span><span class="p">);</span><span class="w"></span>
+<span class="nx">son</span><span class="p">.</span><span class="nx">exam</span><span class="p">();</span><span class="w"></span>
+<span class="c1">// 此时就完成了继承 而且 Father 中也不会有 exan() 方法</span><span class="w"></span>
+<span class="nx">son</span><span class="p">.</span><span class="nx">money</span><span class="p">();</span><span class="w"></span>
+</code></pre></div>
+<h3 id="_27">类的本质<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h3>
+<p>类的本质其实还是一个函数，我们也可以简单地认为 类就是 构造函数的另外一种写法</p>
+<h2 id="es5">ES5新增方法概述<a class="headerlink" href="#es5" title="Permanent link">&para;</a></h2>
+<p>ES5中给我们增加了一些方法，可以很方便的操作数组或者字符串，这些方法主要包括：</p>
+<ul>
+<li>数组方法</li>
+<li>字符串方法</li>
+<li>对象方法</li>
+</ul>
+<h3 id="_28">数组方法<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h3>
+<p>迭代（遍历）方法：<code>forEach(), map(), filter(), some(), every()</code></p>
+<ul>
+<li>
+<p><code>array.forEach(function(currentValue, index, arr))</code></p>
+</li>
+<li>
+<p>currentValue：数组当前项的值</p>
+</li>
+<li>index：数组当前项的索引</li>
+<li>arr：数组对象本身</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">];</span><span class="w"></span>
+<span class="nx">arr</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">value</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">,</span><span class="w"> </span><span class="nx">array</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// 获取值</span><span class="w"></span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// 获取索引号</span><span class="w"></span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">index</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// 数组本身</span><span class="w"></span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">array</span><span class="p">);</span><span class="w">   </span>
+<span class="p">})</span><span class="w"></span>
+</code></pre></div>
+<ul>
+<li>
+<p><code>array.filter(function(currentValue, index, arr))</code></p>
+</li>
+<li>
+<p>filter() 方法创建一个新的数组，新数组中的元素是通过检查指定数组中符合条件的所有元素，主要用于筛选数组</p>
+</li>
+<li>
+<p>注意他直接返回一个新数组</p>
+</li>
+<li>
+<p>currentValue：数组当前项的值</p>
+</li>
+<li>
+<p>index：数组当前项的索引</p>
+</li>
+<li>
+<p>arr：数组对象本身</p>
+</li>
+<li>
+<p>```js
+    var arr = [12, 22, 33, 1];
+    var newArr = arr.filter(function (value, index) {
+        return value &gt;= 20;
+    });
+    console.log(newArr);
+    // 过滤出了数组中大于等于20的元素</p>
+<p>// 也可以使用类似 lambda 表达式
+var newArr = arr.filter(value =&gt; value&gt;20);
+```</p>
+</li>
+<li>
+<p><code>array.some(function(currentValue, index, arr))</code></p>
+</li>
+<li>
+<p>some() 方法用于检测数组中的元素是否满足指定条件，通俗点 查找数组中是否有满足条件的元素</p>
+</li>
+<li>
+<p>返回的布尔值，查询到就返回 true 查找不到就返回 false</p>
+</li>
+<li>
+<p>如果查找到第一个满足条件的元素，则终止循环，不再继续查找</p>
+</li>
+<li>
+<p><code>js
+    var arr = [1,2,3];
+    var flag = arr.some(x=&gt; x==1);
+    console.log(flag);</code></p>
+</li>
+</ul>
+<h3 id="_29">对象方法<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h3>
+<p><code>Object.defineProperty(obj, prop, descriptor)</code></p>
+<ul>
+<li>obj：必须，目标对象</li>
+<li>prop：必须，需定义或修改的属性的名字</li>
+<li>descriptor：必须，目标属性所拥有的特性</li>
+<li>以对象形式书写</li>
+<li>value：设置属性的值，默认为 undefined</li>
+<li>writable：值是否可以重写。true | false 默认为 false</li>
+<li>enumerable：目标属性是否可以被枚举，true | false 默认为 false  及是否 使用 obj.xxx 查看</li>
+<li>configurable：目标属性是否可以被删除或是否可以再次修改特性 true | false 默认为 false</li>
+</ul>
+<h2 id="_30">函数进阶<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h2>
+<h3 id="this_2">函数内 this 的指向<a class="headerlink" href="#this_2" title="Permanent link">&para;</a></h3>
+<p>this 的指向，是当我们调用函数的时候确定的。调用方式的不同决定了 this 的指向不同
+一般指向我们的调用者</p>
+<table>
+<thead>
+<tr>
+<th>调用方式</th>
+<th>this指向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>普通函数调用</td>
+<td>window</td>
+</tr>
+<tr>
+<td>构造函数调用</td>
+<td>实例对象、原型对象里面的方法也指向实例对象</td>
+</tr>
+<tr>
+<td>对象方法调用</td>
+<td>该方法岁数对象</td>
+</tr>
+<tr>
+<td>事件绑定方法</td>
+<td>绑定事件对象</td>
+</tr>
+<tr>
+<td>定时器函数</td>
+<td>window</td>
+</tr>
+<tr>
+<td>立即执行函数</td>
+<td>window</td>
+</tr>
+</tbody>
+</table>
+<h3 id="this_3">改变函数内部 this 指向<a class="headerlink" href="#this_3" title="Permanent link">&para;</a></h3>
+<p>JS 为我们专门提供了一些函数方法来帮我们更优雅的处理函数内部 this 的指向问题，常用的有 bind(),call(),apply()</p>
+<ol>
+<li>
+<p>call 方法 具体使用上面</p>
+</li>
+<li>
+<p>apply()</p>
+</li>
+</ol>
+<p>调用一个函数，简单理解为调用函数的方式，但是他可以改变函数的 this 指向</p>
+<p>fun.apply(thisArg, [argsArray])</p>
+<ul>
+<li>thisArg：在 fun 函数运行时指定的 this 值</li>
+<li>argsArray：传递的值，必须包含在数组里面</li>
+<li>返回值就是函数的返回值，因为他就是调用函数</li>
+</ul>
+<p>应用举例：比如 <code>Math.max()</code> 传入参数时，就无法传入一个数组，如果使用 apply 方法就可以传入数组并求出最大值 <code>Math.max.apply(Math, arr)</code>，此处传入的 this 不建议为 null</p>
+<p>与 call 的区别就是传递参数的形式不一样</p>
+<ol>
+<li>bind()</li>
+</ol>
+<p>不会调用函数，但是能够改变函数内部 this 指向</p>
+<p>fun.bind(thisArg, arg1, arg2, ...)</p>
+<ul>
+<li>thisArg：在 fun 函数运行时 指定的 this 值</li>
+<li>arg1,arg2：传递的参数</li>
+<li>返回值有指定的 this 值和初始化参数改造的原函数拷贝</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">fn</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="s2">&quot;andy&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fn</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="nx">o</span><span class="p">);</span><span class="w"></span>
+<span class="nx">f</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<p>一种使用情况</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>点击<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">btn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nx">btn</span><span class="p">.</span><span class="nx">onclick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">disabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="nx">disabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">),</span><span class="w"> </span><span class="mf">3000</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>三者的主要应用场景</p>
+<ol>
+<li>call 经常做继承</li>
+<li>apply 经常跟数组有关系，比如借助于数学对象实现数组的最大值最小值</li>
+<li>bind 不调用函数但是更改this指向，比如改变定时器内部的this指向</li>
+</ol>
+<h2 id="_31">严格模式<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h2>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode">严格模式 - JavaScript | MDN (mozilla.org)</a></p>
+<p>JS 除了提供正常模式外，还提供了严格模式，ES5 的严格模式时采用具有限制性 JS 变体的一种方式，即在严格的条件下运行 JS 代码</p>
+<p>严格模式对正常的 JS 语义做了一些更改：</p>
+<ol>
+<li>消除了 JS 语法的一些不合理、不严谨之处，减少了一些怪异的行为</li>
+<li>消除代码运行的一些不安全之处，保证代码运行的安全</li>
+<li>提高编译器效率，增加运行速度</li>
+</ol>
+<p>严格模式可以应用到整个脚本或者个别函数中。因此在使用时，我们可以将严格模式分为为脚本开启严格模式和为函数开启严格模式两种情况</p>
+<ol>
+<li>为脚本开启严格模式</li>
+</ol>
+<p>需要在所有语句之前放一个特定语句 <code>"use strict";</code> 或者 <code>'use strict' ;</code></p>
+<p>有的 script 基本是严格模式，有的 script 脚本是正常模式，这样不利于文件合并，所以可以将整个脚本文件放在一个立即执行的匿名函数之中。这样独立创建一个作用域而不影响其他 script 脚本文件</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="kd">function</span><span class="p">(){</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;use strict&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">...</span><span class="w"></span>
+<span class="p">})()</span><span class="w"></span>
+</code></pre></div>
+<ol>
+<li>为函数开启严格模式</li>
+</ol>
+<p>需要把<code>"use strict";</code>声明放在函数体所有语句之前。</p>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">fn</span><span class="p">(){</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;use strict&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">...</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="this_4">严格模式下 this 指向问题<a class="headerlink" href="#this_4" title="Permanent link">&para;</a></h3>
+<p><img src="https://sm-1301822562.cos.ap-nanjing.myqcloud.com/myTypora/image-20221006221453222.png" alt="image-20221006221453222" style="zoom:50%;" /></p>
+<h2 id="_32">闭包<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h2>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Closures">闭包 - JavaScript | MDN (mozilla.org)</a></p>
+<p>闭包指有权访问另一个函数作用域中变量的函数</p>
+<p>简单理解就是：一个作用域可以访问另外一个函数内部的局部变量</p>
+<h3 id="_33">闭包的作用<a class="headerlink" href="#_33" title="Permanent link">&para;</a></h3>
+<p>延伸变量的作用范围</p>
+<p>函数外部使用函数内部变量 相当于把函数内部变量进行了返回</p>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">fun</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">fn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fun</span><span class="p">();</span><span class="w"></span>
+<span class="nx">fn</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<h2 id="_34">深拷贝和浅拷贝<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h2>
+<ol>
+<li>浅拷贝知识拷贝一层，更深层次对象级别的只拷贝引用</li>
+<li>深拷贝拷贝多层，每一级别的数据都会拷贝</li>
+</ol>
+<p>浅拷贝函数 <code>Object.assign(拷贝到的对象，被拷贝的对象)</code></p>
+<p>深拷贝</p>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">deepCopy</span><span class="p">(</span><span class="nx">newObj</span><span class="p">,</span><span class="w"> </span><span class="nx">oldObj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">const</span><span class="w"> </span><span class="nx">k</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">oldObj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">oldObj</span><span class="p">[</span><span class="nx">k</span><span class="p">];</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// 判断这个值是否为数组</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// 数组在上是因为 数组也属于 object</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">item</span><span class="w"> </span><span class="ow">instanceof</span><span class="w"> </span><span class="nb">Array</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nx">newObj</span><span class="p">[</span><span class="nx">k</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span><span class="w"></span>
+<span class="w">            </span><span class="nx">deepCopy</span><span class="p">(</span><span class="nx">newObj</span><span class="p">[</span><span class="nx">k</span><span class="p">],</span><span class="w"> </span><span class="nx">item</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">item</span><span class="w"> </span><span class="ow">instanceof</span><span class="w"> </span><span class="nb">Object</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// 判断这个值是否是对象</span><span class="w"></span>
+<span class="w">            </span><span class="nx">newObj</span><span class="p">[</span><span class="nx">k</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="w">            </span><span class="nx">deepCopy</span><span class="p">(</span><span class="nx">newObj</span><span class="p">[</span><span class="nx">k</span><span class="p">],</span><span class="w"> </span><span class="nx">item</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// 简单类型</span><span class="w"></span>
+<span class="w">            </span><span class="nx">newObj</span><span class="p">[</span><span class="nx">k</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">item</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h2 id="_35">正则表达式<a class="headerlink" href="#_35" title="Permanent link">&para;</a></h2>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions">正则表达式 - JavaScript | MDN (mozilla.org)</a></p>
+<p>JS 中 正则表达式是对象</p>
+<p>创建正则表达式：</p>
+<ol>
+<li>通过调用 RegExp 对象的构造函数创建</li>
+</ol>
+<p><code>var 变量名 = new RegExp(/表达式/);</code></p>
+<ol>
+<li>通过字面量创建</li>
+</ol>
+<p><code>var 变量名 = /表达式/</code></p>
+<h3 id="test">测试正则表达式 test<a class="headerlink" href="#test" title="Permanent link">&para;</a></h3>
+<p>test() 正则对象方法，用于见此字符串是否符合该规则，该对象会返回布尔值，其参数是测试字符串</p>
+<p><code>regexobj.test(str)</code></p>
+<h1 id="es6">ES6<a class="headerlink" href="#es6" title="Permanent link">&para;</a></h1>
+<p>let 声明变量的关键字</p>
+<ul>
+<li>
+<p>只在所处于的块级有效</p>
+</li>
+<li>
+<p>不存在变量提升</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span><span class="w"></span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"></span>
+<span class="c1">//这样是报错的</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"></span>
+<span class="c1">//这样的输出结果是 undefined</span><span class="w"></span>
+</code></pre></div>
+<p>const：声明常量，常量就是值（<font color="#dd0000">内存地址</font>）不能变化的量，对于复杂类型只要内存地址没有发生改变，其内部的值是可以更改的</p>
+<ul>
+<li>具有块级作用域</li>
+<li>必须赋初始值</li>
+</ul>
+<h3 id="varletconst">var、let、const的区别<a class="headerlink" href="#varletconst" title="Permanent link">&para;</a></h3>
+<ol>
+<li>var：其作用域为该语句所在的函数内，且存在变量提升现象</li>
+<li>let：作用域为该语句所在的代码块内，不存在变量提升</li>
+<li>const：后面出现的代码中不能再修改该常量的值</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center">var</th>
+<th align="center">let</th>
+<th align="center">const</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">函数及作用域</td>
+<td align="center">块级作用域</td>
+<td align="center">块级作用域</td>
+</tr>
+<tr>
+<td align="center">变量提升</td>
+<td align="center">不存在变量提升</td>
+<td align="center">不存在变量提升</td>
+</tr>
+<tr>
+<td align="center">值可更改</td>
+<td align="center">值可更改</td>
+<td align="center">值不可更改</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_36">解构赋值<a class="headerlink" href="#_36" title="Permanent link">&para;</a></h2>
+<p>ES6中允许从数组中提取值，按照对应位置，对变量赋值。对象也可以实现解构</p>
+<h3 id="_37">数组解构<a class="headerlink" href="#_37" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="p">[</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">,</span><span class="nx">c</span><span class="p">]</span><span class="o">=</span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="mf">2</span><span class="p">,</span><span class="mf">3</span><span class="p">];</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">c</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<h3 id="_38">对象解构<a class="headerlink" href="#_38" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// 对象的解构对应的名字应该相同 ，而且不在乎顺序</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="p">,</span><span class="w"> </span><span class="nx">age</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;zhangsan&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nx">age</span><span class="o">:</span><span class="w"> </span><span class="mf">20</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">name</span><span class="p">);</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">age</span><span class="p">);</span><span class="w"></span>
+<span class="c1">//</span><span class="w"></span>
+<span class="c1">// 设置别名的一种形式</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">age</span><span class="o">:</span><span class="w"> </span><span class="nx">myAge</span><span class="p">,</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="nx">myName</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;zhangsan&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nx">age</span><span class="o">:</span><span class="w"> </span><span class="mf">20</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myName</span><span class="p">);</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myAge</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<h2 id="_39">箭头函数<a class="headerlink" href="#_39" title="Permanent link">&para;</a></h2>
+<p>箭头函数不绑定 this 关键字，箭头函数中的 this ，指向的是定义函数位置的上下文 this</p>
+<p>箭头函数没有类似 js 中的 arguments 传入的参数不固定时语法结构如下</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(...</span><span class="nx">args</span><span class="p">)=&gt;{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nx">args</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">item</span><span class="p">=&gt;</span><span class="nx">total</span><span class="o">+=</span><span class="nx">item</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">total</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sum</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="mf">2</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="mf">4</span><span class="p">,</span><span class="mf">5</span><span class="p">))</span><span class="w"></span>
+</code></pre></div>
+<h2 id="_40">扩展运算符<a class="headerlink" href="#_40" title="Permanent link">&para;</a></h2>
+<p>展开语法，扩展运算符可以将数组或者对象转为用逗号分割的参数序列</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="mf">2</span><span class="p">,</span><span class="mf">3</span><span class="p">];</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(...</span><span class="nx">arr</span><span class="p">);</span><span class="w"></span>
+<span class="c1">// 输出结果是：  1  2  3</span><span class="w"></span>
+</code></pre></div>
+<p>合并数组</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">arr1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="mf">2</span><span class="p">,</span><span class="mf">3</span><span class="p">];</span><span class="w"></span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">arr2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">4</span><span class="p">,</span><span class="mf">5</span><span class="p">,</span><span class="mf">6</span><span class="p">];</span><span class="w"></span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">arr3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[...</span><span class="nx">arr1</span><span class="p">,...</span><span class="nx">arr2</span><span class="p">];</span><span class="w"></span>
+<span class="c1">// 输出结果为： [ 1, 2, 3, 4, 5, 6 ]</span><span class="w"></span>
+<span class="c1">// 方法2</span><span class="w"></span>
+<span class="nx">arr1</span><span class="p">.</span><span class="nx">push</span><span class="p">(...</span><span class="nx">arr2</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>将类数组或者可遍历对象转换为真正的数组</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">divs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="nx">divs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[...</span><span class="nx">divs</span><span class="p">];</span><span class="w"></span>
+</code></pre></div>
+<h2 id="_41">模板字符串<a class="headerlink" href="#_41" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">``</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>模板字符串可以解析变量</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;张三&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`hello,my name is </span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span><span class="w"></span>
+<span class="c1">// 输出结果为 hello,my name is 张三</span><span class="w"></span>
+</code></pre></div>
+<h2 id="set">数据结构 Set<a class="headerlink" href="#set" title="Permanent link">&para;</a></h2>
+<p>类似于数组，但是成员的值都是唯一的，没有重复的值</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Set</span><span class="p">();</span><span class="w"></span>
+<span class="c1">// ke&#39;yi&#39;jie&#39;s</span><span class="w"></span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">set</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Set</span><span class="p">([...]);</span><span class="w"></span>
+</code></pre></div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      
+        
+        <a href="../jQuery/" class="md-footer__link md-footer__link--prev" aria-label="上一页: jQuery" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              jQuery
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../TypeScript%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/" class="md-footer__link md-footer__link--next" aria-label="下一页: TypeScript" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              TypeScript
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 韩永琰
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    <a href="https://space.bilibili.com/358218864" target="_blank" rel="noopener" title="Bilibili | 愿你决定" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92.02c-26.45-.8-48.21-9.8-65.28-27.2C9.682 419.4.767 396.5 0 368.2V169.8c.767-26 9.682-47.6 26.74-65.7C43.81 87.75 65.57 78.77 92.02 78h29.38L96.05 52.19c-5.75-5.73-8.63-13-8.63-21.79 0-8.8 2.88-16.06 8.63-21.797C101.8 2.868 109.1 0 117.9 0s16.1 2.868 21.9 8.603L213.1 78h88l74.5-69.397C381.7 2.868 389.2 0 398 0c8.8 0 16.1 2.868 21.9 8.603 5.7 5.737 8.6 12.997 8.6 21.797 0 8.79-2.9 16.06-8.6 21.79L394.6 78h29.3c26.4.77 48 9.75 64.7 26.1zm-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96.05c-9.59.4-17.45 3.7-23.58 9.8-6.14 6.1-9.4 13.9-9.78 23.5v194.4c0 9.2 3.26 17 9.78 23.5s14.38 9.8 23.58 9.8H416.4c9.2 0 17-3.3 23.3-9.8 6.3-6.5 9.7-14.3 10.1-23.5V173.8zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5-9.6 0-17.5-3.2-23.6-9.5-6.1-6.3-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2 6.3-6.3 13.2-9.6 23.3-10 9.2.4 17 3.7 23.3 10zm191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.1 6.3-14 9.5-23.6 9.5-9.6 0-17.4-3.2-23.6-9.5-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2 6.3-6.3 14.1-9.6 23.3-10 9.2.4 17 3.7 23.3 10z"/></svg>
+    </a>
+  
+    
+    
+    <a href="https://github.com/hanyongyan" target="_blank" rel="noopener" title="GitHub | hanyongyan" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+        <script src="../../../mkdocs/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+    
+  </body>
+</html>

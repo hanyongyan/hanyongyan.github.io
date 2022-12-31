@@ -1,0 +1,1934 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="韩永琰的个人网站">
+      
+      
+        <meta name="author" content="韩永琰">
+      
+      
+        <link rel="canonical" href="https://hanyongyan.github.io/StudyNodes/Git/3.5-%E5%B8%B8%E8%A7%81%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%AF%94%E8%BE%83/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>常见工作流比较 - 韩永琰的个人网站</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/no-footer.css">
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/unordered-list-symbols.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="韩永琰的个人网站" class="md-header__button md-logo" aria-label="韩永琰的个人网站" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            韩永琰的个人网站
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              常见工作流比较
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+            </label>
+          
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hanyongyan/hanyongyan.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hanyongyan.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        学习笔记
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="韩永琰的个人网站" class="md-nav__button md-logo" aria-label="韩永琰的个人网站" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    韩永琰的个人网站
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hanyongyan/hanyongyan.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hanyongyan.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../">学习笔记</a>
+          
+            <label for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="学习笔记" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          学习笔记
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1_2" type="checkbox" id="__nav_1_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_2">
+          Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Linux" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linux/Linux/" class="md-nav__link">
+        Linux入门
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linux/Vim/" class="md-nav__link">
+        Vim
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1_3" type="checkbox" id="__nav_1_3" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_3">
+          MySql
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="MySql" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          MySql
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MySql/MySQL%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        Mysql
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1_4" type="checkbox" id="__nav_1_4" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_4">
+          js
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="js" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          js
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JS/Ajax/" class="md-nav__link">
+        Ajax
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JS/jQuery/" class="md-nav__link">
+        jQuery
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JS/JS/" class="md-nav__link">
+        javaScript
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JS/TypeScript%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        TypeScript
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JS/Node.js/" class="md-nav__link">
+        nodejs
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1_5" type="checkbox" id="__nav_1_5" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_5">
+          java
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="java" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_5">
+          <span class="md-nav__icon md-icon"></span>
+          java
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java/JavaWeb/" class="md-nav__link">
+        JavaWeb
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java/Maven/" class="md-nav__link">
+        Maven
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java/MyBatis%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        MyBatis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java/MyBatisPlus/" class="md-nav__link">
+        MyBatisPlus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java/SSM/" class="md-nav__link">
+        SSM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java/%E7%91%9E%E5%90%89%E5%A4%96%E5%8D%96%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        瑞吉外卖笔记
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java/Nacos%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        Nacos
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1_6" type="checkbox" id="__nav_1_6" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_6">
+          Git
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Git" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_6">
+          <span class="md-nav__icon md-icon"></span>
+          Git
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Git/" class="md-nav__link">
+        git
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.1-Git%E7%AE%80%E6%98%93%E6%8C%87%E5%8D%97%28%E4%B8%8A%29/" class="md-nav__link">
+        1.1Git简易指南
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.2-%E5%88%9B%E5%BB%BA%E4%BB%A3%E7%A0%81%E4%BB%93%E5%BA%93/" class="md-nav__link">
+        1.2创建代码仓库
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.3-%E4%BF%9D%E5%AD%98%E4%BD%A0%E7%9A%84%E6%9B%B4%E6%94%B9/" class="md-nav__link">
+        1.3保存更改
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.4-%E6%9F%A5%E7%9C%8B%E4%BB%93%E5%BA%93%E7%8A%B6%E6%80%81/" class="md-nav__link">
+        1.4查看仓库状态
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.5-检查以前的提交.md" class="md-nav__link">
+        1.5检查以前的提交
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.6-%E5%9B%9E%E6%BB%9A%E9%94%99%E8%AF%AF%E7%9A%84%E4%BF%AE%E6%94%B9/" class="md-nav__link">
+        1.6回滚错误的修改
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.7-%E9%87%8D%E5%86%99%E9%A1%B9%E7%9B%AE%E5%8E%86%E5%8F%B2/" class="md-nav__link">
+        1.7重写项目历史
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.2-%E4%BF%9D%E6%8C%81%E4%BB%A3%E7%A0%81%E5%90%8C%E6%AD%A5/" class="md-nav__link">
+        2.1保持代码同步
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.3-%E5%88%9B%E5%BB%BAPullRequest/" class="md-nav__link">
+        2.2创建PullRequest
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.4-%E4%BD%BF%E7%94%A8%E5%88%86%E6%94%AF/" class="md-nav__link">
+        2.3使用分支
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../常见工作流比较.md" class="md-nav__link">
+        2.4常见工作流比较
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4-Git%E5%9B%BE%E8%A7%A3/" class="md-nav__link">
+        3Git图解
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5.1-%E4%BB%A3%E7%A0%81%E5%90%88%E5%B9%B6Merge%E8%BF%98%E6%98%AFRebase/" class="md-nav__link">
+        4.1代码合并Merge还是Rebase
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5.2-%E5%9B%9E%E6%BB%9A%E5%91%BD%E4%BB%A4Reset%E3%80%81Checkout%E3%80%81Revert%E8%BE%A8%E6%9E%90/" class="md-nav__link">
+        4.2回滚命令
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5.3-Git_log%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/" class="md-nav__link">
+        4.3Git_log高级用法
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5.4-Git%E9%92%A9%E5%AD%90/" class="md-nav__link">
+        4.4Git钩子
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5.5-Git%E6%8F%90%E4%BA%A4%E5%BC%95%E7%94%A8/" class="md-nav__link">
+        4.5Git提交引用
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    中心化的工作流
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    如何工作
+  </a>
+  
+    <nav class="md-nav" aria-label="如何工作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    管理冲突
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    栗子
+  </a>
+  
+    <nav class="md-nav" aria-label="栗子">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    一人初始化了中央仓库
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    所有人将仓库克隆到本地
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#john" class="md-nav__link">
+    John 在开发他的功能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mary" class="md-nav__link">
+    Mary 在开发她的功能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#john_1" class="md-nav__link">
+    John 发布了他的功能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mary-as" class="md-nav__link">
+    Mary as试图发布她的功能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maryjohnrebase" class="md-nav__link">
+    Mary在John的提交之上rebase
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mary_1" class="md-nav__link">
+    Mary 解决了合并冲突
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mary_2" class="md-nav__link">
+    Mary 成功发布了她的分支
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    接下来该怎么做
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature" class="md-nav__link">
+    Feature 分支的工作流
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    如何工作
+  </a>
+  
+    <nav class="md-nav" aria-label="如何工作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pull-request" class="md-nav__link">
+    Pull Request
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    栗子
+  </a>
+  
+    <nav class="md-nav" aria-label="栗子">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mary_3" class="md-nav__link">
+    Mary 开始了一个新功能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mary_4" class="md-nav__link">
+    Mary 去吃饭了
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mary_5" class="md-nav__link">
+    Mary 完成了她的工作
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bill-pull-request" class="md-nav__link">
+    Bill 收到了 Pull Request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mary_6" class="md-nav__link">
+    Mary 作了修改
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mary_7" class="md-nav__link">
+    Mary 发布了她的功能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#john_2" class="md-nav__link">
+    同时，John 以同样的方式工作着
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    接下来该怎么做
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gitflow" class="md-nav__link">
+    GitFlow 工作流
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    如何工作
+  </a>
+  
+    <nav class="md-nav" aria-label="如何工作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    历史分支
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    功能分支
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    发布分支
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    维护分支
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    栗子
+  </a>
+  
+    <nav class="md-nav" aria-label="栗子">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    创建一个开发分支
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mary-john" class="md-nav__link">
+    Mary 和 John 开始了新功能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mary_8" class="md-nav__link">
+    Mary 完成了她的功能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mary_9" class="md-nav__link">
+    Mary 开始准备发布
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mary_10" class="md-nav__link">
+    Mary完成了她的发布
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug" class="md-nav__link">
+    终端用户发现了一个 bug
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    接下来该怎么做
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fork" class="md-nav__link">
+    Fork 工作流
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    如何工作
+  </a>
+  
+    <nav class="md-nav" aria-label="如何工作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    中央仓库
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fork_1" class="md-nav__link">
+    Fork 工作流中的分支
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    栗子
+  </a>
+  
+    <nav class="md-nav" aria-label="栗子">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    项目维护者初始化了中央仓库
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fork_2" class="md-nav__link">
+    开发者 fork 仓库
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fork_3" class="md-nav__link">
+    开发者将 fork 的仓库克隆到本地
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    开发者进行自己的开发
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    开发者发布他们的功能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    项目维护者整合他们的功能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    开发者和中央仓库保持同步
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    接下来该怎么做
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+  <a href="https://github.com/hanyongyan/hanyongyan.github.io/edit/main/docs/StudyNodes/Git/3.5-常见工作流比较.md" title="编辑此页" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="_1">常见工作流比较<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>BY 童仲毅（<a href="https://github.com/geeeeeeeeek/git-recipes/">geeeeeeeeek@github</a>）</p>
+<p>这是一篇在<a href="https://www.atlassian.com/git/tutorials/comparing-workflows">原文（BY atlassian）</a>基础上演绎的译文。除非另行注明，页面上所有内容采用知识共享-署名（<a href="http://creativecommons.org/licenses/by/2.5/au/deed.zh">CC BY 2.5 AU</a>）协议共享。</p>
+</blockquote>
+<p>多种多样的工作流使得在项目中实施 Git 时变得难以选择。这份教程提供了一个出发点，调查企业团队最常见的 Git 工作流。</p>
+<p>阅读的时候，请记住工作流应该是一种规范而不是金科玉律。我们希望向你展示所有工作流，让你融会贯通，因地制宜。</p>
+<p>这份教程讨论了下面四种工作流：</p>
+<ul>
+<li><a href="https://github.com/geeeeeeeeek/git-recipes/wiki/3.5-%E5%B8%B8%E8%A7%81%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%AF%94%E8%BE%83#%E4%B8%AD%E5%BF%83%E5%8C%96%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%B5%81">中心化的工作流</a></li>
+<li><a href="https://github.com/geeeeeeeeek/git-recipes/wiki/3.5-%E5%B8%B8%E8%A7%81%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%AF%94%E8%BE%83#feature%E5%88%86%E6%94%AF%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%B5%81">基于功能分支的工作流</a></li>
+<li><a href="https://github.com/geeeeeeeeek/git-recipes/wiki/3.5-%E5%B8%B8%E8%A7%81%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%AF%94%E8%BE%83#gitflow%E5%B7%A5%E4%BD%9C%E6%B5%81">Gitflow工作流</a></li>
+<li><a href="https://github.com/geeeeeeeeek/git-recipes/wiki/3.5-%E5%B8%B8%E8%A7%81%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%AF%94%E8%BE%83#fork%E5%B7%A5%E4%BD%9C%E6%B5%81">Fork工作流</a></li>
+</ul>
+<h2 id="_2">中心化的工作流<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p><img alt="Git Workflows: SVN-style Workflow" src="https://wac-cdn.atlassian.com/dam/jcr:0869c664-5bc1-4bf2-bef0-12f3814b3187/01.svg" /></p>
+<p>过渡到分布式分版本控制系统看起来是个令人恐惧的任务，但你不必为了利用 Git 的优点而改变你现有的工作流。你的团队仍然可以用以前SVN的方式开发项目。</p>
+<p>然而，使用 Git 来驱动你的开发工作流显示出了一些SVN没有的优点。首先，它让每个开发者都有了自己 <em>本地</em> 的完整项目副本。隔离的环境使得每个开发者的工作独立于项目的其它修改——他们可以在自己的本地仓库中添加提交，完全无视上游的开发，直到需要的时候。</p>
+<p>第二，它让你接触到了 Git 鲁棒的分支和合并模型。和 SVN 不同，Git 分支被设计为一种故障安全的机制，用来在仓库之间整合代码和共享更改。</p>
+<h2 id="_3">如何工作<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>和 Subversion 一样，中心化的工作流将中央仓库作为项目中所有修改的唯一入口。和 <code>trunk</code>  不同，默认的开发分支叫做<code>master</code>，所有更改都被提交到这个分支。这种工作流不需要 <code>master</code> 之外的其它分支。</p>
+<p>开发者将中央仓库克隆到本地后开始工作。在他们的本地项目副本中，他们可以像SVN一样修改文件和提交更改；不过，这些新的提交被保存在 <em>本地</em> ——它们和中央仓库完全隔离。这使得开发者可以将和上游的同步推迟到他们方便的时候。</p>
+<p>为了向官方项目发布修改，开发者将他们的本地 <code>master</code> 分支「推送」到中央仓库。这一步等同于 <code>svn commit</code>，除了Git添加的是所有不在中央 <code>master</code> 分支上的本地提交。</p>
+<p><img alt="Central and local repositories" src="https://wac-cdn.atlassian.com/dam/jcr:f03a0fbd-a880-477f-aa32-33340383ce07/02%20(3).svg" /></p>
+<h3 id="_4">管理冲突<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>中央仓库代表官方项目，因此它的提交历史应该被视作神圣不可更改的。如果开发者的本地提交和中央仓库分叉了，Git 会拒绝将他们的修改推送上去，因为这会覆盖官方提交。</p>
+<p><img alt="Managing Conflicts" src="https://wac-cdn.atlassian.com/dam/jcr:d06191e3-994e-453a-8ea9-a2e93374e53e/03%20(4).svg" /></p>
+<p>在开发者发布他们的功能之前，他们需要 fetch 更新的中央提交，在它们之上 rebase 自己的更改。这就像是「我想要在其他人的工作进展之上添加我的修改」，它会产生完美的线性历史，就像和传统的 SVN 工作流一样。</p>
+<p>如果本地修改和上游提交冲突时，Git 会暂停 rebase 流程，给你机会手动解决这些冲突。Git 很赞的一点是，它将 <a href="https://github.com/geeeeeeeeek/git-recipes/wiki/2.4-%E6%A3%80%E6%9F%A5%E4%BB%93%E5%BA%93%E7%8A%B6%E6%80%81#git-status"><code>git status</code></a> 和 <a href="https://github.com/geeeeeeeeek/git-recipes/wiki/2.3-%E4%BF%9D%E5%AD%98%E4%BD%A0%E7%9A%84%E6%9B%B4%E6%94%B9#git-add"><code>git add</code></a> 命令同时用来生成提交和解决合并冲突。这使得开发者能够轻而易举地管理他们的合并。另外，如果他们改错了什么，Git 让他们轻易地退出 rebase 过程，然后重试（或者找人帮忙）。</p>
+<h2 id="_5">栗子<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>让我们一步步观察一个普通的小团队是如何使用这种工作流协作的。我们有两位开发者，John 和 Mary，分别在开发两个功能，他们通过中心化的仓库共享代码。</p>
+<h3 id="_6">一人初始化了中央仓库<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p><img alt="Git Workflows: Initialize Central Bare Repository" src="https://www.atlassian.com/git/images/tutorials/collaborating/comparing-workflows/centralized-workflow/04.svg" /></p>
+<p>首先，需要有人在服务器上创建中央仓库。如果这是一个新项目，你可以初始化一个空的仓库。不然，你需要导入一个已经存在的 Git 或 SVN 项目。</p>
+<p>中央仓库应该永远是裸仓库（没有工作目录），可以这样创建：</p>
+<div class="highlight"><pre><span></span><code>ssh user@host git init --bare /path/to/repo.git
+</code></pre></div>
+<p>但确保你使用的 SSH 用户名 <code>user</code>、服务器 <code>host</code> 的域名或 IP 地址、储存仓库的地址 <code>/path/to/repo.git</code> 是有效的。注意 <code>.git</code> 约定俗成地出现在仓库名的后面，表明这是一个裸仓库。</p>
+<h3 id="_7">所有人将仓库克隆到本地<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p><img alt="Git Workflows: Clone Central Repo" src="https://www.atlassian.com/git/images/tutorials/collaborating/comparing-workflows/centralized-workflow/05.svg" /></p>
+<p>接下来，每个开发者在本地创建一份完整项目的副本。使用 <a href="https://github.com/geeeeeeeeek/git-recipes/wiki/2.2-%E5%88%9B%E5%BB%BA%E4%BB%A3%E7%A0%81%E4%BB%93%E5%BA%93#git-clone"><code>git clone</code></a> 命令：</p>
+<div class="highlight"><pre><span></span><code>git clone ssh://user@host/path/to/repo.git
+</code></pre></div>
+<p>当你克隆仓库时，Git 自动添加了一个名为 <code>origin</code> 的远程连接，指向「父」仓库，以便你以后和这个仓库交换数据。</p>
+<h3 id="john">John 在开发他的功能<a class="headerlink" href="#john" title="Permanent link">&para;</a></h3>
+<p><img alt="Git Workflows: Edit Stage Commit Feature Process " src="https://wac-cdn.atlassian.com/dam/jcr:76bfc199-100a-4ef7-b9cf-86179ea5507c/06%20(2).svg" /></p>
+<p>在他的本地仓库中，John 可以用标准的 Git 提交流程开发功能：编辑、缓存、提交。如果你对缓存区还不熟悉，你也可以不用记录工作目录中每次的变化。于是你创建了一个高度集中的提交，即使你已经在本地做了很多修改。</p>
+<div class="highlight"><pre><span></span><code>git status # 查看仓库状态
+git add &lt;some-file&gt; # 缓存一个文件
+git commit # 提交一个文件&lt;/some-file&gt;
+</code></pre></div>
+<p>记住，这些命令创建的是本地提交，John 可以周而复始地重复这个过程，而不用考虑中央仓库。对于庞大的功能，需要切成更简单、原子化的片段时，这个特性就很有用。</p>
+<h3 id="mary">Mary 在开发她的功能<a class="headerlink" href="#mary" title="Permanent link">&para;</a></h3>
+<p><img alt="Git Workflows: Edit Stage Commit Feature" src="https://wac-cdn.atlassian.com/dam/jcr:a0aa8d1b-11a4-4aa4-a3a9-4f83f9be9a67/07.svg" /></p>
+<p>同时，Mary 在她自己的本地仓库用相同的编辑/缓存/提交流程开发她的功能。和 John 一样，她不需要关心中央仓库的进展，她也 <em>完全</em> 不关心 John 在他自己仓库中做的事，因为所有本地仓库都是私有的。</p>
+<h3 id="john_1">John 发布了他的功能<a class="headerlink" href="#john_1" title="Permanent link">&para;</a></h3>
+<p><img alt="Git Workflows: Publish Feature" src="https://wac-cdn.atlassian.com/dam/jcr:6e5dc66d-b041-4013-b321-b1908fecfdbd/08.svg" /></p>
+<p>一旦 John 完成了他的功能，他应该将本地提交发布到中央仓库，这样其他项目成员就可以访问了。他可以使用<a href="https://github.com/geeeeeeeeek/git-recipes/wiki/3.2-%E4%BF%9D%E6%8C%81%E5%90%8C%E6%AD%A5#git-push"><code>git push</code></a>命令，就像：</p>
+<div class="highlight"><pre><span></span><code>git push origin master
+</code></pre></div>
+<p>记住，<code>origin</code> 是 John 克隆中央仓库时指向它的远程连接。<code>master</code> 参数告诉 Git 试着将 <code>origin</code> 的 <code>master</code> 分支变得和他本地的 <code>master</code> 分支一样。中央仓库在 John 克隆之后还没有进展，因此这个推送如他所愿，没有产生冲突。</p>
+<h3 id="mary-as">Mary as试图发布她的功能<a class="headerlink" href="#mary-as" title="Permanent link">&para;</a></h3>
+<p><img alt="Git Workflows: Push Command Error" src="https://wac-cdn.atlassian.com/dam/jcr:52e2347e-b8e0-49ab-9530-5d1e9129198e/09.svg" /></p>
+<p>John 已经成功地将他的更改发布到了中央仓库上，看看当 Mary 试着将她的功能推送到上面时会发生什么。她可以使用同一个推送命令：</p>
+<div class="highlight"><pre><span></span><code>git push origin master
+</code></pre></div>
+<p>但是，她的本地历史和中央仓库已经分叉了，Git 会拒绝这个请求，并显示一段冗长的错误信息：</p>
+<div class="highlight"><pre><span></span><code>error: failed to push some refs to &#39;/path/to/repo.git&#39;
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Merge the remote changes (e.g. &#39;git pull&#39;)
+hint: before pushing again.
+hint: See the &#39;Note about fast-forwards&#39; in &#39;git push --help&#39; for details.
+</code></pre></div>
+<p>Git 防止 Mary 覆盖官方的修改。她需要将 John 的更新拉取到她的仓库，和她的本地修改整合后，然后重试。</p>
+<h3 id="maryjohnrebase">Mary在John的提交之上rebase<a class="headerlink" href="#maryjohnrebase" title="Permanent link">&para;</a></h3>
+<p><img alt="Git Workflows: Git Pull Rebase" src="https://wac-cdn.atlassian.com/dam/jcr:25edd772-a30a-475a-a6ca-d1055ae61737/10.svg" /></p>
+<p>Mary 可以使用 <a href="https://github.com/geeeeeeeeek/git-recipes/wiki/3.2-%E4%BF%9D%E6%8C%81%E5%90%8C%E6%AD%A5#git-pull"><code>git pull</code></a> 来将上游修改并入她的仓库。这个命令和 <code>svn update</code> 很像——它拉取整个上游提交历史到Mary的本地仓库，并和她的本地提交一起整合：</p>
+<div class="highlight"><pre><span></span><code>git pull --rebase origin master
+</code></pre></div>
+<p><code>--rebase</code> 选项告诉 Git，在同步了中央仓库的修改之后，将 Mary 所有的提交移到 <code>master</code> 分支的顶端，如下图所示：</p>
+<p><img alt="Rebasing to Master" src="https://wac-cdn.atlassian.com/dam/jcr:5165668f-b62d-4417-95e6-fde8ed97ec60/11.svg" /></p>
+<p>如果你忽略这个选项拉取同样会成功，只不过你每次和中央仓库同步时都会多出一个「合并提交」。在这种工作流中，rebase 和生成一个合并提交相比，总是一个更好的选择。</p>
+<h3 id="mary_1">Mary 解决了合并冲突<a class="headerlink" href="#mary_1" title="Permanent link">&para;</a></h3>
+<p><img alt="Git Workflows: Rebasing on Commits" src="https://wac-cdn.atlassian.com/dam/jcr:eaad29a3-6d94-4916-8a2c-3dea71aea4c2/12.svg" /></p>
+<p>Rebase 的工作是将每个本地提交一个个转移到更新后的 <code>master</code> 分支。也就是说，你可以一个个提交分别解决合并冲突，而不是在一个庞大的合并提交中解决。它会让你的每个提交保持专注，并获得一个干净的项目历史。另一方面，你更容易发现bug是在哪引入的，如果有必要的话，用最小的代价回滚这些修改。</p>
+<p>如果 Mary 和 John 开发的功能没有关联，rebase的过程不太可能出现冲突。但如果出现冲突时，Git 在当前提交会暂停 rebase，输出下面的信息，和一些相关的指令：</p>
+<div class="highlight"><pre><span></span><code>CONFLICT (content): Merge conflict in &lt;some-file&gt;
+</code></pre></div>
+<p><img alt="Conflict Resolution" src="https://wac-cdn.atlassian.com/dam/jcr:adf8c8e3-4287-4ec1-acf7-2a052d61d03f/13.svg" /></p>
+<p>Git 的优点在于 <em>每个人</em> 都能解决他们自己的合并冲突。在这个例子中，Mary 只需运行一下 <a href="https://github.com/geeeeeeeeek/git-recipes/wiki/2.4-%E6%A3%80%E6%9F%A5%E4%BB%93%E5%BA%93%E7%8A%B6%E6%80%81#git-status"><code>git status</code></a> 就可以发现问题是什么。冲突的文件会出现在未合并路径中：</p>
+<div class="highlight"><pre><span></span><code># Unmerged paths:
+# (use &quot;git reset HEAD &lt;some-file&gt;...&quot; to unstage)
+# (use &quot;git add/rm &lt;some-file&gt;...&quot; as appropriate to mark resolution)
+#
+# both modified: &lt;some-file&gt;
+</code></pre></div>
+<p>接下来，修改这些文件。如果她对结果满意了，和往常一样缓存这些文件，然后让 <a href="https://github.com/geeeeeeeeek/git-recipes/wiki/2.7-%E9%87%8D%E5%86%99%E9%A1%B9%E7%9B%AE%E5%8E%86%E5%8F%B2#git-rebase"><code>git rebase</code></a> 完成接下来的工作：</p>
+<div class="highlight"><pre><span></span><code>git add &lt;some-file&gt;
+git rebase --continue
+</code></pre></div>
+<p>就是这样。Git 会继续检查下个提交，对冲突的提交重复这个流程。</p>
+<p>如果你这时候发现不知道自己做了什么，不要惊慌。只要运行下面的命令，你就会回到开始之前的状态：</p>
+<div class="highlight"><pre><span></span><code>git rebase --abort
+</code></pre></div>
+<h3 id="mary_2">Mary 成功发布了她的分支<a class="headerlink" href="#mary_2" title="Permanent link">&para;</a></h3>
+<p><img alt="Git Workflows: Synchronize Central Repo" src="https://wac-cdn.atlassian.com/dam/jcr:de2dabdd-542f-4f64-9be4-870abff06f60/14.svg" /></p>
+<p>在她和中央仓库同步之后，Mary 可以成功地发布她的修改：</p>
+<div class="highlight"><pre><span></span><code>git push origin master
+</code></pre></div>
+<h2 id="_8">接下来该怎么做<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<p>正如你所见，使用一丢丢 Git 命令来复制一套传统的 Subversion 开发环境也是可行的。这对于从 SVN 转变而来的团队来说很棒，但这样没有利用到 Git 分布式的本质。</p>
+<p>如果你的团队已经习惯了中心化的工作流，但希望提高协作效率，那么探索 <a href="https://github.com/geeeeeeeeek/git-recipes/wiki/3.5-%E5%B8%B8%E8%A7%81%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%AF%94%E8%BE%83#feature%E5%88%86%E6%94%AF%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%B5%81">Feature 分支工作流</a> 的好处是完全值当的。每个功能在专门的独立分支上进行，在代码并入官方项目之前就可以启动围绕新修改的深度讨论。</p>
+<h2 id="feature">Feature 分支的工作流<a class="headerlink" href="#feature" title="Permanent link">&para;</a></h2>
+<p><img alt="Feature Branch Workflow" src="https://www.atlassian.com/git/images/tutorials/collaborating/comparing-workflows/feature-branch-workflow/01.svg" /></p>
+<p>一旦你掌握了 <a href="https://github.com/geeeeeeeeek/git-recipes/wiki/3.5-%E5%B8%B8%E8%A7%81%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%AF%94%E8%BE%83#%E4%B8%AD%E5%BF%83%E5%8C%96%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%B5%81">中心化工作流</a> 的使用方法，在你的开发流程中添加功能分支是一个简单的方式，来促进协作和开发者之间的交流。这种封装使得多个开发者专注自己的功能而不会打扰主代码库。它还保证 <code>master</code> 分支永远不会包含损坏的代码，给持续集成环境带来了是很大的好处。</p>
+<p>封装功能的开发使得 <a href="https://github.com/geeeeeeeeek/git-recipes/wiki/3.3-%E5%88%9B%E5%BB%BA-Pull-Request">Pull Request</a> 的使用成为可能，用来启动围绕一个分支的讨论。它给了其他开发者在功能并入主项目之前参与决策的机会。或者，如果你开发功能时卡在一半，你可以发起一个 Pull Request，向同事寻求建议。重点是，Pull Request 使得你的团队在评论其他人的工作时变得非常简单。</p>
+<h2 id="_9">如何工作<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<p>Feature 分支工作流同样使用中央仓库，<code>master</code> 同样代表官方的项目历史。但是，与其直接提交在本地的 <code>master</code> 分支，开发者每次进行新的工作时创建一个新的分支。Feature 分支应该包含描述性的名称，比如 <code>animated-menu-items</code>（菜单项动画）或 <code>issue-#1061</code>。每个分支都应该有一个清晰、高度集中的目的。</p>
+<p>Git 在技术上无法区别 <code>master</code> 和功能分支，所以开发者可以在 feature 分支上编辑、缓存、提交，就和中心化工作流中一样。</p>
+<p>此外，feature 分支可以（也应该）被推送到中央仓库。这使得你和其他开发者共享这个功能，而又不改变官方代码。既然 <code>master</code> 只是一个“特殊”的分支，在中央仓库中储存多个 feature 分支不会引出什么问题。当然了，这也是备份每个开发者本地提交的好办法。</p>
+<h3 id="pull-request">Pull Request<a class="headerlink" href="#pull-request" title="Permanent link">&para;</a></h3>
+<p>除了隔离功能开发之外，分支使得通过 <a href="https://github.com/geeeeeeeeek/git-recipes/wiki/3.3-%E5%88%9B%E5%BB%BA-Pull-Request">Pull Request</a> 讨论修改成为可能。一旦有人完成了一个功能，他们不会立即将它并入<code>master</code>。他们将 feature 分支推送到中央服务器上，发布一个 Pull Request，请求将他们的修改并入 <code>master</code>。这给了其他开发者在修改并入主代码库之前审查的机会。</p>
+<p>代码审查是 Pull Request 的主要好处，但他们事实上被设计为成为讨论代码的一般场所。你可以把 Pull Request 看作是专注某个分支的讨论版。也就是说他们可以用于开发流程之前。比如，一个开发者在某个功能上需要帮助，他只需发起一个 Pull Request。感兴趣的小伙伴会自动收到通知，看到相关提交中的问题。</p>
+<p>一旦 Pull Request 被接受了，发布功能的行为和中心化的工作流是一样的。首先，确定你本地的 <code>master</code> 和上游的 <code>master</code> 已经同步。然后，将  feature分支并入 <code>master</code>，将更新的 <code>master</code> 推送回中央仓库。</p>
+<h2 id="_10">栗子<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<p>下面这🌰演示了代码审查使用到的 Pull Request，但记住 Pull Request 有多种用途。</p>
+<h3 id="mary_3">Mary 开始了一个新功能<a class="headerlink" href="#mary_3" title="Permanent link">&para;</a></h3>
+<p><img alt="New Feature Branch" src="https://wac-cdn.atlassian.com/dam/jcr:223f5106-2191-4450-8916-e5c80d7d907a/02.svg" /></p>
+<p>在她开始开发一个功能之前，Mary 需要一个独立的分支。她可以用下面的命令<a href="https://github.com/geeeeeeeeek/git-recipes/wiki/3.4-%E4%BD%BF%E7%94%A8%E5%88%86%E6%94%AF#git-checkout">创建新分支</a>：</p>
+<div class="highlight"><pre><span></span><code>git checkout -b marys-feature master
+</code></pre></div>
+<p>一个基于 <code>master</code>、名为 <code>marys-feature</code> 的分支将会被checkout，<code>-b</code> 标记告诉Git在分支不存在时创建它。在这个分支上，Mary和往常一样编辑、缓存、提交更改，用足够多的提交来构建这个功能：</p>
+<div class="highlight"><pre><span></span><code>git status
+git add &lt;some-file&gt;
+git commit
+</code></pre></div>
+<h3 id="mary_4">Mary 去吃饭了<a class="headerlink" href="#mary_4" title="Permanent link">&para;</a></h3>
+<p><img alt="Git Workflows: Feature Commits" src="https://wac-cdn.atlassian.com/dam/jcr:e2c88c1b-fb28-46a3-93be-c1c45f86bd1c/03%20(1).svg" /></p>
+<p>Mary 在早上<a href="https://github.com/geeeeeeeeek/git-recipes/wiki/2.3-%E4%BF%9D%E5%AD%98%E4%BD%A0%E7%9A%84%E6%9B%B4%E6%94%B9#git-commit">给她的功能添加了一些提交</a>。在她去吃午饭前，<a href="https://github.com/geeeeeeeeek/git-recipes/wiki/3.2-%E4%BF%9D%E6%8C%81%E5%90%8C%E6%AD%A5#git-push">将她的分支推送到中央仓库</a>是个不错的想法。这是一种方便的备份，但如果Mary和其他开发者一起协作，他们也可以看到她的初始提交了。</p>
+<div class="highlight"><pre><span></span><code>git push -u origin marys-feature
+</code></pre></div>
+<p>这个命令将 <code>marys-feature</code> 推送到中央仓库（<code>origin</code>），<code>-u</code> 标记将它添加为远程跟踪的分支。在设置完跟踪的分支之后，Mary 调用不带任何参数的 <code>git push</code> 来推送她的功能。</p>
+<h3 id="mary_5">Mary 完成了她的工作<a class="headerlink" href="#mary_5" title="Permanent link">&para;</a></h3>
+<p><img alt="Git Workflows: Pull Request" src="https://wac-cdn.atlassian.com/dam/jcr:d0c471b4-61c8-4005-86bc-904d894e391b/04.svg" /></p>
+<p>当 Mary 吃完午饭回来，她完成了她的功能。在<a href="https://github.com/geeeeeeeeek/git-recipes/wiki/3.4-%E4%BD%BF%E7%94%A8%E5%88%86%E6%94%AF#git-merge">并入 <code>master</code></a> 之前，她需要发布一个 Pull Request，让其他的团队成员知道她所做的工作。但首先，她应该保证中央仓库包含了她最新的提交：</p>
+<div class="highlight"><pre><span></span><code>git push
+</code></pre></div>
+<p>然后，她在她的 Git 界面上发起了一个 Pull Request，请求将 <code>marys-feature</code> 合并进 <code>master</code>，团队成员会收到自动的通知。Pull Request 的好处是，评论显示在相关的提交正下方，方便讨论特定的修改。</p>
+<h3 id="bill-pull-request">Bill 收到了 Pull Request<a class="headerlink" href="#bill-pull-request" title="Permanent link">&para;</a></h3>
+<p><img alt="Git Workflows: Feature Pull Requests" src="https://wac-cdn.atlassian.com/dam/jcr:2119c2a3-7dff-43ad-bf98-77672d93242f/05%20(1).svg" /></p>
+<p>Bill 收到了 Pull Request，并且查看了 <code>marys-feature</code>。他决定在并入官方项目之前做一些小修改，通过 Pull Request 和 Mary 进行了沟通。</p>
+<h3 id="mary_6">Mary 作了修改<a class="headerlink" href="#mary_6" title="Permanent link">&para;</a></h3>
+<p><img alt="Git Workflows: Central Repository Push" src="https://wac-cdn.atlassian.com/dam/jcr:1c466900-dffa-4912-8764-79943755dbf9/06%20(1).svg" /></p>
+<p>为了做这些更改，Mary 重复了之前创建功能时相同的流程，她编辑、缓存、提交、将更新推送到中央仓库。她所有的活动显示在 Pull Request 中，Bill 可以一直评论。</p>
+<p>如果 Bill 想要的话，也可以将 <code>marys-feature</code> 分支 pull 到他自己的本地仓库，继续工作。后续的任何提交都会显示在 Pull Request 上。</p>
+<h3 id="mary_7">Mary 发布了她的功能<a class="headerlink" href="#mary_7" title="Permanent link">&para;</a></h3>
+<p><img alt="Merging a Feature Branch" src="https://wac-cdn.atlassian.com/dam/jcr:09308632-38a3-4637-bba2-af2110629d56/07.svg" /></p>
+<p>一旦 Bill 准备接受这个 Pull Request，某个人（Bill 或者 Mary 都可）需要将功能并入稳定的项目：</p>
+<div class="highlight"><pre><span></span><code>git checkout master
+git pull
+git pull origin marys-feature
+git push
+</code></pre></div>
+<p>首先，不管是谁在执行合并，都要保证他们的 <code>master</code> 分支是最新的。然后，运行 <code>git pull origin marys-feature</code> 合并中央仓库的 <code>marys-feature</code> 副本。你也可以使用简单的 <code>git merge marys-feature</code>，但之前的命令保证你拉取下来的一定是功能分支最新的版本。最后，更新的 <code>master</code> 需要被推送回 <code>origin</code>。</p>
+<p>这个过程导致了一个合并提交。一些开发者喜欢它，因为它是功能和其余代码合并的标志。但，如果你希望得到线性的历史，你可以在执行 merge 之前将功能 rebase 到 <code>master</code> 分支的顶端，产生一个快速向前的合并。</p>
+<p>一些界面会自动化接受 Pull Request 的流程，只需点击一下「Merge Pull Request」。如果你的没有的话，它至少在合并之后应该可以自动地关闭 Pull Request。</p>
+<h3 id="john_2">同时，John 以同样的方式工作着<a class="headerlink" href="#john_2" title="Permanent link">&para;</a></h3>
+<p>Mary 和 Bill 一起开发 <code>marys-feature</code>，在 Pull Request 上讨论的同时，John 还在开发他自己的  feature分支。通过将功能用不同分支隔离开来，每个人可以独立地工作，但很容易和其他开发者共享修改。</p>
+<h2 id="_11">接下来该怎么做<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<p>为了彻底了解 GitHub 上的功能分支，你应该查看<a href="https://github.com/geeeeeeeeek/git-recipes/wiki/3.4-%E4%BD%BF%E7%94%A8%E5%88%86%E6%94%AF">使用分支一章</a>。现在，你应该已经看到了功能分支极大地增强了<a href="https://github.com/geeeeeeeeek/git-recipes/wiki/3.5-%E5%B8%B8%E8%A7%81%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%AF%94%E8%BE%83#%E4%B8%AD%E5%BF%83%E5%8C%96%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%B5%81">中心化工作流</a>中单一 <code>master</code> 分支的作用。除此之外，功能分支还便利了 Pull Request 的使用，在版本控制界面上直接讨论特定的提交。GitFlow 工作流是管理功能开发、发布准备、维护的常见模式。</p>
+<h2 id="gitflow">GitFlow 工作流<a class="headerlink" href="#gitflow" title="Permanent link">&para;</a></h2>
+<p><img alt="Gitflow Workflow" src="https://www.atlassian.com/git/images/tutorials/collaborating/comparing-workflows/gitflow-workflow/01.svg" /></p>
+<p>下面的 <a href="http://nvie.com/posts/a-successful-git-branching-model/">GitFlow 工作流</a>一节源于 <a href="http://nvie.com/">nvie</a> 网站上的作者 Vincent Driessen。</p>
+<p>GitFlow 工作流围绕项目发布定义了一个严格的分支模型。有些地方比<a href="https://github.com/geeeeeeeeek/git-recipes/wiki/3.5-%E5%B8%B8%E8%A7%81%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%AF%94%E8%BE%83#feature%E5%88%86%E6%94%AF%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%B5%81">功能分支工作流</a>更复杂，为管理大型项目提供了鲁棒的框架。</p>
+<p>和功能分支工作流相比，这种工作流没有增加任何新的概念或命令。它给不同的分支指定了特定的角色，定义它们应该如何、什么时候交流。除了功能分支之外，它还为准备发布、维护发布、记录发布分别使用了单独的分支。当然，你还能享受到功能分支工作流带来的所有好处：Pull Request、隔离实验和更高效的协作。</p>
+<h2 id="_12">如何工作<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<p>GitFlow 工作流仍然使用中央仓库作为开发者沟通的中心。和<a href="https://github.com/geeeeeeeeek/git-recipes/wiki/3.5-%E5%B8%B8%E8%A7%81%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%AF%94%E8%BE%83">其他工作流</a>一样，开发者在本地工作，将分支推送到中央仓库。唯一的区别在于项目的分支结构。</p>
+<h3 id="_13">历史分支<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p>和单独的 <code>master</code> 分支不同，这种工作流使用两个分支来记录项目历史。<code>master</code> 分支储存官方发布历史，<code>develop</code> 分支用来整合功能分支。同时，这还方便了在 <code>master</code> 分支上给所有提交打上版本号标签。</p>
+<p><img alt="Historical Branches" src="https://wac-cdn.atlassian.com/dam/jcr:2bef0bef-22bc-4485-94b9-a9422f70f11c/02%20(2).svg" /></p>
+<p>工作流剩下的部分围绕这两个分支的差别展开。</p>
+<h3 id="_14">功能分支<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<p>每个新功能都放置在自己的分支中，可以<a href="https://github.com/geeeeeeeeek/git-recipes/wiki/3.2-%E4%BF%9D%E6%8C%81%E5%90%8C%E6%AD%A5#git-push">在备份/协作时推送到中央仓库</a>。但是，与其合并到 <code>master</code>，功能分支将开发分支作为父分支。当一个功能完成时，它将被<a href="https://github.com/geeeeeeeeek/git-recipes/wiki/3.4-%E4%BD%BF%E7%94%A8%E5%88%86%E6%94%AF#git-merge">合并回 <code>develop</code></a>。功能永远不应该直接在 <code>master</code> 上交互。</p>
+<p><img alt="Feature Branches" src="https://wac-cdn.atlassian.com/dam/jcr:b5259cce-6245-49f2-b89b-9871f9ee3fa4/03%20(2).svg" /></p>
+<p>注意，功能分支加上 <code>develop</code> 分支就是我们之前所说的功能分支工作流。但是，GitFlow 工作流不止于此。</p>
+<h3 id="_15">发布分支<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<p><img alt="Release Branches" src="https://wac-cdn.atlassian.com/dam/jcr:a9cea7b7-23c3-41a7-a4e0-affa053d9ea7/04%20(1).svg" /></p>
+<p>一旦  <code>develop</code>分支的新功能足够发布（或者预先确定的发布日期即将到来），你可以从 <code>develop</code> 分支 fork 一个发布分支。这个分支的创建开始了下个发布周期，只有和发布相关的任务应该在这个分支进行，如修复 bug、生成文档等。一旦准备好了发布，发布分支将合并进 <code>master</code>，打上版本号的标签。另外，它也应该合并回 <code>develop</code>，后者可能在发布启动之后有了新的进展。</p>
+<p>使用一个专门的分支来准备发布确保一个团队完善当前的发布，其他团队可以继续开发下一个发布的功能。它还建立了清晰的开发阶段（比如说，「这周我们准备 4.0 版本的发布」，而我们在仓库的结构中也能看到这个阶段）。</p>
+<p>通常我们约定：</p>
+<ul>
+<li>从 <code>develop</code> 创建分支</li>
+<li>合并进 <code>master</code> 分支</li>
+<li>命名规范 <code>release-* or release/*</code></li>
+</ul>
+<h3 id="_16">维护分支<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<p><img alt="Maintenance Branches" src="https://wac-cdn.atlassian.com/dam/jcr:61ccc620-5249-4338-be66-94d563f2843c/05%20(2).svg" /></p>
+<p>维护或者「紧急修复」分支用来快速给产品的发布打上补丁。这是唯一可以从 <code>master</code> 上 fork 的分支。一旦修复完成了，它应该被并入 <code>master</code> 和 <code>develop</code> 分支（或者当前的发布分支），<code>master</code> 应该打上更新的版本号的标签。</p>
+<p>有一个专门的 bug 修复开发线使得你的团队能够处理 issues，而不打断其他工作流或是要等到下一个发布周期。你可以将维护分支看作在 <code>master</code> 分支上工作的临时发布分支。</p>
+<h2 id="_17">栗子<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h2>
+<p>下面的栗子演示了这种工作流如何用来管理发布周期。假设你已经创建了中央仓库。</p>
+<h3 id="_18">创建一个开发分支<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<p><img alt="Create a Develop Branch" src="https://www.atlassian.com/git/images/tutorials/collaborating/comparing-workflows/gitflow-workflow/06.svg" /></p>
+<p>你要做的第一步是为默认的 <code>master</code> 分支创建一个互补的 <code>develop</code> 分支。最简单的办法是<a href="https://github.com/geeeeeeeeek/git-recipes/wiki/3.4-%E4%BD%BF%E7%94%A8%E5%88%86%E6%94%AF#git-branch">在本地创建一个空的 develop 分支</a>，将它推送到服务器上：</p>
+<div class="highlight"><pre><span></span><code>git branch develop
+git push -u origin develop
+</code></pre></div>
+<p>这个分支将会包含项目中所有的历史，而 <code>master</code> 将包含不完全的版本。其他开发者应该<a href="https://github.com/geeeeeeeeek/git-recipes/wiki/2.2-%E5%88%9B%E5%BB%BA%E4%BB%A3%E7%A0%81%E4%BB%93%E5%BA%93#git-clone">将中央仓库克隆到本地</a>，创建一个分支来追踪 develop 分支：</p>
+<div class="highlight"><pre><span></span><code>git clone ssh://user@host/path/to/repo.git
+git checkout -b develop origin/develop
+</code></pre></div>
+<p>现在所有人都有了一份历史分支的本地副本。</p>
+<h3 id="mary-john">Mary 和 John 开始了新功能<a class="headerlink" href="#mary-john" title="Permanent link">&para;</a></h3>
+<p><img alt="New Feature Branches" src="https://www.atlassian.com/git/images/tutorials/collaborating/comparing-workflows/gitflow-workflow/07.svg" /></p>
+<p>我们的栗子从 John 和 Mary 在不同分支上工作开始。他们都要为自己的功能创建单独的分支。<a href="https://github.com/geeeeeeeeek/git-recipes/wiki/3.4-%E4%BD%BF%E7%94%A8%E5%88%86%E6%94%AF#git-checkout">他们的功能分支都应该基于<code>develop</code></a>，而不是 <code>master</code>：</p>
+<div class="highlight"><pre><span></span><code>git checkout -b some-feature develop
+</code></pre></div>
+<p>他们都使用「编辑、缓存、提交」的一般约定来向功能分支添加提交：</p>
+<div class="highlight"><pre><span></span><code>git status
+git add &lt;some-file&gt;
+git commit
+</code></pre></div>
+<h3 id="mary_8">Mary 完成了她的功能<a class="headerlink" href="#mary_8" title="Permanent link">&para;</a></h3>
+<p><img alt="Merging a Feature Branch" src="https://www.atlassian.com/git/images/tutorials/collaborating/comparing-workflows/gitflow-workflow/08.svg" /></p>
+<p>在添加了一些提交之后，Mary 确信她的功能以及准备好了。如果她的团队使用 Pull Request，现在正是发起 Pull Request 的好时候，请求将她的功能并入 <code>develop</code> 分支。否则，她可以向下面一样，将它并入本地的 <code>develop</code> 分支，推送到中央仓库：</p>
+<div class="highlight"><pre><span></span><code>git pull origin develop
+git checkout develop
+git merge some-feature
+git push
+git branch -d some-feature
+</code></pre></div>
+<p>第一个命令在尝试并入功能分支之前确保 <code>develop</code> 分支已是最新。注意，功能绝不该被直接并入 <code>master</code>。冲突的处理方式和<a href="https://github.com/geeeeeeeeek/git-recipes/wiki/3.5-%E5%B8%B8%E8%A7%81%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%AF%94%E8%BE%83#%E4%B8%AD%E5%BF%83%E5%8C%96%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%B5%81">中心化工作流</a>相同。</p>
+<h3 id="mary_9">Mary 开始准备发布<a class="headerlink" href="#mary_9" title="Permanent link">&para;</a></h3>
+<p><img alt="Preparing a Release" src="https://www.atlassian.com/git/images/tutorials/collaborating/comparing-workflows/gitflow-workflow/09.svg" /></p>
+<p>当 John 仍然在他的功能分支上工作时，Mary s开始准备项目的第一个官方发布。和开发功能一样，她新建了一个分支来封装发布的准备工作。这也正是发布的版本号创建的一步：</p>
+<div class="highlight"><pre><span></span><code>git checkout -b release-0.1 develop
+</code></pre></div>
+<p>这个分支用来整理提交，充分测试，更新文档，为即将到来的发布做各种准备。它就像是一个专门用来完善发布的功能分支。</p>
+<p>一旦 Mary 创建了这个分支，推送到中央仓库，这次发布的功能便被锁定了。不在 <code>develop</code> 分支中的功能将被推迟到下个发布周期。</p>
+<h3 id="mary_10">Mary完成了她的发布<a class="headerlink" href="#mary_10" title="Permanent link">&para;</a></h3>
+<p><img alt="Merging Release into Master" src="https://www.atlassian.com/git/images/tutorials/collaborating/comparing-workflows/gitflow-workflow/10.svg" /></p>
+<p>一旦发布准备稳妥，Mary 将它并入 <code>master</code> 和 <code>develop</code>，然后删除发布分支。合并回 <code>develop</code> 很重要，因为可能已经有关键的更新添加到了发布分支上，而开发新功能需要用到它们。同样的，如果 Mary 的团队重视代码审查，现在将是发起 Pull Request 的完美时机。</p>
+<div class="highlight"><pre><span></span><code>git checkout master
+git merge release-0.1
+git push
+git checkout develop
+git merge release-0.1
+git push
+git branch -d release-0.1
+</code></pre></div>
+<p>发布分支是功能开发（<code>develop</code>）和公开发布（<code>master</code>）之间的过渡阶段。不论什么时候将提交并入 <code>master</code> 时，你应该为提交打上方便引用的标签：</p>
+<div class="highlight"><pre><span></span><code>git tag -a 0.1 -m &quot;Initial public release&quot; master
+git push --tags
+</code></pre></div>
+<p>Git 提供了许多钩子，即仓库中特定事件发生时被执行的脚本。当你向中央仓库推送 <code>master</code> 分支或者标签时，你可以配置一个钩子来自动化构建公开发布。</p>
+<h3 id="bug">终端用户发现了一个 bug<a class="headerlink" href="#bug" title="Permanent link">&para;</a></h3>
+<p><img alt="Maintenance Branch" src="https://www.atlassian.com/git/images/tutorials/collaborating/comparing-workflows/gitflow-workflow/11.svg" /></p>
+<p>正式发布之后，Mary 回过头来和 John 一起为下一个发布开发功能。这时，一个终端用户开了一个 issue 抱怨说当前发布中存在一个 bug。为了解决这个 bug，Mary（或 John）从 <code>master</code> 创建了一个维护分支，用几个提交修复这个 issue，然后直接合并回 <code>master</code>。</p>
+<div class="highlight"><pre><span></span><code>git checkout -b issue-#001 master
+# Fix the bug
+git checkout master
+git merge issue-#001
+git push
+</code></pre></div>
+<p>和发布分支一样，维护分支包含了 <code>develop</code> 中需要的重要更新，因此 Mary 同样需要执行这个合并。接下来，她可以<a href="https://github.com/geeeeeeeeek/git-recipes/wiki/3.4-%E4%BD%BF%E7%94%A8%E5%88%86%E6%94%AF#git-branch">删除这个分支</a>了：</p>
+<div class="highlight"><pre><span></span><code>git checkout develop
+git merge issue-#001
+git push
+git branch -d issue-#001
+</code></pre></div>
+<h2 id="_19">接下来该怎么做<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h2>
+<p>现在，希望你已经很熟悉<a href="https://github.com/geeeeeeeeek/git-recipes/wiki/3.5-%E5%B8%B8%E8%A7%81%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%AF%94%E8%BE%83#%E4%B8%AD%E5%BF%83%E5%8C%96%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%B5%81">中心化的工作流</a>、<a href="https://github.com/geeeeeeeeek/git-recipes/wiki/3.5-%E5%B8%B8%E8%A7%81%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%AF%94%E8%BE%83#feature%E5%88%86%E6%94%AF%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%B5%81">功能分支工作流</a>和 GitFlow 工作流。你应该已经可以抓住本地仓库、推送/拉取模式，和 Git 鲁棒的分支和合并模型的无限潜力。</p>
+<p>请记住，教程中呈现的工作流只是可行的实践——而非工作中使用 Git 的金科玉律。因此，尽情地取其精华，去其糟粕吧。不变的是要让 Git 为你所用，而不是相反。</p>
+<h2 id="fork">Fork 工作流<a class="headerlink" href="#fork" title="Permanent link">&para;</a></h2>
+<p>Fork 工作流和教程中讨论的其它工作流截然不同。与其使用唯一的服务端仓库作为「中央」代码库，它给予 <em>每个</em> 开发者一个服务端仓库。也就是说每个贡献者都有两个 Git 仓库，而不是一个：一个私有的本地仓库和一个公开的服务端仓库。</p>
+<p><img alt="Git Workflows: Forking" src="https://www.atlassian.com/git/images/tutorials/collaborating/comparing-workflows/forking-workflow/01.svg" /></p>
+<p>Fork 工作流的主要优点在于贡献可以轻易地整合进项目，而不需要每个人都推送到单一的中央仓库。开发者推送到他们 <em>自己的</em> 服务端仓库，只有项目管理者可以推送到官方仓库。这使得管理者可以接受任何开发者的提交，却不需要给他们中央仓库的权限。</p>
+<p>结论是，这种分布式的工作流为大型、组织性强的团队（包括不可信的第三方）提供了安全的协作方式。它同时也是开源项目理想的工作流。</p>
+<h2 id="_20">如何工作<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h2>
+<p>和其它 Git 工作流一样，Fork 工作流以一个储存在服务端的官方公开项目开场。但新的开发者想参与项目时，他们不直接克隆官方项目。</p>
+<p>取而代之地，他们 fork 一份官方项目，在服务端创建一份副本。这份新建的副本作为他们私有的公开仓库——没有其他开发者可以在上面推送，但他们可以从上面拉取修改（在后面我们会讨论为什么这一点很重要）。在他们创建了服务端副本之后，开发者执行 <code>git clone</code> 操作，在他们的本地机器上复制一份。这是他们私有的开发环境，正如其他工作流中一样。</p>
+<p>当他们准备好发布本地提交时，他们将提交推送到自己的公开仓库——而非官方仓库。然后，他们向主仓库发起一个 Pull Request，让项目维护者知道一个更新做好了合并的准备。如果贡献的代码有什么问题的话，Pull Request 可以作为一个方便的讨论版。</p>
+<p>我为了将功能并入官方代码库，维护者将贡献者的修改拉取到他们的本地仓库，确保修改不会破坏项目，将它<a href="https://github.com/geeeeeeeeek/git-recipes/wiki/3.4-%E4%BD%BF%E7%94%A8%E5%88%86%E6%94%AF#git-merge">合并到本地的 master 分支</a>，然后将 <code>master</code> 分支<a href="https://github.com/geeeeeeeeek/git-recipes/wiki/3.2-%E4%BF%9D%E6%8C%81%E5%90%8C%E6%AD%A5#git-push">推送</a>到服务端的官方仓库。贡献现在已是项目的一部分，其他开发者应该从官方仓库拉取并同步他们的本地仓库。</p>
+<h3 id="_21">中央仓库<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<p>「官方」仓库这个概念在 Fork 工作流中只是一个约定，理解这一点很重要。从技术的角度，Git 并看不出每个开发者和官方的公开仓库有什么区别。事实上，官方仓库唯一官方的原因是，它是项目维护者的仓库。</p>
+<h3 id="fork_1">Fork 工作流中的分支<a class="headerlink" href="#fork_1" title="Permanent link">&para;</a></h3>
+<p>所有这些个人的公开仓库只是一个在开发者之间共享分支的约定。每个人仍然可以使用分支来隔离功能，就像在<a href="](https://github.com/geeeeeeeeek/git-recipes/wiki/3.5-%E5%B8%B8%E8%A7%81%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%AF%94%E8%BE%83#feature%E5%88%86%E6%94%AF%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%B5%81)">功能分支工作流</a>和 <a href="https://github.com/geeeeeeeeek/git-recipes/wiki/3.5-%E5%B8%B8%E8%A7%81%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%AF%94%E8%BE%83#gitflow%E5%B7%A5%E4%BD%9C%E6%B5%81">GitFlow 工作流中</a>一样。唯一的区别在于这些分支是如何开始的。在 Fork 工作流中，它们从另一个开发者的本地仓库拉取而来，而在功能分支和 GitFlow 分支它们被推送到官方仓库。</p>
+<h2 id="_22">栗子<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h2>
+<h3 id="_23">项目维护者初始化了中央仓库<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
+<p><img alt="Forking Workflow: Shared Repository" src="https://www.atlassian.com/git/images/tutorials/collaborating/comparing-workflows/forking-workflow/02.svg" /></p>
+<p>和任何基于 Git 的项目一样，第一步是在服务端创建一个可以被所有项目成员访问到的官方仓库。一般来说，这个仓库同时还是项目维护者的公开仓库。</p>
+<p><a href="https://github.com/geeeeeeeeek/git-recipes/wiki/2.2-%E5%88%9B%E5%BB%BA%E4%BB%A3%E7%A0%81%E4%BB%93%E5%BA%93#git-init">公开的仓库应该永远是裸的</a>，不管它们是否代表官方代码库。所以项目维护者应该运行下面这样的命令来设置官方仓库：</p>
+<div class="highlight"><pre><span></span><code>ssh user@host
+git init --bare /path/to/repo.git
+</code></pre></div>
+<p>GitHub 同时提供了一个图形化界面来替代上面的操作。这和教程中其它工作流设置中央仓库的流程完全一致。如果有必要的话，项目维护者应该将已有的代码库推送到这个仓库中。</p>
+<h3 id="fork_2">开发者 fork 仓库<a class="headerlink" href="#fork_2" title="Permanent link">&para;</a></h3>
+<p><img alt="Forking Workflow: Forking the official repository." src="https://wac-cdn.atlassian.com/dam/jcr:642c56e3-ddc6-43ff-ab86-c5cd845afd05/03.svg" /></p>
+<p>接下来，所有开发者需要 fork 官方仓库。你可以用 SSH 到服务器，运行 <code>git clone</code> 将它复制到服务器的另一个地址—— fork 其实只是服务端的 clone。但同样地，GitHub上开发者只需点一点按钮就可以 fork 仓库。</p>
+<p>在这步之后，每个开发者应该都有了自己的服务端仓库。像官方仓库一样，所有这些仓库都应该是裸仓库。</p>
+<h3 id="fork_3">开发者将 fork 的仓库克隆到本地<a class="headerlink" href="#fork_3" title="Permanent link">&para;</a></h3>
+<p><img alt="Forking Workflow: Cloning the forked repositories" src="https://www.atlassian.com/git/images/tutorials/collaborating/comparing-workflows/forking-workflow/04.svg" /></p>
+<p>接下来开发者需要克隆他们自己的公开仓库。他们可以用熟悉的 <code>git clone</code> 命令来完成这一步。</p>
+<p>我们的栗子假设使用他们使用 GitHub 来托管仓库。记住，在这种情况下，每个开发者应该有他们自己的 GitHub 账号，应该用下面的命令克隆服务端仓库：</p>
+<div class="highlight"><pre><span></span><code>git clone https://user@github.com/user/repo.git
+</code></pre></div>
+<p>而教程中的其他工作流使用单一的 <code>origin</code> 远程连接，指向中央仓库，Fork 工作流需要两个远程连接，一个是中央仓库，另一个是开发者个人的服务端仓库。你可以给这些远端取任何名字，约定的做法是将 <code>origin</code> 作为你 fork 后的仓库的远端（运行 <code>git clone</code> 是会自动创建）和 <code>upstream</code> 作为官方项目。</p>
+<div class="highlight"><pre><span></span><code>git remote add upstream https://github.com/maintainer/repo
+</code></pre></div>
+<p>你需要使用上面的命令来创建上游仓库的远程连接。它使得你轻易地保持本地仓库和官方仓库的进展同步。注意如果你的上游仓库开启了认证（比如它没有开源），你需要提供一个用户名，就像这样：</p>
+<div class="highlight"><pre><span></span><code>git remote add upstream https://user@bitbucket.org/maintainer/repo.git
+</code></pre></div>
+<p>它需要用户从官方代码库克隆或拉取之前提供有效的密码。</p>
+<h3 id="_24">开发者进行自己的开发<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
+<p><img alt="Forking Workflow: Developers work on features" src="https://www.atlassian.com/git/images/tutorials/collaborating/comparing-workflows/forking-workflow/05.svg" /></p>
+<p>在他们刚克隆的本地仓库中，开发者可以编辑代码、<a href="https://github.com/geeeeeeeeek/git-recipes/wiki/2.3-%E4%BF%9D%E5%AD%98%E4%BD%A0%E7%9A%84%E6%9B%B4%E6%94%B9#git-commit">提交更改</a>，和其它分支中一样<a href="https://github.com/geeeeeeeeek/git-recipes/wiki/3.4-%E4%BD%BF%E7%94%A8%E5%88%86%E6%94%AF#git-branch">创建分支</a>：</p>
+<div class="highlight"><pre><span></span><code>git checkout -b some-feature
+# 编辑代码
+git commit -a -m &quot;Add first draft of some feature&quot;
+</code></pre></div>
+<p>他们所有的更改在推送到公开仓库之前都是完全私有的。而且，如果官方项目已经向前进展了，他们可以用 <code>git pull</code> 获取新的提交：</p>
+<div class="highlight"><pre><span></span><code>git pull upstream master
+</code></pre></div>
+<p>因为开发者应该在专门的功能分支开发，这一般会<a href="https://github.com/geeeeeeeeek/git-recipes/wiki/3.4-%E4%BD%BF%E7%94%A8%E5%88%86%E6%94%AF#git-merge">产生一个快速向前的合并</a>。</p>
+<h3 id="_25">开发者发布他们的功能<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h3>
+<p><img alt="Forking Workflow: Developers publish features" src="https://wac-cdn.atlassian.com/dam/jcr:0de71551-5c08-4fc4-ab6d-dc8a51bfcc5a/05.svg" /></p>
+<p>一旦开发者准备好共享他们的新功能，他们需要做两件事情。第一，他们必须将贡献的代码推送到自己的公开仓库，让其他开发者能够访问到。他们的 <code>origin</code> 远端应该已经设置好了，所以他们只需要：</p>
+<div class="highlight"><pre><span></span><code>git push origin feature-branch
+</code></pre></div>
+<p>这和其他工作流不同之处在于，<code>origin</code> 远端指向开发者个人的服务端仓库，而不是主代码库。</p>
+<p>第二，他们需要通知项目维护者，他们想要将功能并入官方代码库。GitHub 提供了一个「New Pull Request」按钮，跳转到一个网页，让你指明想要并入主仓库的分支。一般来说，你希望将功能分支并入上游远端的 <code>master</code> 分支。</p>
+<h3 id="_26">项目维护者整合他们的功能<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h3>
+<p><img alt="Forking Workflow: Integrate Features" src="https://www.atlassian.com/git/images/tutorials/collaborating/comparing-workflows/forking-workflow/07.svg" /></p>
+<p>当项目维护者收到 Pull Request 时，他们的工作是决定是否将它并入官方的代码库。他们可以使用下面两种方式之一：</p>
+<ol>
+<li>直接检查 Pull Request 中检查代码</li>
+<li>将代码拉取到本地仓库然后手动合并</li>
+</ol>
+<p>第一个选项更简单，让维护者查看修改前后的差异，在上面评论，然后通过图形界面执行合并。然而，如果 Pull Request 会导致合并冲突，第二个选项就有了必要。在这个情况中，维护者需要从开发者的服务端仓库 fetch 功能分支，合并到他们本地的 <code>master</code> 分支，然后解决冲突：</p>
+<div class="highlight"><pre><span></span><code>git fetch https://bitbucket.org/user/repo feature-branch
+# 检查修改
+git checkout master
+git merge FETCH_HEAD
+</code></pre></div>
+<p>一旦修改被整合进本地的 <code>master</code>，维护者需要将它推送到服务器上的官方仓库，这样其他开发者也可以访问它：</p>
+<div class="highlight"><pre><span></span><code>git push origin master
+</code></pre></div>
+<p>记住，维护者的 <code>origin</code> 指向他们的公开仓库，也就是项目的官方代码库。开发者的贡献现在完全并入了项目。</p>
+<h3 id="_27">开发者和中央仓库保持同步<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h3>
+<p><img alt="Forking Workflow: Synchronize with the official repository" src="https://www.atlassian.com/git/images/tutorials/collaborating/comparing-workflows/forking-workflow/08.svg" /></p>
+<p>因为主代码库已经取得了新的进展，其他开发者应该和官方仓库同步：</p>
+<div class="highlight"><pre><span></span><code>git pull upstream master
+</code></pre></div>
+<h2 id="_28">接下来该怎么做<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h2>
+<p>如果你从 SVN 迁移而来，Fork 工作流看上去是一个比较大的转变。但不要害怕——它只是在 Feature 分支工作流之上引入了一层抽象。贡献的代码发布到开发者在服务端自己的仓库，而不是在唯一的中央仓库中直接共享分支。</p>
+<p>这篇文章解释了一次代码贡献是如何从一个开发者流入官方的 <code>master</code> 分支的，但相同的方法可以用在将代码贡献整合进任何仓库。比如，如果你团队的一部分成员在一个特定功能上协作，他们可以用自己约定的行为共享修改——而不改变主仓库。</p>
+<p>这使得 Fork 工作流对于松散的团队来说是个非常强大的工具。任何开发者都可以轻而易举地和其他开发者共享修改，任何分支都能高效地并入主代码库。</p>
+<blockquote>
+<p>这篇文章是<a href="https://github.com/geeeeeeeeek/git-recipes/"><strong>「git-recipes」</strong></a>的一部分，点击 <a href="https://github.com/geeeeeeeeek/git-recipes/wiki/"><strong>目录</strong></a> 查看所有章节。</p>
+<p>如果你觉得文章对你有帮助，欢迎点击右上角的 <strong>Star</strong> :star2: 或 <strong>Fork</strong> :fork_and_knife:。</p>
+<p>如果你发现了错误，或是想要加入协作，请参阅 <a href="https://github.com/geeeeeeeeek/git-recipes/issues/1">Wiki 协作说明</a>。</p>
+</blockquote>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 韩永琰
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    <a href="https://space.bilibili.com/358218864" target="_blank" rel="noopener" title="Bilibili | 愿你决定" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92.02c-26.45-.8-48.21-9.8-65.28-27.2C9.682 419.4.767 396.5 0 368.2V169.8c.767-26 9.682-47.6 26.74-65.7C43.81 87.75 65.57 78.77 92.02 78h29.38L96.05 52.19c-5.75-5.73-8.63-13-8.63-21.79 0-8.8 2.88-16.06 8.63-21.797C101.8 2.868 109.1 0 117.9 0s16.1 2.868 21.9 8.603L213.1 78h88l74.5-69.397C381.7 2.868 389.2 0 398 0c8.8 0 16.1 2.868 21.9 8.603 5.7 5.737 8.6 12.997 8.6 21.797 0 8.79-2.9 16.06-8.6 21.79L394.6 78h29.3c26.4.77 48 9.75 64.7 26.1zm-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96.05c-9.59.4-17.45 3.7-23.58 9.8-6.14 6.1-9.4 13.9-9.78 23.5v194.4c0 9.2 3.26 17 9.78 23.5s14.38 9.8 23.58 9.8H416.4c9.2 0 17-3.3 23.3-9.8 6.3-6.5 9.7-14.3 10.1-23.5V173.8zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5-9.6 0-17.5-3.2-23.6-9.5-6.1-6.3-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2 6.3-6.3 13.2-9.6 23.3-10 9.2.4 17 3.7 23.3 10zm191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.1 6.3-14 9.5-23.6 9.5-9.6 0-17.4-3.2-23.6-9.5-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2 6.3-6.3 14.1-9.6 23.3-10 9.2.4 17 3.7 23.3 10z"/></svg>
+    </a>
+  
+    
+    
+    <a href="https://github.com/hanyongyan" target="_blank" rel="noopener" title="GitHub | hanyongyan" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+        <script src="../../../mkdocs/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+    
+  </body>
+</html>
